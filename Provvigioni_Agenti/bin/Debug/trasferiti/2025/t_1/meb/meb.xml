@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTrasferito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Trasferito>
+    <Regione>LOMBARDIA</Regione>
+    <Venduto>8227.16</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>TRENTINO ALTO ADIGE</Regione>
+    <Venduto>91.99</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>VENETO</Regione>
+    <Venduto>57988.35</Venduto>
+  </Trasferito>
+</ArrayOfTrasferito>

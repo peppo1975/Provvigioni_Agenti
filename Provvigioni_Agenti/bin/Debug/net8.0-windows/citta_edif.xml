@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCitta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Citta>
+    <Comune>Abruzzo</Comune>
+    <Regione>ABRUZZO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Marche</Comune>
+    <Regione>MARCHE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Molise</Comune>
+    <Regione>MOLISE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Romagna</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Umbria</Comune>
+    <Regione>UMBRIA</Regione>
+  </Citta>
+</ArrayOfCitta>

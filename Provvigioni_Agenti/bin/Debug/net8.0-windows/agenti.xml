@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAgente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Agente>
+    <ID>415.01084#415.01086#415.01034#415.01023#415.01089#415.01078#415.01048#415.01046#415.01070#415.01072#415.01050#415.01079#415.01087#415.01069</ID>
+    <Nome>TUTTI GLI AGENTI</Nome>
+    <NikName>-- TUTTI GLI AGENTI --</NikName>
+    <Regione>
+      <Regione>
+        <Nome>ITALIA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01084</ID>
+    <Nome>BCD RAPPRESENTANZE SNC DI CAPPUGI ALESSIO &amp; C.</Nome>
+    <NikName>BCD RAPPRESENTANZE</NikName>
+    <Regione>
+      <Regione>
+        <Nome>TOSCANA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01078</ID>
+    <Nome>MCR SAS DI MAURO CAROVILLANO</Nome>
+    <NikName>CAROVILLANO</NikName>
+    <Regione>
+      <Regione>
+        <Nome>LAZIO</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01086</ID>
+    <Nome>DG S.A.S. DI PAOLO DI GENOVA &amp; C.</Nome>
+    <NikName>DI GENOVA DG S.A.S.</NikName>
+    <Regione>
+      <Regione>
+        <Nome>ABRUZZO</Nome>
+      </Regione>
+      <Regione>
+        <Nome>MOLISE</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01034</ID>
+    <Nome>ERAMO VITTORIO</Nome>
+    <NikName>ERAMO</NikName>
+    <Regione>
+      <Regione>
+        <Nome>LAZIO</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01023</ID>
+    <Nome>AGENZIA GIERRE di R.P. &amp; C. S.n.c.</Nome>
+    <NikName>GIERRE</NikName>
+    <Regione>
+      <Regione>
+        <Nome>CAMPANIA</Nome>
+      </Regione>
+      <Regione>
+        <Nome>BASILICATA - PZ</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01048</ID>
+    <Nome>GRIMALDI FRANCESCO</Nome>
+    <NikName>GRIMALDI</NikName>
+    <Regione>
+      <Regione>
+        <Nome>PUGLIA</Nome>
+      </Regione>
+      <Regione>
+        <Nome>BASILICATA - MT</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01046</ID>
+    <Nome>LUIGINO CALABRIA</Nome>
+    <NikName>LUIGINO CALABRIA</NikName>
+    <Regione>
+      <Regione>
+        <Nome>CALABRIA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01070</ID>
+    <Nome>MELIS EMANUELE</Nome>
+    <NikName>MELIS</NikName>
+    <Regione>
+      <Regione>
+        <Nome>SARDEGNA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01072</ID>
+    <Nome>PALLAVER ANTONIO</Nome>
+    <NikName>PALLAVER ANTONIO</NikName>
+    <Regione>
+      <Regione>
+        <Nome>UMBRIA</Nome>
+      </Regione>
+      <Regione>
+        <Nome>MARCHE</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01089</ID>
+    <Nome>RAPPRESENTANZE ELETTRICHE PIEMONTESI SRL</Nome>
+    <NikName>RAPPRESENTANZE ELETTRICHE PIEMONTESI SRL</NikName>
+    <Regione>
+      <Regione>
+        <Nome>PIEMONTE</Nome>
+      </Regione>
+      <Regione>
+        <Nome>LIGURIA</Nome>
+      </Regione>
+      <Regione>
+        <Nome>VALLE D AOSTA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01050</ID>
+    <Nome>S.V.R. S.R.L.</Nome>
+    <NikName>S.V.R. S.R.L.</NikName>
+    <Regione>
+      <Regione>
+        <Nome>SICILIA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01079</ID>
+    <Nome>SARCO DI PICCIONE R. &amp; ZUCCHINI P. SNC</Nome>
+    <NikName>SARCO</NikName>
+    <Regione>
+      <Regione>
+        <Nome>LOMBARDIA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01087</ID>
+    <Nome>SCATTOLIN &amp; RUBBI SAS DI SCATTOLIN MARCO &amp; C.</Nome>
+    <NikName>SCATTOLIN &amp; RUBBI</NikName>
+    <Regione>
+      <Regione>
+        <Nome>EMILIA ROMAGNA</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01069</ID>
+    <Nome>WATT SRLS</Nome>
+    <NikName>WATT SRLS</NikName>
+    <Regione>
+      <Regione>
+        <Nome>FRIULI VENEZIA GIULIA</Nome>
+      </Regione>
+      <Regione>
+        <Nome>TRENTINO ALTO ADIGE</Nome>
+      </Regione>
+      <Regione>
+        <Nome>VENETO</Nome>
+      </Regione>
+    </Regione>
+  </Agente>
+</ArrayOfAgente>

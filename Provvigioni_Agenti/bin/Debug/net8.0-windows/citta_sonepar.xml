@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCitta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Citta>
+    <Comune>ABRUZZO</Comune>
+    <Regione>ABRUZZO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>MOLISE</Comune>
+    <Regione>MOLISE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>MARCHE</Comune>
+    <Regione>MARCHE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>EMILIA ROMAGNA</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>VENETO</Comune>
+    <Regione>VENETO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>FRIULI</Comune>
+    <Regione>FRIULI VENEZIA GIULIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>LOMBARDIA</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CAMPANIA</Comune>
+    <Regione>CAMPANIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BASILICATA</Comune>
+    <Regione>BASILICATA - PZ</Regione>
+  </Citta>
+  <Citta>
+    <Comune>TRENTINO</Comune>
+    <Regione>TRENTINO ALTO ADIGE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>TOSCANA</Comune>
+    <Regione>TOSCANA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>SICILIA</Comune>
+    <Regione>SICILIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CALABRIA</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>PUGLIA</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>LAZIO</Comune>
+    <Regione>LAZIO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>SARDEGNA</Comune>
+    <Regione>SARDEGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>UMBRIA</Comune>
+    <Regione>UMBRIA</Regione>
+  </Citta>
+</ArrayOfCitta>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCitta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Citta>
+    <Comune>SESTO SAN GIOVANNI (AB)</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>VILLANUOVA S/C (AJ)</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>ORZINUOVI (AK)</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>LEGNANO (AN)</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>SARONNO (AS)</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BRESCIA VERGNANO (A7)</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>MODENA (BG)</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>RICCIONE (BJ)</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CESENA (BZ)</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BOLOGNA (B7)</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>PRENESTINO (CF)</Comune>
+    <Regione>LAZIO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CRC-LAZIO (CJ)</Comune>
+    <Regione>LAZIO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BERGAMO (01)</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+</ArrayOfCitta>

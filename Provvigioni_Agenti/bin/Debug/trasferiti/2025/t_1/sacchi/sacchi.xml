@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTrasferito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Trasferito>
+    <Regione>VALLE D AOSTA</Regione>
+    <Venduto>5714.1900000000005</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>PIEMONTE</Regione>
+    <Venduto>66268.50999999998</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>LOMBARDIA</Regione>
+    <Venduto>142005.89999999997</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>TRENTINO ALTO ADIGE</Regione>
+    <Venduto>18332.34</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>LIGURIA</Regione>
+    <Venduto>8929.000000000002</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>EMILIA ROMAGNA</Regione>
+    <Venduto>1429.3200000000002</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>TOSCANA</Regione>
+    <Venduto>217.12</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>CALABRIA</Regione>
+    <Venduto>2865.99</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>SARDEGNA</Regione>
+    <Venduto>2627.34</Venduto>
+  </Trasferito>
+</ArrayOfTrasferito>

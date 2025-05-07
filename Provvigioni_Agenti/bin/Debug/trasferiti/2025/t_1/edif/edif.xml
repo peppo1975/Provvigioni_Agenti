@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTrasferito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Trasferito>
+    <Regione>ABRUZZO</Regione>
+    <Venduto>116519.98999999999</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>MARCHE</Regione>
+    <Venduto>118745.60999999999</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>MOLISE</Regione>
+    <Venduto>34954.38</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>EMILIA ROMAGNA</Regione>
+    <Venduto>18840.59</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>UMBRIA</Regione>
+    <Venduto>157975.68</Venduto>
+  </Trasferito>
+</ArrayOfTrasferito>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAgente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Agente>
+    <ID>415.01084</ID>
+    <Nome>BCD RAPPRESENTANZE SNC DI CAPPUGI ALESSIO &amp; C.</Nome>
+    <NikName>BCD RAPPRESENTANZE</NikName>
+    <Regione>TOSCANA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01081</ID>
+    <Nome>DI GENOVA PAOLO</Nome>
+    <NikName>DI GENOVA</NikName>
+    <Regione>ABRUZZO</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01086</ID>
+    <Nome>DG S.A.S. DI PAOLO DI GENOVA &amp; C.</Nome>
+    <NikName>DI GENOVA DG S.A.S.</NikName>
+    <Regione>ABRUZZO</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01034</ID>
+    <Nome>ERAMO VITTORIO</Nome>
+    <NikName>ERAMO</NikName>
+    <Regione>LAZIO</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01023</ID>
+    <Nome>AGENZIA GIERRE di R.P. &amp; C. S.n.c.</Nome>
+    <NikName>GIERRE</NikName>
+    <Regione>CAMPANIA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01048</ID>
+    <Nome>GRIMALDI FRANCESCO</Nome>
+    <NikName>GRIMALDI</NikName>
+    <Regione>PUGLIA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01070</ID>
+    <Nome>MELIS EMANUELE</Nome>
+    <NikName>MELIS</NikName>
+    <Regione>SARDEGNA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01072</ID>
+    <Nome>PALLAVER ANTONIO</Nome>
+    <NikName>PALLAVER ANTONIO</NikName>
+    <Regione>MARCHE</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01050</ID>
+    <Nome>S.V.R. S.R.L.</Nome>
+    <NikName>S.V.R. S.R.L.</NikName>
+    <Regione>SICILIA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01079</ID>
+    <Nome>SARCO DI PICCIONE R. &amp; ZUCCHINI P. SNC</Nome>
+    <NikName>SARCO</NikName>
+    <Regione>LOMBARDIA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01087</ID>
+    <Nome>SCATTOLIN &amp; RUBBI SAS DI SCATTOLIN MARCO &amp; C.</Nome>
+    <NikName>SCATTOLIN &amp; RUBBI</NikName>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01076</ID>
+    <Nome>VALCANTE CAMILLO ROBERTO</Nome>
+    <NikName>VALCANTE</NikName>
+    <Regione>PIEMONTE LIGURIA</Regione>
+  </Agente>
+  <Agente>
+    <ID>415.01069</ID>
+    <Nome>WATT SRLS</Nome>
+    <NikName>WATT SRLS</NikName>
+    <Regione>VENETO</Regione>
+  </Agente>
+</ArrayOfAgente>

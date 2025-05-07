@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCitta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Citta>
+    <Comune>Lombardia</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Lazio</Comune>
+    <Regione>LAZIO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Piemonte</Comune>
+    <Regione>PIEMONTE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Marche</Comune>
+    <Regione>MARCHE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Campania</Comune>
+    <Regione>CAMPANIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Calabria</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Emilia Romagna</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Sicilia</Comune>
+    <Regione>SICILIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Liguria</Comune>
+    <Regione>LIGURIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Toscana</Comune>
+    <Regione>TOSCANA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Sardegna</Comune>
+    <Regione>SARDEGNA</Regione>
+  </Citta>
+</ArrayOfCitta>

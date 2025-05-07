@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCitta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Citta>
+    <Comune>LOMBARDIA</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>TRENTINO ALTO ADIGE</Comune>
+    <Regione>TRENTINO ALTO ADIGE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>VENETO</Comune>
+    <Regione>VENETO</Regione>
+  </Citta>
+</ArrayOfCitta>

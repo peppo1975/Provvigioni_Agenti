@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCitta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Citta>
+    <Comune>Valle d'Aosta</Comune>
+    <Regione>VALLE D AOSTA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Piemonte</Comune>
+    <Regione>PIEMONTE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Lombardia</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Trentino-Alto Adige</Comune>
+    <Regione>TRENTINO ALTO ADIGE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Liguria</Comune>
+    <Regione>LIGURIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Emilia-Romagna</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Toscana</Comune>
+    <Regione>TOSCANA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Calabria</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Sardegna</Comune>
+    <Regione>SARDEGNA</Regione>
+  </Citta>
+</ArrayOfCitta>

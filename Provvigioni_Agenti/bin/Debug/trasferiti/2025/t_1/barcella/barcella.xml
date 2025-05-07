@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTrasferito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Trasferito>
+    <Regione>LOMBARDIA</Regione>
+    <Venduto>136578.05</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>EMILIA ROMAGNA</Regione>
+    <Venduto>393.84000000000003</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>VENETO</Regione>
+    <Venduto>37812.47</Venduto>
+  </Trasferito>
+</ArrayOfTrasferito>

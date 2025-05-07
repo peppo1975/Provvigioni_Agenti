@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTrasferito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Trasferito>
+    <Regione>ABRUZZO</Regione>
+    <Venduto>76198.68000000001</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>MOLISE</Regione>
+    <Venduto>8077.589999999999</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>MARCHE</Regione>
+    <Venduto>76934.93000000002</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>EMILIA ROMAGNA</Regione>
+    <Venduto>76707.73</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>VENETO</Regione>
+    <Venduto>452365.8500000001</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>FRIULI VENEZIA GIULIA</Regione>
+    <Venduto>50715.26000000001</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>LOMBARDIA</Regione>
+    <Venduto>37965.369999999995</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>CAMPANIA</Regione>
+    <Venduto>110531.27999999998</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>BASILICATA - PZ</Regione>
+    <Venduto>4581.599999999999</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>TRENTINO ALTO ADIGE</Regione>
+    <Venduto>10232.939999999997</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>TOSCANA</Regione>
+    <Venduto>365976.80000000005</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>SICILIA</Regione>
+    <Venduto>29459.320000000003</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>CALABRIA</Regione>
+    <Venduto>11710.869999999999</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>PUGLIA</Regione>
+    <Venduto>182178.65000000005</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>LAZIO</Regione>
+    <Venduto>110642.46000000005</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>SARDEGNA</Regione>
+    <Venduto>51756.55</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>UMBRIA</Regione>
+    <Venduto>27627.81</Venduto>
+  </Trasferito>
+</ArrayOfTrasferito>

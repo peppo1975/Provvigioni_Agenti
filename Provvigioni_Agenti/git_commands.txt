@@ -1,0 +1,19 @@
+git init
+git status
+git add .
+git commit -m "{testo}" -m "{testo}" -m "{testo}" ...
+
+git remote add origin https://github.com/peppo1975/Provvigioni_Agenti.git
+git branch -M master
+git push -u origin master
+
+git switch -c NEW_BRANCH_NAME // creo un nuovo branch
+git checkout NEW_BRANCH_NAME // passo al nuovo branch NB: per passare da un branch all'altro devo prima eseguire il commit
+
+git fetch
+git pull https://github.com/peppo1975/Provvigioni_Agenti master
+
+username/email
+giuseppelag@gmail.com
+
+password

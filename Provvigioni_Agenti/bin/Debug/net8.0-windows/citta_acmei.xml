@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCitta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Citta>
+    <Comune>ABRUZZO</Comune>
+    <Regione>ABRUZZO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BASILICATA</Comune>
+    <Regione>BASILICATA - MT</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CALABRIA</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>MOLISE</Comune>
+    <Regione>MOLISE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>PUGLIA</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
+</ArrayOfCitta>
