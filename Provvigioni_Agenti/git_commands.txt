@@ -13,7 +13,3 @@ git checkout NEW_BRANCH_NAME // passo al nuovo branch NB: per passare da un bran
 git fetch
 git pull https://github.com/peppo1975/Provvigioni_Agenti master
 
-username/email
-giuseppelag@gmail.com
-
-password

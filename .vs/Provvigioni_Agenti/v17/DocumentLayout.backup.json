@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "E:\\User\\source\\repos\\Provvigioni_Agenti\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\controllers\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\controllers\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\trasferitiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\models\\trasferitiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\controllers\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\controllers\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\controllers\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\controllers\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\trasferitiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\models\\trasferitiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\controllers\\elaboraxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\controllers\\elaboraxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\agentiriepilogoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\elaborazioniservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\models\\elaborazioniservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\controllers\\elaboraxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\controllers\\elaboraxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Peppe\\AppData\\Local\\Temp\\.vsdbgsrc\\de340a16ce2e44a2cbc7092cbb90ce2646032188cac7f72faf6e2a0b7ab0cc8d\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -105,48 +105,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 321,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "General.cs",
-              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\General.cs",
-              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Controllers\\General.cs",
-              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\General.cs",
-              "RelativeToolTip": "Provvigioni_Agenti\\Controllers\\General.cs",
-              "ViewState": "AgIAAEkDAAAAAAAAAAAqwEgDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T15:58:38.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Provvigioni_Agenti\\MainWindow.xaml.cs",
-              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Provvigioni_Agenti\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAD4v5MAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T10:41:13.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TrasferitiService.cs",
-              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\TrasferitiService.cs",
-              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\TrasferitiService.cs",
-              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\TrasferitiService.cs",
-              "RelativeToolTip": "Provvigioni_Agenti\\Models\\TrasferitiService.cs",
-              "ViewState": "AgIAAJECAAAAAAAAAAAIwMECAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T10:34:50.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ElaborazioniService.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\ElaborazioniService.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\ElaborazioniService.cs",
@@ -158,30 +121,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\MainWindow.xaml",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml",
               "RelativeToolTip": "Provvigioni_Agenti\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-20T10:34:36.451Z"
+              "WhenOpened": "2025-02-20T10:34:36.451Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AgentiRiepilogoService.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\AgentiRiepilogoService.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\AgentiRiepilogoService.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\AgentiRiepilogoService.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Models\\AgentiRiepilogoService.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAMwG0AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T20:28:01.418Z"
+              "WhenOpened": "2025-04-29T20:28:01.418Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TrasferitiService.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\TrasferitiService.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\TrasferitiService.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\TrasferitiService.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Models\\TrasferitiService.cs",
+              "ViewState": "AgIAAK4FAAAAAIe1b/gkwCAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:34:50.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAO0BAAAAAAAAAAD4v/8BAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:41:13.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "General.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\General.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Controllers\\General.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\General.cs*",
+              "RelativeToolTip": "Provvigioni_Agenti\\Controllers\\General.cs*",
+              "ViewState": "AgIAAIgDAAAAAAAAAAAMwKQDAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T15:58:38.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Database.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\Database.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Controllers\\Database.cs",
@@ -189,7 +193,8 @@
               "RelativeToolTip": "Provvigioni_Agenti\\Controllers\\Database.cs",
               "ViewState": "AgIAABwAAAAAAAAAAADwvzYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T09:45:04.75Z"
+              "WhenOpened": "2025-03-18T09:45:04.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -205,27 +210,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "ElaboraXml.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\ElaboraXml.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Controllers\\ElaboraXml.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\ElaboraXml.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Controllers\\ElaboraXml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwDMAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwC8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T15:12:53.653Z"
+              "WhenOpened": "2025-02-20T15:12:53.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AgenteRiepilogo.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\AgenteRiepilogo.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\AgenteRiepilogo.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\AgenteRiepilogo.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Models\\AgenteRiepilogo.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T20:26:56.43Z"
+              "WhenOpened": "2025-04-29T20:26:56.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

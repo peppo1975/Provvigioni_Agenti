@@ -39,6 +39,7 @@ namespace Provvigioni_Agenti
         IList<CategoriaStatistica> categorieStatisticheTotaleProgressivo = null;
         IList<AgenteRiepilogo> AgentiRiepilogo = null;
 
+
         Style HorizontalCenterStyle = null;
 
         public MainWindow()
@@ -148,6 +149,8 @@ namespace Provvigioni_Agenti
             var st = Controllers.Database.SELECT_GET_LIST<Storico>(query);
 
 
+
+
             string fromDateTxt = fromDate.ToString();
             string toDateTxt = toDate.ToString();
 
@@ -200,21 +203,12 @@ namespace Provvigioni_Agenti
                 deltaTrimestre.Text = (riepilogoVendutoCorrente - riepilogoVendutoRiferimento).ToString("C", CultureInfo.CurrentCulture);
                 deltaTrimestrePercent.Text = String.Format("{0:P2}", ((riepilogoVendutoCorrente - riepilogoVendutoRiferimento) / riepilogoVendutoRiferimento));
 
-
-                //string[] dirs = Directory.GetDirectories(trimestreSelezionato());
-
-                //List<Trasferito> a = General.estraiXmlSellout(dirs);
-
                 return;
 
             }
 
 
 
-            // estrapolo i valori da total
-            //ElaboraXml.s(agente.ID, storicoService.StoricoTotal);
-
-            //var elenco = new Models.ClientiService(storicoService.Storico, periodoService.Periodo[0]);
             var elenco = new Models.ClientiService(st, periodoService.Periodo[0]);
 
             ClientiRiepilogoVendite = elenco.ClientiRiepilogoVendite[0];
@@ -512,7 +506,39 @@ namespace Provvigioni_Agenti
 
                 if (RowIndex >= 0)
                 {
-                    ClienteResponseDatagrid customer = (ClienteResponseDatagrid)dataGridVendite.SelectedItem;
+
+                    if (agente.ID.Contains('#'))
+                    {
+                        // legge xml
+                        List<Agente> cc = new List<Agente>();
+                        XmlSerializer xmlsd = new XmlSerializer(typeof(List<Agente>));
+                        using (TextReader tr = new StreamReader(@"agenti.xml"))
+                        {
+                            cc = (List<Agente>)xmlsd.Deserialize(tr);
+                        }
+
+                        var g = AgentiRiepilogo[RowIndex];
+
+                        var Regione = cc.Find(x=> x.ID == g.ID).Regione.ToList();
+
+                        // TRASFERITI --------------------------------------------
+                        elencoTrasferiti = General.directoryTrasferiti(annoCorrenteTxt);
+                        trs = new TrasferitiService(Regione, annoCorrenteTxt, trimestre, elencoTrasferiti);
+                        // ------------------------------------------------------
+
+
+                        dataGridTrasferiti.ItemsSource = trs.Trasferiti;
+                        dataGridTrasferiti.Columns[1].CellStyle = HorizontalCenterStyle;
+
+                        dataGridTrasferiti.Columns[0].Width = 190;
+                        dataGridTrasferiti.Columns[1].Width = 80;
+
+                        dataGridTrasferiti.Columns[2].Visibility = Visibility.Collapsed;
+
+                        return;
+                    }
+
+                        ClienteResponseDatagrid customer = (ClienteResponseDatagrid)dataGridVendite.SelectedItem;
                     string idCliente = customer.IdCliente;
                     string nomeCliente = customer.NomeCliente;
 

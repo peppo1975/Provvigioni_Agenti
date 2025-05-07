@@ -382,6 +382,7 @@ namespace Provvigioni_Agenti.Controllers
         }
 
 
+
         public static void generaExcelTrasferiti(string agente, string agenteFullName, string annoCorrente, string annoRiferimento, string trimestre, IList<ClienteResponse> clienteResponse, IList<Final> Trasferiti, IList<CategoriaStatistica> categorieStatistiche, IList<CategoriaStatistica> categorieStatisticheTotaleProgressivo)
         {
             Dictionary<string, string> trimestri = new Dictionary<string, string>() { { "t_1", "TRIM-1" }, { "t_2", "TRIM-2" }, { "t_3", "TRIM-3" }, { "t_4", "TRIM-4" } };
@@ -405,6 +406,14 @@ namespace Provvigioni_Agenti.Controllers
 
             using var workbook = new XLWorkbook();
             var worksheet = workbook.AddWorksheet("Provvigioni");
+
+            var imagePath = @"../logo.jpg";
+
+            var image = worksheet.AddPicture(imagePath)
+                .MoveTo(worksheet.Cell("A2"))
+                .Scale(0.3); // optional: resize picture
+
+
 
             worksheet.Column("A").Width = 10;
             worksheet.Column("B").Width = 45;
@@ -727,6 +736,32 @@ namespace Provvigioni_Agenti.Controllers
             int index = 9;
             int rowInit = index;
 
+
+            // legge xml
+            List<Agente> cc = new List<Agente>();
+            XmlSerializer xmlsd = new XmlSerializer(typeof(List<Agente>));
+            using (TextReader tr = new StreamReader(@"agenti.xml"))
+            {
+                cc = (List<Agente>)xmlsd.Deserialize(tr);
+            }
+
+            // TRASFERITI --------------------------------------------
+            var elencoTrasferiti = General.directoryTrasferiti(annoCorrente);
+            //   var trs = new TrasferitiService(Regione, annoCorrente, trimestre, elencoTrasferiti);
+            // ------------------------------------------------------
+
+            List<string> titleTable = new List<string>();
+            titleTable.Add("Codice");
+            titleTable.Add("Descrizione");
+            titleTable.Add($"Imp. periodo {annoRiferimento}");
+            titleTable.Add($"Imp. periodo {annoCorrente}");
+            titleTable.Add("Delta imp.");
+            titleTable.Add("Delta imp. %");
+            titleTable.Add("Imp. Sellout");
+            titleTable.Add("Provvigioni Passepartout");
+            titleTable.Add("Provvigioni Sellout");
+            titleTable.Add("Provvigioni TOTALI");
+
             int indexRowProvvigioneAgente = 0;
             int indexRowProvvigioneAgenteSellout = 0;
 
@@ -739,38 +774,50 @@ namespace Provvigioni_Agenti.Controllers
             using var workbook = new XLWorkbook();
             var worksheet = workbook.AddWorksheet("Resoconto");
 
+
+            var imagePath = @"../logo.jpg";
+
+            var image = worksheet.AddPicture(imagePath)
+                .MoveTo(worksheet.Cell("A2"))
+                .Scale(0.3); // optional: resize picture
+
+            int indexCol = 1;
+
+            titleTable.ForEach((x) =>
+            {
+
+                int index = titleTable.IndexOf(x);
+
+                worksheet.Cell(8, index + 1).Value = x;
+            });
+
             worksheet.Column("A").Width = 10;
             worksheet.Column("B").Width = 45;
-            worksheet.Column("C").Width = 17;
-            worksheet.Column("D").Width = 17;
-            worksheet.Column("E").Width = 17;
-            worksheet.Column("F").Width = 17;
-            worksheet.Column("G").Width = 17;
-            worksheet.Column("H").Width = 17;
-            worksheet.Column("I").Width = 17;
+            worksheet.Column("C").Width = 14;
+            worksheet.Column("D").Width = 14;
+            worksheet.Column("E").Width = 14;
+            worksheet.Column("F").Width = 14;
+            worksheet.Column("G").Width = 14;
+            worksheet.Column("H").Width = 14;
+            worksheet.Column("I").Width = 14;
+            worksheet.Column("J").Width = 14;
 
 
-            worksheet.Cell("C2").Value = "";
+            worksheet.Cell("C2").Value = "FT_AGENTI";
             worksheet.Cell("C2").Style.Font.FontSize = 20;
             worksheet.Range("C2:G2").Merge();
 
 
-            worksheet.Cell("D3").Value = $"{trimestriSuExcel[trimestre]} {annoCorrente} - PROVVIGIONI TOTALI AGENTI: ";
-            worksheet.Cell("D3").Style.Font.FontSize = 15;
-            worksheet.Range("D3:G3").Merge();
-            //worksheet.Cell("H3").Value
+            worksheet.Cell("C3").Value = $"{trimestriSuExcel[trimestre]} {annoCorrente}";
+            worksheet.Cell("C3").Style.Font.FontSize = 20;
+            worksheet.Range("C3:G3").Merge();
 
-            worksheet.Cell("A8").Value = $"Codice";
-            worksheet.Cell("B8").Value = $"Descrizione";
-            worksheet.Cell("C8").Value = $"Imp. periodo " + annoRiferimento;
-            worksheet.Cell("D8").Value = $"Imp. periodo " + annoCorrente;
-            worksheet.Cell("E8").Value = $"Delta imp.";
-            worksheet.Cell("F8").Value = $"Delta imp. %";
-            worksheet.Cell("G8").Value = $"Provvigioni Passpourt";
-            worksheet.Cell("H8").Value = $"Provvigioni Sellout";
-            worksheet.Cell("I8").Value = $"Provvigioni TOTALI";
+            worksheet.Row(2).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+            worksheet.Row(3).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
-            worksheet.Range($"A8:I8").Style.Font.Bold = true;
+
+
+            worksheet.Range($"A8:Z8").Style.Font.Bold = true;
 
             //foreach (ClienteResponse cliente in clienteResponse)
             foreach (AgenteRiepilogo cliente in AgentiRiepilogo)
@@ -786,6 +833,7 @@ namespace Provvigioni_Agenti.Controllers
                 worksheet.Cell(index, 7).Style.NumberFormat.Format = "#,##0.00 €";
                 worksheet.Cell(index, 8).Style.NumberFormat.Format = "#,##0.00 €";
                 worksheet.Cell(index, 9).Style.NumberFormat.Format = "#,##0.00 €";
+                worksheet.Cell(index, 10).Style.NumberFormat.Format = "#,##0.00 €";
 
                 worksheet.Cell(index, 1).Value = cliente.ID;
                 worksheet.Cell(index, 2).Value = cliente.Nome;
@@ -793,13 +841,14 @@ namespace Provvigioni_Agenti.Controllers
                 worksheet.Cell(index, 4).Value = cliente.VendutoCorrente;
                 worksheet.Cell(index, 5).Value = cliente.Delta;
                 worksheet.Cell(index, 6).Value = cliente.DeltaPercent == double.PositiveInfinity ? 0 : cliente.DeltaPercent;
-                worksheet.Cell(index, 7).Value = cliente.ProvvigioneCorrente;
-                worksheet.Cell(index, 8).Value = cliente.ProvvigioneSellout;
+                worksheet.Cell(index, 7).Value = cliente.VendutoSellout;
+                worksheet.Cell(index, 8).Value = cliente.ProvvigioneCorrente;
+                worksheet.Cell(index, 9).Value = cliente.ProvvigioneSellout;
 
-                string columnString1 = worksheet.Cell(index, 7).WorksheetColumn().ColumnLetter();
-                string columnString2 = worksheet.Cell(index, 8).WorksheetColumn().ColumnLetter();
+                string columnString1 = worksheet.Cell(index, 8).WorksheetColumn().ColumnLetter();
+                string columnString2 = worksheet.Cell(index, 9).WorksheetColumn().ColumnLetter();
 
-                worksheet.Cell(index, 9).FormulaA1 = $"SUM({columnString1}{index}:{columnString2}{index})";
+                worksheet.Cell(index, 10).FormulaA1 = $"SUM({columnString1}{index}:{columnString2}{index})";
 
                 worksheet.Row(index).Height = 20;
 
@@ -810,7 +859,7 @@ namespace Provvigioni_Agenti.Controllers
             worksheet.Range($"C{index}:Z{index}").Style.Font.Bold = true;
 
 
-            for (int col = 3; col <= 9; col++)
+            for (int col = 3; col <= 10; col++)
             {
                 string columnString = worksheet.Cell(index, col).WorksheetColumn().ColumnLetter();
                 switch (columnString)
@@ -840,11 +889,11 @@ namespace Provvigioni_Agenti.Controllers
 
 
             string initCol = "";
-            string endCol = "I";
+            string endCol = "J";
             for (int rw = 8; rw <= index; rw++)
             {
                 initCol = "A";
-                
+
 
                 if (rw == index)
                 {
@@ -858,6 +907,39 @@ namespace Provvigioni_Agenti.Controllers
 
             }
 
+            index++;
+            index++;
+            foreach (AgenteRiepilogo cliente in AgentiRiepilogo)
+            {
+                string id = cliente.ID;
+                var Regione = cc.Find(x => x.ID == id).Regione.ToList();
+                var trs = new TrasferitiService(Regione, annoCorrente, trimestre, elencoTrasferiti);
+                worksheet.Cell(index, 1).Value = cliente.ID;
+                worksheet.Cell(index, 2).Value = cliente.Nome;
+
+                worksheet.Range($"A{index}:Z{index}").Style.Font.Bold = true;
+
+                index++;
+                int indexInit = index;
+                foreach (Final final in (List<Final>)trs.Trasferiti)
+                {
+                    worksheet.Cell(index,2).Value = final.Fornitore;
+                    worksheet.Cell(index,3).Value = final.ValoreEuro;
+                    worksheet.Cell(index, 3).Style.NumberFormat.Format = "#,##0.00 €";
+                    index++;
+                }
+                worksheet.Cell(index, 3).FormulaA1 = $"SUM(C{indexInit}:C{index-1})";
+                worksheet.Cell(index, 3).Style.NumberFormat.Format = "#,##0.00 €";
+                worksheet.Cell(index, 3).Style.Font.Bold = true;
+
+
+
+
+                index++;
+                index++;
+            }
+
+            //   
             workbook.SaveAs(pathFile);
 
             Process.Start("explorer.exe", System.IO.Path.GetFullPath($"{path}"));

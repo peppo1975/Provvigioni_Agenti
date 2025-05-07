@@ -18,10 +18,22 @@ namespace Provvigioni_Agenti.Models
     internal class AgentiRiepilogoService : IAgentiRiepilogoService
     {
         private List<AgenteRiepilogo> _agentiRiepilogo = null;
+        private List<AgenteRiepilogo> _agentiRiepilogo2 = null;
 
         public AgentiRiepilogoService(IList<Storico> Storico, Periodo p, string[] dirs)
         {
             _agentiRiepilogo = new List<AgenteRiepilogo>();
+            _agentiRiepilogo2 = new List<AgenteRiepilogo>();
+
+        https://josipmisko.com/posts/c-sharp-unique-list
+            var agentiId = Storico.DistinctBy(x => x.CKY_CNT_AGENTE).ToList();
+
+            foreach (var item in agentiId)
+            {
+                // _agentiRiepilogo2.Add(filtra((List<Storico>)Storico, p, item.CKY_CNT_AGENTE, (Storico)item));
+
+                _agentiRiepilogo.Add(new AgenteRiepilogo() { ID = item.CKY_CNT_AGENTE, Nome = item.NomeAgente });
+            }
 
             foreach (var item in Storico)
             {
@@ -85,28 +97,88 @@ namespace Provvigioni_Agenti.Models
             List<Trasferito> a = General.estraiXmlSellout(dirs);
 
 
-            _agentiRiepilogo.ForEach((x) =>
+
+            foreach (var item in agentiId)
             {
-                //x.VendutoRiferimento = 1.3;
-                string id = x.ID;
+                List<Regione> agenteRegione = ag.Find(r => r.ID == item.CKY_CNT_AGENTE).Regione.ToList();
 
-               var res = ag.Find(x => x.ID == id);
+                double sellout = 0;
 
-                res.Regione.ForEach((y) =>
+                agenteRegione.ForEach((r) =>
                 {
-                    string nome = y.Nome;
-                    var resnum = a.Find(z=>z.Regione == nome);
-
-                    x.VendutoSellout += resnum.Venduto;
-                    x.VendutoSelloutString = x.VendutoSellout.ToString("C", CultureInfo.CurrentCulture);
-
-                    x.ProvvigioneSellout = x.VendutoSellout * 0.02;
-                    x.ProvvigioneSelloutString = x.ProvvigioneSellout.ToString("C", CultureInfo.CurrentCulture);
+                    Trasferito resnum = a.Find(z => z.Regione == r.Nome);
+                    sellout += resnum.Venduto;
                 });
+
+                _agentiRiepilogo2.Add(filtra((List<Storico>)Storico, p, item.CKY_CNT_AGENTE, (Storico)item, sellout));
+            }
+
+            _agentiRiepilogo.ForEach((x) =>
+        {
+            //x.VendutoRiferimento = 1.3;
+            string id = x.ID;
+
+            var res = ag.Find(x => x.ID == id);
+
+            res.Regione.ForEach((y) =>
+            {
+                string nome = y.Nome;
+                var resnum = a.Find(z => z.Regione == nome);
+
+                x.VendutoSellout += resnum.Venduto;
+                x.VendutoSelloutString = x.VendutoSellout.ToString("C", CultureInfo.CurrentCulture);
+
+                x.ProvvigioneSellout = x.VendutoSellout * 0.02;
+                x.ProvvigioneSelloutString = x.ProvvigioneSellout.ToString("C", CultureInfo.CurrentCulture);
             });
+        });
 
         }
 
-        public IList<AgenteRiepilogo> AgentiRiepilogo => _agentiRiepilogo;  //elemento pubblico che da modo di visualizzare un elemento privato
+
+        private AgenteRiepilogo filtra(List<Storico> Storico, Periodo p, string AgenteId, Storico item, double sellout)
+        {
+            // new AgenteRiepilogo() { ID = item.CKY_CNT_AGENTE, Nome = item.NomeAgente }
+
+            AgenteRiepilogo res = new AgenteRiepilogo();
+
+            List<Storico> aCorrPos = Storico.Where((x) => x.CKY_CNT_AGENTE.ToString() == item.CKY_CNT_AGENTE && x.ANNO.ToString() == p.annoCorrente.ToString() && (DateTime.Parse(x.DTT_DOC) >= DateTime.Parse(p.dataInizioCorrente)) && (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineCorrente)) && x.CSG_DOC == "FT").ToList();
+            List<Storico> aCorrNeg = Storico.Where((x) => x.CKY_CNT_AGENTE.ToString() == item.CKY_CNT_AGENTE && x.ANNO.ToString() == p.annoCorrente.ToString() && (DateTime.Parse(x.DTT_DOC) >= DateTime.Parse(p.dataInizioCorrente)) && (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineCorrente)) && x.CSG_DOC != "FT").ToList();
+
+            double vendutoCorrente = aCorrPos.Sum(x => (Double.Parse(x.NMP_VALMOV_UM1))) - aCorrNeg.Sum(x => (Double.Parse(x.NMP_VALMOV_UM1)));
+            double provvigioneCorrente = aCorrPos.Sum(x => (Double.Parse(x.NMP_VALPRO_UM1))) - aCorrNeg.Sum(x => (Double.Parse(x.NMP_VALPRO_UM1)));
+
+            List<Storico> aRifPos = Storico.Where((x) => x.CKY_CNT_AGENTE.ToString() == item.CKY_CNT_AGENTE && x.ANNO.ToString() == p.annoRiferimento.ToString() && (DateTime.Parse(x.DTT_DOC) >= DateTime.Parse(p.dataInizioRiferimento)) && (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineRiferimento)) && x.CSG_DOC == "FT").ToList();
+            List<Storico> aRifNeg = Storico.Where((x) => x.CKY_CNT_AGENTE.ToString() == item.CKY_CNT_AGENTE && x.ANNO.ToString() == p.annoRiferimento.ToString() && (DateTime.Parse(x.DTT_DOC) >= DateTime.Parse(p.dataInizioRiferimento)) && (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineRiferimento)) && x.CSG_DOC != "FT").ToList();
+
+            double vendutoRiferimento = aRifPos.Sum(x => (Double.Parse(x.NMP_VALMOV_UM1))) - aRifNeg.Sum(x => (Double.Parse(x.NMP_VALMOV_UM1)));
+            //double provvigioneRiferimento = aRifPos.Sum(x => (Double.Parse(x.NMP_VALPRO_UM1))) - aRifNeg.Sum(x => (Double.Parse(x.NMP_VALPRO_UM1)));
+
+            res.ID = item.CKY_CNT_AGENTE;
+            res.Nome = item.NomeAgente;
+            res.VendutoCorrente = vendutoCorrente;
+            res.VendutoRiferimento = vendutoRiferimento;
+            res.ProvvigioneCorrente = provvigioneCorrente;
+            res.Delta = vendutoCorrente - vendutoRiferimento;
+            res.DeltaPercent = res.Delta / vendutoRiferimento;
+            res.VendutoSellout = sellout;
+            res.ProvvigioneSellout = sellout * 0.02;
+
+
+            res.VendutoCorrenteString = res.VendutoCorrente.ToString("C", CultureInfo.CurrentCulture);
+            res.VendutoRiferimentoString = res.VendutoRiferimento.ToString("C", CultureInfo.CurrentCulture);
+            res.ProvvigioneCorrenteString = res.ProvvigioneCorrente.ToString("C", CultureInfo.CurrentCulture);
+            res.VendutoSelloutString = res.VendutoSellout.ToString("C", CultureInfo.CurrentCulture);
+            res.ProvvigioneSelloutString = res.ProvvigioneSellout.ToString("C", CultureInfo.CurrentCulture);
+            res.ProvvigioneCorrenteString = res.ProvvigioneCorrente.ToString("C", CultureInfo.CurrentCulture);
+            res.DeltaString = res.Delta.ToString("C", CultureInfo.CurrentCulture);
+            res.DeltaPercentString = String.Format("{0:P2}", res.DeltaPercent);
+
+            //return new AgenteRiepilogo() { ID = item.CKY_CNT_AGENTE, Nome = item.NomeAgente, VendutoCorrente = vendutoCorrente, VendutoRiferimento = vendutoRiferimento };
+            return res;
+
+        }
+
+        public IList<AgenteRiepilogo> AgentiRiepilogo => _agentiRiepilogo2;  //elemento pubblico che da modo di visualizzare un elemento privato
     }
 }
