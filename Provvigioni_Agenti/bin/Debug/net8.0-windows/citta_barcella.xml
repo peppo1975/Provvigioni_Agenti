@@ -152,4 +152,32 @@
     <Comune>Rovato</Comune>
     <Regione>LOMBARDIA</Regione>
   </Citta>
+  <Citta>
+    <Comune>Bergamo</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Cremona</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Monza Brianza</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Milano</Comune>
+    <Regione>LOMBARDIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Novara</Comune>
+    <Regione>PIEMONTE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Venezia</Comune>
+    <Regione>VENETO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>Reggio Emilia</Comune>
+    <Regione>EMILIA ROMAGNA</Regione>
+  </Citta>
 </ArrayOfCitta>

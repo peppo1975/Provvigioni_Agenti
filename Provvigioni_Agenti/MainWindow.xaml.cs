@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Xml.Serialization;
+using DocumentFormat.OpenXml.Drawing;
 using Provvigioni_Agenti.Controllers;
 using Provvigioni_Agenti.Models;
 
@@ -215,6 +216,9 @@ namespace Provvigioni_Agenti
             categorieStatisticheTotaleProgressivo = elenco.CategorieStatitischeTotaleProgressivo;
 
 
+            double total = trs.Trasferiti.Sum(x => x.ValoreEuro);
+
+            trs.Trasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = total.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = total });
 
             dataGridTrasferiti.ItemsSource = trs.Trasferiti;
             dataGridTrasferiti.Columns[1].CellStyle = HorizontalCenterStyle;
@@ -507,7 +511,7 @@ namespace Provvigioni_Agenti
                 if (RowIndex >= 0)
                 {
 
-                    if (agente.ID.Contains('#'))
+                    if (agente.ID.Contains('#')) // TUTTI GLI AGENTI
                     {
                         // legge xml
                         List<Agente> cc = new List<Agente>();
@@ -519,26 +523,43 @@ namespace Provvigioni_Agenti
 
                         var g = AgentiRiepilogo[RowIndex];
 
-                        var Regione = cc.Find(x=> x.ID == g.ID).Regione.ToList();
+                        var Regione = cc.Find(x => x.ID == g.ID).Regione.ToList();
 
                         // TRASFERITI --------------------------------------------
                         elencoTrasferiti = General.directoryTrasferiti(annoCorrenteTxt);
                         trs = new TrasferitiService(Regione, annoCorrenteTxt, trimestre, elencoTrasferiti);
                         // ------------------------------------------------------
 
+                        double total = trs.Trasferiti.Sum(x => x.ValoreEuro);
+
+                        trs.Trasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = total.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = total });
 
                         dataGridTrasferiti.ItemsSource = trs.Trasferiti;
+
                         dataGridTrasferiti.Columns[1].CellStyle = HorizontalCenterStyle;
 
                         dataGridTrasferiti.Columns[0].Width = 190;
+
                         dataGridTrasferiti.Columns[1].Width = 80;
 
                         dataGridTrasferiti.Columns[2].Visibility = Visibility.Collapsed;
 
+                        int nRows = dataGridTrasferiti.Items.Count;
+
+                       // dataGridTrasferiti.SelectedIndex = nRows - 2;
+
+                      //  dataGridTrasferiti.CurrentCell = new DataGridCellInfo(dataGridTrasferiti.Items[nRows - 2], dataGridTrasferiti.Columns[1]);
+
+                       // dataGridTrasferiti.SelectedCells.Add(dataGridTrasferiti.CurrentCell);
+
+                        
+
+                 //       dataGridTrasferiti.SelectedCells.FontWeight = FontWeights.Bold;
+
                         return;
                     }
 
-                        ClienteResponseDatagrid customer = (ClienteResponseDatagrid)dataGridVendite.SelectedItem;
+                    ClienteResponseDatagrid customer = (ClienteResponseDatagrid)dataGridVendite.SelectedItem;
                     string idCliente = customer.IdCliente;
                     string nomeCliente = customer.NomeCliente;
 
