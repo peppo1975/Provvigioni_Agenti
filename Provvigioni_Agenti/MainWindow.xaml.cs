@@ -257,21 +257,8 @@ namespace Provvigioni_Agenti
 
             Console.WriteLine(dataGridVendite.Items.Count);
 
-            for (int i = 0; i < dataGridVendite.Items.Count; i++)
-            {
-                try
-                {
-                    Console.WriteLine(((ClienteResponseDatagrid)dataGridVendite.Items[i]).Delta);
-                    double d = Double.Parse(((ClienteResponseDatagrid)dataGridVendite.Items[i]).Delta.Replace(" €", ""));
-
-                    if (d < 0)
-                    {
-
-                    }
-                }
-                catch (Exception ex) { }
-
-            }
+            //   var LastRow = dataGridVendite.Items[dataGridVendite.Items.Count - 1];
+            // LastRow.Font.Bold = true;
 
 
             corr.Text = annoCorrenteTxt;
@@ -546,15 +533,15 @@ namespace Provvigioni_Agenti
 
                         int nRows = dataGridTrasferiti.Items.Count;
 
-                       // dataGridTrasferiti.SelectedIndex = nRows - 2;
+                        // dataGridTrasferiti.SelectedIndex = nRows - 2;
 
-                      //  dataGridTrasferiti.CurrentCell = new DataGridCellInfo(dataGridTrasferiti.Items[nRows - 2], dataGridTrasferiti.Columns[1]);
+                        //  dataGridTrasferiti.CurrentCell = new DataGridCellInfo(dataGridTrasferiti.Items[nRows - 2], dataGridTrasferiti.Columns[1]);
 
-                       // dataGridTrasferiti.SelectedCells.Add(dataGridTrasferiti.CurrentCell);
+                        // dataGridTrasferiti.SelectedCells.Add(dataGridTrasferiti.CurrentCell);
 
-                        
 
-                 //       dataGridTrasferiti.SelectedCells.FontWeight = FontWeights.Bold;
+
+                        //       dataGridTrasferiti.SelectedCells.FontWeight = FontWeights.Bold;
 
                         return;
                     }
@@ -566,19 +553,25 @@ namespace Provvigioni_Agenti
                     nomeClienteCategoriaLabel.Text = nomeCliente;
 
                     var clickCliente = clienteResponse.Where(x => x.IdCliente == idCliente).ToArray()[0];
-                    List<CategoriaStatisticaDettaglio> cstdL = new List<CategoriaStatisticaDettaglio>();
+                    //List<CategoriaStatisticaDettaglio> cstdL = new List<CategoriaStatisticaDettaglio>();
+                    List<GruppoStatistico> cstdL = new List<GruppoStatistico>();
 
-                    foreach (var item in clickCliente.CategoriaStatistica)
+                    //foreach (var item in clickCliente.CategoriaStatistica)
+                    foreach (var item in clickCliente.GruppoStatisticoCorrente)
                     {
-                        cstdL.Add(new CategoriaStatisticaDettaglio() { Categoria = item.Categoria, ValoreCorrente = General.valuta(item.ValoreCorrente) });
+                        //cstdL.Add(new CategoriaStatisticaDettaglio() { Categoria = item.Categoria, ValoreCorrente = General.valuta(item.ValoreCorrente) });
+                        cstdL.Add(new GruppoStatistico() { CKY_MERC = item.CKY_MERC.Trim(' '), CDS_MERC = item.CDS_MERC.Trim(' '), ValoreString = item.Valore.ToString("C", CultureInfo.CurrentCulture) });
                     }
 
                     dataGridCategorieStatCliente.ItemsSource = cstdL;
 
-                    dataGridCategorieStatCliente.Columns[0].Width = 190;
-                    dataGridCategorieStatCliente.Columns[1].Width = 80;
+                    dataGridCategorieStatCliente.Columns[0].Width = 70;
+                    dataGridCategorieStatCliente.Columns[1].Width = 190;
 
-                    dataGridCategorieStatCliente.Columns[1].CellStyle = HorizontalCenterStyle;
+                    dataGridCategorieStatCliente.Columns[2].Visibility = Visibility.Collapsed;
+
+                    dataGridCategorieStatCliente.Columns[0].CellStyle = HorizontalCenterStyle;
+                    dataGridCategorieStatCliente.Columns[3].CellStyle = HorizontalCenterStyle;
                 }
                 else
                 {

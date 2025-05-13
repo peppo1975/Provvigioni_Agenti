@@ -388,7 +388,7 @@ namespace Provvigioni_Agenti.Controllers
             Dictionary<string, string> trimestri = new Dictionary<string, string>() { { "t_1", "TRIM-1" }, { "t_2", "TRIM-2" }, { "t_3", "TRIM-3" }, { "t_4", "TRIM-4" } };
             Dictionary<string, string> trimestriSuExcel = new Dictionary<string, string>() { { "t_1", "1° TRIM" }, { "t_2", "2° TRIM" }, { "t_3", "3° TRIM" }, { "t_4", "4° TRIM" } };
 
-            IList<ClienteResponse> clienteResponseFiltered = clienteResponse.Where(x => x.TotaleVenduto > 0 || x.totaleAnnoPrecedente > 0).ToList();
+            IList<ClienteResponse> clienteResponseFiltered = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList();
 
             string path = "../excelAgenti";
             string pathFile = $"{path}/{annoCorrente}-{trimestri[trimestre]}--{agente}.xlsx";
@@ -451,12 +451,12 @@ namespace Provvigioni_Agenti.Controllers
             foreach (ClienteResponse cliente in clienteResponseFiltered)
             {
                 double[] result = new double[2];
-                result = calcolaPercentuale(cliente.totaleAnnoPrecedente, cliente.TotaleVenduto);
+                result = calcolaPercentuale(cliente.TotaleVendutoRiferimento, cliente.TotaleVendutoCorrente);
 
                 worksheet.Cell(index, 1).Value = cliente.IdCliente;
                 worksheet.Cell(index, 2).Value = cliente.NomeCliente;
-                worksheet.Cell(index, 3).Value = cliente.totaleAnnoPrecedente;
-                worksheet.Cell(index, 4).Value = cliente.TotaleVenduto;
+                worksheet.Cell(index, 3).Value = cliente.TotaleVendutoRiferimento;
+                worksheet.Cell(index, 4).Value = cliente.TotaleVendutoCorrente;
                 worksheet.Cell(index, 5).Value = result[0];
                 worksheet.Cell(index, 6).Value = result[1]; // percentule
                 worksheet.Cell(index, 8).Value = cliente.ProvvigioneCorrente;
@@ -907,8 +907,12 @@ namespace Provvigioni_Agenti.Controllers
 
             }
 
-            index++;
-            index++;
+            index += 3;
+            worksheet.Cell(index, 2).Value = "SELL OUT";
+            worksheet.Cell(index, 2).Style.Font.FontSize = 20;
+            index += 2;
+
+
             foreach (AgenteRiepilogo cliente in AgentiRiepilogo)
             {
                 string id = cliente.ID;

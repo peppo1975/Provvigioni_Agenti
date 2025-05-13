@@ -24,8 +24,11 @@ namespace Provvigioni_Agenti.Models
         public string DTT_DOC { get; set; } //data
 
         public string CDS_CAT_STAT_ART { get; set; }
-        public string CategoriaMerce { get; set; }
         public string CSG_DOC { get; set; }
+
+        public string CKY_MERC {  get; set; }
+
+        public string CDS_MERC { get;set; }
 
     }
     public class StoricoTotal

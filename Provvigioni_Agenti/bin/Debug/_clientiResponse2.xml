@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClienteResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClienteResponse>
+    <IdCliente>201.18109</IdCliente>
+    <NomeCliente>AGENERGY S.R.L.S.                                           </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>50.63000000000001</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>1265.85</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>1265.85</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.17748</IdCliente>
+    <NomeCliente>BE ESCO SPA                                                 </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.21229</IdCliente>
+    <NomeCliente>CAMBIELLI S.P.A.                                            </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>808.1999999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>808.1999999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>808.1999999999999</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>808.1999999999999</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>32.339999999999996</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.17864</IdCliente>
+    <NomeCliente>COMOLI FERRARI &amp; C. SPA                                     </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.20441</IdCliente>
+    <NomeCliente>CONVOI MULTIUTILITY ITALIA SRL                              </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19387</IdCliente>
+    <NomeCliente>ENERGY DUXON SRL                                            </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18937</IdCliente>
+    <NomeCliente>ENITALIA GROUP S.R.L.                                       </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>33.2</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>830.1700000000001</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>830.1700000000001</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19938</IdCliente>
+    <NomeCliente>GEGROUP SRL                                                 </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18076</IdCliente>
+    <NomeCliente>GESCO S.P.A. UNIPERSONALE                                   </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>57803.119999999995</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>57803.119999999995</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>54132.53</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>54132.53</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>2165.31</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>10.8</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>270.11</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>270.11</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.20500</IdCliente>
+    <NomeCliente>I.F.EL. SRL                                                 </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>371.37</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>0</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>371.37</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>0</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>371.37</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>371.37</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>11.14</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.21341</IdCliente>
+    <NomeCliente>IES ENGINEERING SRL                                         </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>15.610000000000003</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>390.18</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>390.18</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.20588</IdCliente>
+    <NomeCliente>IES SOLARE SRL                                              </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>2236.37</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>2236.37</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>2236.37</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>2236.37</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>89.47</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>59.93999999999998</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>1498.15</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>1498.15</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18976</IdCliente>
+    <NomeCliente>L'ELETTRICA S.P.A.                                          </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>6271.01</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>1268.42</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>6271.01</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>1268.42</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>7539.430000000001</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>7539.430000000001</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>125.20000000000002</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>142.84000000000003</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>3571.129999999999</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>3571.129999999999</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18714</IdCliente>
+    <NomeCliente>MARINI-PANDOLFI S.P.A.                                      </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>15199.539999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>34150.57999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>514             </CKY_MERC>
+        <CDS_MERC>GB SOLAR                                </CDS_MERC>
+        <Valore>409.32</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <Valore>1400</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>15199.539999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>34150.57999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>514             </CKY_MERC>
+        <CDS_MERC>GB SOLAR                                </CDS_MERC>
+        <Valore>409.32</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <Valore>1400</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>51159.43999999999</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>51159.43999999999</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>1990.33</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>4089.679999999999</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>103460.24000000003</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>103460.24000000003</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18766</IdCliente>
+    <NomeCliente>MASTER ELECTRIC SRL                                         </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.15483</IdCliente>
+    <NomeCliente>MEF S.R.L.                                                  </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>4980.72</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>4980.72</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>4980.72</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>4980.72</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>199.23</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>105.03999999999999</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>2626.4099999999994</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>2626.4099999999994</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.16210</IdCliente>
+    <NomeCliente>NWG S.p.A.                                                  </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>688.5700000000007</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>17215.840000000015</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>17215.840000000015</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18785</IdCliente>
+    <NomeCliente>SOLARYS I.S. S.R.L.                                         </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>511             </CKY_MERC>
+        <CDS_MERC>CONTERRA                                </CDS_MERC>
+        <Valore>0</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>511             </CKY_MERC>
+        <CDS_MERC>CONTERRA                                </CDS_MERC>
+        <Valore>0</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.17763</IdCliente>
+    <NomeCliente>SOLSOLIS SRLS                                               </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>1472.98</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>12296.810000000001</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>1472.98</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>12296.810000000001</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>13769.79</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>13769.79</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>550.81</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>399.95000000000005</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>9998.14</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>9998.14</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.16223</IdCliente>
+    <NomeCliente>SONEPAR ITALIA S.P.A.                                       </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>212848.42</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>212848.42</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>212848.42</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>212848.42</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>2128.47</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18806</IdCliente>
+    <NomeCliente>SUNPRIME DEVELOPMENT SRL                                    </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18379</IdCliente>
+    <NomeCliente>Toscana Componenti Energetici S.R.L.                        </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>5610.099999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>5610.099999999999</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>5610.099999999999</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>5610.099999999999</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>224.43</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>78.65999999999998</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>1965.8000000000002</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>1965.8000000000002</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19474</IdCliente>
+    <NomeCliente>UNOENERGY GREEN SOLUTIONS SPA                               </NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>6305.919999999998</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>6237.91</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoCorrente>
+    <GruppoStatisticoRiferimento>
+      <GruppoStatistico>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <Valore>6305.919999999998</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+      <GruppoStatistico>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <Valore>6237.91</Valore>
+        <ValoreString />
+      </GruppoStatistico>
+    </GruppoStatisticoRiferimento>
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <TotaleVendutoCorrente>12543.829999999996</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>12543.829999999996</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>501.78999999999996</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>552.2400000000002</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>13805.410000000003</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>13805.410000000003</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+</ArrayOfClienteResponse>

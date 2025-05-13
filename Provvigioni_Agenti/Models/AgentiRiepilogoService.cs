@@ -25,7 +25,7 @@ namespace Provvigioni_Agenti.Models
             _agentiRiepilogo = new List<AgenteRiepilogo>();
             _agentiRiepilogo2 = new List<AgenteRiepilogo>();
 
-        https://josipmisko.com/posts/c-sharp-unique-list
+            https://josipmisko.com/posts/c-sharp-unique-list
             var agentiId = Storico.DistinctBy(x => x.CKY_CNT_AGENTE).ToList();
 
             foreach (var item in agentiId)

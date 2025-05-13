@@ -12,33 +12,32 @@ namespace Provvigioni_Agenti.Models
 
     public class ClienteResponse
     {
-        public string IdCliente { get; set; }
-        public string NomeCliente { get; set; }
-
-        public double RepSolare { get; set; } = 0;
-        public double QuadriFV { get; set; } = 0;
-        public double Commercializzato { get; set; } = 0;
+        public string IdCliente { get; set; } = string.Empty;
+        public string NomeCliente { get; set; } = string.Empty;
 
         public List<CategoriaStatistica> CategoriaStatisticaProgressiva { get; set; } = new List<CategoriaStatistica>();
         public List<CategoriaStatistica> CategoriaStatistica { get; set; } = new List<CategoriaStatistica>();
 
-        //public double ProgessivoRepSolare { get; set; } = 0;
-        //public double ProgessivoQuadriFV { get; set; } = 0;
-        //public double ProgessivoCommercializzato { get; set; } = 0;
+        public List<GruppoStatistico> GruppoStatisticoCorrente { get; set; } = new List<GruppoStatistico>();
+        public List<GruppoStatistico> GruppoStatisticoRiferimento { get; set; } = new List<GruppoStatistico>();
+        public List<GruppoStatistico> GruppoStatisticoCorrenteProgressivo { get; set; } = new List<GruppoStatistico>();
+        public List<GruppoStatistico> GruppoStatisticoRiferimentoProgressivo { get; set; } = new List<GruppoStatistico>();
 
-
-        public double TotaleVenduto { get; set; } = 0;
+        public double TotaleVendutoCorrente { get; set; } = 0;
+        public double TotaleVendutoCorrenteProgressivo { get; set; } = 0;
         public double ProvvigioneCorrente { get; set; } = 0;
         public double ProvvigioneRiferimento { get; set; } = 0;
         public double Percentuale { get; set; } = 0;
-        public double totaleAnnoPrecedente { get; set; } = 0;
+        public double TotaleVendutoRiferimento { get; set; } = 0;
+        public double TotaleVendutoRiferimentoProgressivo { get; set; } = 0;
     }
+
 
 
 
     public class CategoriaStatistica
     {
-        public string Categoria { get; set; }
+        public string Categoria { get; set; } = string.Empty;
         public double ValoreCorrente { get; set; } = 0;
         public double ValoreRiferimento { get; set; } = 0;
     }
@@ -46,15 +45,15 @@ namespace Provvigioni_Agenti.Models
 
     public class CategoriaStatisticaDettaglio
     {
-        public string Categoria { get; set; }
-        public string ValoreCorrente { get; set; }
-        public string ValoreRiferimento { get; set; }
+        public string Categoria { get; set; } = string.Empty;
+        public string ValoreCorrente { get; set; } = string.Empty;
+        public string ValoreRiferimento { get; set; } = string.Empty;
     }
 
     public class ClienteResponseDatagrid
     {
-        public string IdCliente { get; set; }
-        public string NomeCliente { get; set; }
+        public string IdCliente { get; set; } = string.Empty;
+        public string NomeCliente { get; set; } = string.Empty;
         public string totaleAnnoPrecedente { get; set; } = "";
         public string TotaleVenduto { get; set; } = "";
 
@@ -75,5 +74,25 @@ namespace Provvigioni_Agenti.Models
         public double TotaleVendutoRiferimento { get; set; } = 0; // anno precedente
         public double ProgressivoRiferimento { get; set; } = 0;
         public double ProgressivoCorrente { get; set; } = 0;
+    }
+
+
+    public class EstrapolaDatiCliente
+    {
+        public double totaleVenduto { get; set; } = 0;
+        public double totaleVendutoProgressivo { get; set; } = 0;
+        public double provvigione { get; set; } = 0;
+
+        public List<GruppoStatistico> GruppoStatistico { get; set; } = new List<GruppoStatistico>();
+        public List<GruppoStatistico> GruppoStatisticoProgressivo { get; set; } = new List<GruppoStatistico>();
+    }
+
+    public class GruppoStatistico
+    {
+        public string CKY_MERC { get; set; } = string.Empty;
+        public string CDS_MERC { get; set; } = string.Empty;
+
+        public double Valore { get; set; } = 0;
+        public string ValoreString { get; set; } =string.Empty;
     }
 }
