@@ -9,6 +9,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>1265.85</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>1.265,85 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>1265.85</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>1.265,85 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -26,6 +46,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -44,7 +84,7 @@
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>808.1999999999999</Valore>
-        <ValoreString />
+        <ValoreString>808,20 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -52,11 +92,31 @@
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>808.1999999999999</Valore>
-        <ValoreString />
+        <ValoreString>808,20 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>808.1999999999999</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>808,20 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>808.1999999999999</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>808,20 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>808.1999999999999</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>808.1999999999999</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>32.339999999999996</ProvvigioneCorrente>
@@ -74,6 +134,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -91,6 +171,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -108,6 +208,42 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -125,6 +261,42 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>830.1700000000001</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>830,17 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>511             </CKY_MERC>
+        <CDS_MERC>CONTERRA                                </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>830.1700000000001</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>830,17 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>511             </CKY_MERC>
+        <CDS_MERC>CONTERRA                                </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -142,6 +314,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -160,7 +352,7 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>57803.119999999995</Valore>
-        <ValoreString />
+        <ValoreString>57.803,12 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -168,11 +360,31 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>57803.119999999995</Valore>
-        <ValoreString />
+        <ValoreString>57.803,12 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>270.11</ValoreRiferimento>
+        <ValoreCorrente>57803.119999999995</ValoreCorrente>
+        <ValoreRiferimentoString>270,11 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>57.803,12 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>270.11</ValoreRiferimento>
+        <ValoreCorrente>57803.119999999995</ValoreCorrente>
+        <ValoreRiferimentoString>270,11 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>57.803,12 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>54132.53</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>54132.53</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>2165.31</ProvvigioneCorrente>
@@ -191,13 +403,13 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>371.37</Valore>
-        <ValoreString />
+        <ValoreString>371,37 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>0</Valore>
-        <ValoreString />
+        <ValoreString>0,00 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -205,17 +417,53 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>371.37</Valore>
-        <ValoreString />
+        <ValoreString>371,37 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>0</Valore>
-        <ValoreString />
+        <ValoreString>0,00 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>371.37</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>371,37 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>0,00 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>371.37</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>371,37 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>0,00 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>371.37</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>371.37</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>11.14</ProvvigioneCorrente>
@@ -233,6 +481,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>390.18</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>390,18 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>390.18</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>390,18 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -251,7 +519,7 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>2236.37</Valore>
-        <ValoreString />
+        <ValoreString>2.236,37 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -259,11 +527,31 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>2236.37</Valore>
-        <ValoreString />
+        <ValoreString>2.236,37 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>1498.15</ValoreRiferimento>
+        <ValoreCorrente>2236.37</ValoreCorrente>
+        <ValoreRiferimentoString>1.498,15 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>2.236,37 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>1498.15</ValoreRiferimento>
+        <ValoreCorrente>2236.37</ValoreCorrente>
+        <ValoreRiferimentoString>1.498,15 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>2.236,37 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>2236.37</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>2236.37</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>89.47</ProvvigioneCorrente>
@@ -282,13 +570,13 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>6271.01</Valore>
-        <ValoreString />
+        <ValoreString>6.271,01 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>1268.42</Valore>
-        <ValoreString />
+        <ValoreString>1.268,42 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -296,17 +584,53 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>6271.01</Valore>
-        <ValoreString />
+        <ValoreString>6.271,01 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>1268.42</Valore>
-        <ValoreString />
+        <ValoreString>1.268,42 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>3571.129999999999</ValoreRiferimento>
+        <ValoreCorrente>6271.01</ValoreCorrente>
+        <ValoreRiferimentoString>3.571,13 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>6.271,01 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>1268.42</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>1.268,42 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>3571.129999999999</ValoreRiferimento>
+        <ValoreCorrente>6271.01</ValoreCorrente>
+        <ValoreRiferimentoString>3.571,13 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>6.271,01 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>1268.42</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>1.268,42 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>7539.430000000001</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>7539.430000000001</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>125.20000000000002</ProvvigioneCorrente>
@@ -325,25 +649,25 @@
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>15199.539999999999</Valore>
-        <ValoreString />
+        <ValoreString>15.199,54 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>34150.57999999999</Valore>
-        <ValoreString />
+        <ValoreString>34.150,58 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>514             </CKY_MERC>
         <CDS_MERC>GB SOLAR                                </CDS_MERC>
         <Valore>409.32</Valore>
-        <ValoreString />
+        <ValoreString>409,32 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>600             </CKY_MERC>
         <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
         <Valore>1400</Valore>
-        <ValoreString />
+        <ValoreString>1.400,00 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -351,29 +675,113 @@
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>15199.539999999999</Valore>
-        <ValoreString />
+        <ValoreString>15.199,54 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>34150.57999999999</Valore>
-        <ValoreString />
+        <ValoreString>34.150,58 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>514             </CKY_MERC>
         <CDS_MERC>GB SOLAR                                </CDS_MERC>
         <Valore>409.32</Valore>
-        <ValoreString />
+        <ValoreString>409,32 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>600             </CKY_MERC>
         <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
         <Valore>1400</Valore>
-        <ValoreString />
+        <ValoreString>1.400,00 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>99710.81000000001</ValoreRiferimento>
+        <ValoreCorrente>34150.57999999999</ValoreCorrente>
+        <ValoreRiferimentoString>99.710,81 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>34.150,58 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>3349.4300000000003</ValoreRiferimento>
+        <ValoreCorrente>15199.539999999999</ValoreCorrente>
+        <ValoreRiferimentoString>3.349,43 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>15.199,54 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <ValoreRiferimento>400</ValoreRiferimento>
+        <ValoreCorrente>1400</ValoreCorrente>
+        <ValoreRiferimentoString>400,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>1.400,00 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>513             </CKY_MERC>
+        <CDS_MERC>INTERRA                                 </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>514             </CKY_MERC>
+        <CDS_MERC>GB SOLAR                                </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>409.32</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>409,32 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>99710.81000000001</ValoreRiferimento>
+        <ValoreCorrente>34150.57999999999</ValoreCorrente>
+        <ValoreRiferimentoString>99.710,81 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>34.150,58 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>3349.4300000000003</ValoreRiferimento>
+        <ValoreCorrente>15199.539999999999</ValoreCorrente>
+        <ValoreRiferimentoString>3.349,43 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>15.199,54 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <ValoreRiferimento>400</ValoreRiferimento>
+        <ValoreCorrente>1400</ValoreCorrente>
+        <ValoreRiferimentoString>400,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>1.400,00 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>513             </CKY_MERC>
+        <CDS_MERC>INTERRA                                 </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>514             </CKY_MERC>
+        <CDS_MERC>GB SOLAR                                </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>409.32</ValoreCorrente>
+        <ValoreRiferimentoString />
+        <ValoreCorrenteString>409,32 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>51159.43999999999</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>51159.43999999999</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>1990.33</ProvvigioneCorrente>
@@ -391,6 +799,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -409,7 +837,7 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>4980.72</Valore>
-        <ValoreString />
+        <ValoreString>4.980,72 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -417,11 +845,31 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>4980.72</Valore>
-        <ValoreString />
+        <ValoreString>4.980,72 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>2626.4099999999994</ValoreRiferimento>
+        <ValoreCorrente>4980.72</ValoreCorrente>
+        <ValoreRiferimentoString>2.626,41 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>4.980,72 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>2626.4099999999994</ValoreRiferimento>
+        <ValoreCorrente>4980.72</ValoreCorrente>
+        <ValoreRiferimentoString>2.626,41 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>4.980,72 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>4980.72</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>4980.72</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>199.23</ProvvigioneCorrente>
@@ -439,6 +887,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>19479.830000000013</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>19.479,83 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>19479.830000000013</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>19.479,83 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -457,7 +925,7 @@
         <CKY_MERC>511             </CKY_MERC>
         <CDS_MERC>CONTERRA                                </CDS_MERC>
         <Valore>0</Valore>
-        <ValoreString />
+        <ValoreString>0,00 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -465,11 +933,47 @@
         <CKY_MERC>511             </CKY_MERC>
         <CDS_MERC>CONTERRA                                </CDS_MERC>
         <Valore>0</Valore>
-        <ValoreString />
+        <ValoreString>0,00 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>511             </CKY_MERC>
+        <CDS_MERC>CONTERRA                                </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>0,00 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>511             </CKY_MERC>
+        <CDS_MERC>CONTERRA                                </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>0,00 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -488,13 +992,13 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>1472.98</Valore>
-        <ValoreString />
+        <ValoreString>1.472,98 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>12296.810000000001</Valore>
-        <ValoreString />
+        <ValoreString>12.296,81 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -502,17 +1006,53 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>1472.98</Valore>
-        <ValoreString />
+        <ValoreString>1.472,98 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>12296.810000000001</Valore>
-        <ValoreString />
+        <ValoreString>12.296,81 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>3924.86</ValoreRiferimento>
+        <ValoreCorrente>1472.98</ValoreCorrente>
+        <ValoreRiferimentoString>3.924,86 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>1.472,98 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>6073.28</ValoreRiferimento>
+        <ValoreCorrente>12296.810000000001</ValoreCorrente>
+        <ValoreRiferimentoString>6.073,28 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>12.296,81 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>3924.86</ValoreRiferimento>
+        <ValoreCorrente>1472.98</ValoreCorrente>
+        <ValoreRiferimentoString>3.924,86 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>1.472,98 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>6073.28</ValoreRiferimento>
+        <ValoreCorrente>12296.810000000001</ValoreCorrente>
+        <ValoreRiferimentoString>6.073,28 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>12.296,81 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>13769.79</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>13769.79</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>550.81</ProvvigioneCorrente>
@@ -531,7 +1071,7 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>212848.42</Valore>
-        <ValoreString />
+        <ValoreString>212.848,42 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -539,11 +1079,31 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>212848.42</Valore>
-        <ValoreString />
+        <ValoreString>212.848,42 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>212848.42</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>212.848,42 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>212848.42</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>212.848,42 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>212848.42</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>212848.42</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>2128.47</ProvvigioneCorrente>
@@ -561,6 +1121,26 @@
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>0</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>0,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
@@ -579,7 +1159,7 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>5610.099999999999</Valore>
-        <ValoreString />
+        <ValoreString>5.610,10 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -587,11 +1167,31 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>5610.099999999999</Valore>
-        <ValoreString />
+        <ValoreString>5.610,10 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>1965.8000000000002</ValoreRiferimento>
+        <ValoreCorrente>5610.099999999999</ValoreCorrente>
+        <ValoreRiferimentoString>1.965,80 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>5.610,10 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>1965.8000000000002</ValoreRiferimento>
+        <ValoreCorrente>5610.099999999999</ValoreCorrente>
+        <ValoreRiferimentoString>1.965,80 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>5.610,10 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>5610.099999999999</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>5610.099999999999</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>224.43</ProvvigioneCorrente>
@@ -610,13 +1210,13 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>6305.919999999998</Valore>
-        <ValoreString />
+        <ValoreString>6.305,92 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>6237.91</Valore>
-        <ValoreString />
+        <ValoreString>6.237,91 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoCorrente>
     <GruppoStatisticoRiferimento>
@@ -624,17 +1224,69 @@
         <CKY_MERC>500             </CKY_MERC>
         <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
         <Valore>6305.919999999998</Valore>
-        <ValoreString />
+        <ValoreString>6.305,92 €</ValoreString>
       </GruppoStatistico>
       <GruppoStatistico>
         <CKY_MERC>503             </CKY_MERC>
         <CDS_MERC>QUADRI                                  </CDS_MERC>
         <Valore>6237.91</Valore>
-        <ValoreString />
+        <ValoreString>6.237,91 €</ValoreString>
       </GruppoStatistico>
     </GruppoStatisticoRiferimento>
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>8402.759999999997</ValoreRiferimento>
+        <ValoreCorrente>6305.919999999998</ValoreCorrente>
+        <ValoreRiferimentoString>8.402,76 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>6.305,92 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>5002.65</ValoreRiferimento>
+        <ValoreCorrente>6237.91</ValoreCorrente>
+        <ValoreRiferimentoString>5.002,65 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>6.237,91 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <ValoreRiferimento>400</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>400,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridProgressivo>
+    <GruppoStatisticoDataGridTrimestre>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>500             </CKY_MERC>
+        <CDS_MERC>STRUTTURE FTV                           </CDS_MERC>
+        <ValoreRiferimento>8402.759999999997</ValoreRiferimento>
+        <ValoreCorrente>6305.919999999998</ValoreCorrente>
+        <ValoreRiferimentoString>8.402,76 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>6.305,92 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>503             </CKY_MERC>
+        <CDS_MERC>QUADRI                                  </CDS_MERC>
+        <ValoreRiferimento>5002.65</ValoreRiferimento>
+        <ValoreCorrente>6237.91</ValoreCorrente>
+        <ValoreRiferimentoString>5.002,65 €</ValoreRiferimentoString>
+        <ValoreCorrenteString>6.237,91 €</ValoreCorrenteString>
+      </GruppoStatisticoDataGrid>
+      <GruppoStatisticoDataGrid>
+        <CKY_MERC>600             </CKY_MERC>
+        <CDS_MERC>SERVIZI A CLIENTI                       </CDS_MERC>
+        <ValoreRiferimento>400</ValoreRiferimento>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimentoString>400,00 €</ValoreRiferimentoString>
+        <ValoreCorrenteString />
+      </GruppoStatisticoDataGrid>
+    </GruppoStatisticoDataGridTrimestre>
     <TotaleVendutoCorrente>12543.829999999996</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>12543.829999999996</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>501.78999999999996</ProvvigioneCorrente>

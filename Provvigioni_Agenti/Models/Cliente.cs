@@ -23,6 +23,9 @@ namespace Provvigioni_Agenti.Models
         public List<GruppoStatistico> GruppoStatisticoCorrenteProgressivo { get; set; } = new List<GruppoStatistico>();
         public List<GruppoStatistico> GruppoStatisticoRiferimentoProgressivo { get; set; } = new List<GruppoStatistico>();
 
+        public List<GruppoStatisticoDataGrid> GruppoStatisticoDataGridProgressivo { get; set; } = new List<GruppoStatisticoDataGrid>();
+        public List<GruppoStatisticoDataGrid> GruppoStatisticoDataGridTrimestre { get; set; } = new List<GruppoStatisticoDataGrid>();
+
         public double TotaleVendutoCorrente { get; set; } = 0;
         public double TotaleVendutoCorrenteProgressivo { get; set; } = 0;
         public double ProvvigioneCorrente { get; set; } = 0;
@@ -83,7 +86,7 @@ namespace Provvigioni_Agenti.Models
         public double totaleVendutoProgressivo { get; set; } = 0;
         public double provvigione { get; set; } = 0;
 
-        public List<GruppoStatistico> GruppoStatistico { get; set; } = new List<GruppoStatistico>();
+        public List<GruppoStatistico> GruppoStatisticoTrimestre { get; set; } = new List<GruppoStatistico>();
         public List<GruppoStatistico> GruppoStatisticoProgressivo { get; set; } = new List<GruppoStatistico>();
     }
 
@@ -93,6 +96,19 @@ namespace Provvigioni_Agenti.Models
         public string CDS_MERC { get; set; } = string.Empty;
 
         public double Valore { get; set; } = 0;
-        public string ValoreString { get; set; } =string.Empty;
+        public string ValoreString { get; set; } = string.Empty;
+    }
+
+    public class GruppoStatisticoDataGrid
+    {
+        public string CKY_MERC { get; set; } = string.Empty;
+        public string CDS_MERC { get; set; } = string.Empty;
+
+
+        public double ValoreRiferimento { get; set; } = 0;
+        public double ValoreCorrente { get; set; } = 0;
+        public string ValoreRiferimentoString { get; set; } = string.Empty;
+        public string ValoreCorrenteString { get; set; } = string.Empty;
+
     }
 }

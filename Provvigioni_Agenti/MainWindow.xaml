@@ -26,6 +26,7 @@
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="310"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -195,8 +196,9 @@
 
 
 
-        <DataGrid Grid.Column="5" 
-                  Margin="5,5,0,5"  
+        <DataGrid Grid.Column="4" 
+                  Grid.ColumnSpan="2"
+                  Margin="5,5,5,5"  
                   Grid.Row="2"  
                   Grid.RowSpan="2"
                   x:Name="dataGridTrasferiti"
@@ -208,19 +210,32 @@
 
 
 
-        <StackPanel Grid.Column="5"
+        <StackPanel Grid.Column="4"
+                    Grid.ColumnSpan="2"
                     Grid.Row="4"
                     Grid.RowSpan="2"
-                     Margin="5,5,0,5"  
+                     Margin="5,5,5,5"  
                      Orientation="Vertical"
                     >
             <TextBlock x:Name="nomeClienteCategoriaLabel" FontSize="15" Text="---"  TextAlignment="Left" FontWeight="Bold" />
+            <TextBlock  FontSize="15" Text="progressivo"  TextAlignment="Left" FontWeight="Bold" />
             <DataGrid 
-                  x:Name="dataGridCategorieStatCliente"
+                  x:Name="dataGridGruppiStatisticiProgressivoCliente"
                   ScrollViewer.CanContentScroll="True" 
                   FontSize="13"
                   RowHeight="30" >
             </DataGrid>
+
+            <TextBlock  FontSize="15" Text="trimestre"  TextAlignment="Left" FontWeight="Bold" />
+            <DataGrid 
+                   x:Name="dataGridGruppiStatisticiTrimestreCliente"
+                   ScrollViewer.CanContentScroll="True" 
+                   FontSize="13"
+                   RowHeight="30" >
+            </DataGrid>
+
+
+
         </StackPanel>
 
 
@@ -275,16 +290,16 @@
         <Button Grid.Column="3" 
                 x:Name="creaExcelButton" 
                 Content="CREA EXCEL" 
-                HorizontalAlignment="Left" Width="160"  
-                Margin="319,110,0,0" 
+                HorizontalAlignment="Left" Width="130"  
+                Margin="328,83,0,0" 
                 Click="creaExcelButton_Click" RenderTransformOrigin="0.379,-2.992" Grid.Row="1" Height="30" VerticalAlignment="Top"/>
 
         <Button Grid.Column="3" 
               x:Name="directoryExcelFinale" Content="directory xlsx" Click="directoryExcelFinale_Click"
               HorizontalAlignment="Left" 
-              Width="86"  
+              Width="130"  
               Height="20"
-              Margin="484,117,0,0" 
+              Margin="328,120,0,0" 
               VerticalAlignment="Top" 
               RenderTransformOrigin="0.379,-2.992" 
               Grid.Row="1"/>

@@ -55,7 +55,7 @@ namespace Provvigioni_Agenti.Models
 
             // -------------------------------------------------------------------------
             var clientiID = Storico.DistinctBy(x => x.CKY_CNT).ToList();
-            IList<Storico> idGruppiMerceologici = Storico.DistinctBy(x => x.CKY_MERC).ToList();
+            IList<Storico> idGruppiMerceologici = Storico.DistinctBy(x => x.CKY_MERC).ToList(); // estrapolo tutti i gruppi merceologici nei 2 anni
             Storico2 = Storico;
             _clientiResponseDatagrid2 = new List<ClienteResponseDatagrid>();
 
@@ -295,7 +295,8 @@ namespace Provvigioni_Agenti.Models
         {
             ClienteResponse res = new ClienteResponse();
 
-
+            List<GruppoStatisticoDataGrid> gruppoStatisticoDataGridTrimestre = new List<GruppoStatisticoDataGrid>();
+            List<GruppoStatisticoDataGrid> gruppoStatisticoDataGridProgressivo = new List<GruppoStatisticoDataGrid>();
 
             IList<Storico> cliente = Storico2.Where(x => x.CKY_CNT == idCliente).ToList();
             IList<Storico> entrate = cliente.Where(x => x.CSG_DOC == "FT").ToList();
@@ -315,7 +316,7 @@ namespace Provvigioni_Agenti.Models
             res.TotaleVendutoCorrente = esvalCorr.totaleVenduto;
             res.TotaleVendutoCorrenteProgressivo = esvalCorr.totaleVendutoProgressivo;
             res.ProvvigioneCorrente = esvalCorr.provvigione;
-            res.GruppoStatisticoCorrente = esvalCorr.GruppoStatistico;
+            res.GruppoStatisticoCorrente = esvalCorr.GruppoStatisticoTrimestre;
 
 
             EstrapolaDatiCliente esvalRif = estraiValori(cliente, p.dataInizioRiferimento, p.dataFineRiferimento, p.annoRiferimento);
@@ -323,20 +324,56 @@ namespace Provvigioni_Agenti.Models
             res.TotaleVendutoRiferimento = esvalRif.totaleVenduto;
             res.TotaleVendutoRiferimentoProgressivo = esvalRif.totaleVendutoProgressivo;
             res.ProvvigioneRiferimento = esvalRif.provvigione;
-            res.GruppoStatisticoRiferimento = esvalCorr.GruppoStatistico;
+            res.GruppoStatisticoRiferimento = esvalCorr.GruppoStatisticoTrimestre;
 
+
+            foreach (var item in idGruppiMerceologici)
+            {
+                var grPrCorr = esvalCorr.GruppoStatisticoProgressivo.Find(x => x.CKY_MERC == item.CKY_MERC);
+                var grPrRif = esvalRif.GruppoStatisticoProgressivo.Find(x => x.CKY_MERC == item.CKY_MERC);
+
+                var grTrCorr = esvalCorr.GruppoStatisticoTrimestre.Find(x => x.CKY_MERC == item.CKY_MERC);
+                var grTrRif = esvalRif.GruppoStatisticoTrimestre.Find(x => x.CKY_MERC == item.CKY_MERC);
+
+                if (grPrCorr != null || grPrRif != null)
+                {
+                    gruppoStatisticoDataGridProgressivo.Add(new GruppoStatisticoDataGrid() // creo il prtogressivo gruppi statistici per il datagrid
+                    {
+                        CKY_MERC = item.CKY_MERC,
+                        CDS_MERC = item.CDS_MERC,
+                        ValoreCorrente = grPrCorr == null ? 0 : grPrCorr.Valore,
+                        ValoreRiferimento = grPrRif == null ? 0 : grPrRif.Valore,
+                        ValoreCorrenteString = grPrCorr == null ? "" : grPrCorr.Valore.ToString("C", CultureInfo.CurrentCulture),
+                        ValoreRiferimentoString = grPrRif == null ? "" : grPrRif.Valore.ToString("C", CultureInfo.CurrentCulture),
+                    });
+
+                    gruppoStatisticoDataGridTrimestre.Add(new GruppoStatisticoDataGrid() // creo il prtogressivo gruppi statistici per il datagrid
+                    {
+                        CKY_MERC = item.CKY_MERC,
+                        CDS_MERC = item.CDS_MERC,
+                        ValoreCorrente = grTrCorr == null ? 0 : grTrCorr.Valore,
+                        ValoreRiferimento = grTrRif == null ? 0 : grTrRif.Valore,
+                        ValoreCorrenteString = grTrCorr == null ? "" : grTrCorr.Valore.ToString("C", CultureInfo.CurrentCulture),
+                        ValoreRiferimentoString = grTrRif == null ? "" : grTrRif.Valore.ToString("C", CultureInfo.CurrentCulture),
+                    });
+                }
+            }
+
+            res.GruppoStatisticoDataGridProgressivo = gruppoStatisticoDataGridProgressivo;
+            res.GruppoStatisticoDataGridTrimestre = gruppoStatisticoDataGridTrimestre;
 
             return res;
         }
 
         private EstrapolaDatiCliente estraiValori(IList<Storico> clienteAll, string dataInizio, string dataFine, string anno)
         {
+            // viene estratto il trimestre il progressivo delle vendite e dei gruppi statistici
             EstrapolaDatiCliente res = new EstrapolaDatiCliente();
 
             IList<Storico> cliente = clienteAll.Where(x => x.ANNO == anno).ToList();
 
             IList<Storico> entrate = cliente.Where(x => x.CSG_DOC == "FT").ToList();
-            IList<Storico> entrateNot = cliente.Where(x => x.CSG_DOC != "FT").ToList();
+            IList<Storico> entrateNot = cliente.Where(x => x.CSG_DOC != "FT").ToList(); // vengono detratti dalle vendite
 
             IList<Storico> Progressivo = entrate.Where(x => (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(dataFine))).ToList();
             IList<Storico> Trimestre = Progressivo.Where(x => (DateTime.Parse(x.DTT_DOC) >= DateTime.Parse(dataInizio))).ToList();
@@ -355,15 +392,15 @@ namespace Provvigioni_Agenti.Models
             res.provvigione = provvigione;
 
 
-            var catStatId = cliente.DistinctBy(x => x.CKY_MERC).ToList();
+            var groupStatId = cliente.DistinctBy(x => x.CKY_MERC).ToList();
 
-            foreach (var cat in catStatId)
+            foreach (var cat in groupStatId)
             {
                 var allCat = Trimestre.Where(x => x.CKY_MERC == cat.CKY_MERC).ToList();
                 var allcatPos = allCat.Where(x => x.CSG_DOC == "FT");
                 var allcatNeg = allCat.Where(x => x.CSG_DOC != "FT");
-                double value = allcatPos.Sum(x => Double.Parse(x.NMP_VALMOV_UM1)) - allcatNeg.Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
-                res.GruppoStatistico.Add(new GruppoStatistico() { CKY_MERC = cat.CKY_MERC, CDS_MERC = cat.CDS_MERC, Valore = value });
+                double valueTrim = allcatPos.Sum(x => Double.Parse(x.NMP_VALMOV_UM1)) - allcatNeg.Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
+                res.GruppoStatisticoTrimestre.Add(new GruppoStatistico() { CKY_MERC = cat.CKY_MERC, CDS_MERC = cat.CDS_MERC, Valore = valueTrim, ValoreString = valueTrim.ToString("C", CultureInfo.CurrentCulture) });
 
 
 
@@ -371,7 +408,7 @@ namespace Provvigioni_Agenti.Models
                 var allcatProgrPos = allCatProg.Where(x => x.CSG_DOC == "FT");
                 var allcatProgrNeg = allCatProg.Where(x => x.CSG_DOC != "FT");
                 double valueProgr = allcatProgrPos.Sum(x => Double.Parse(x.NMP_VALMOV_UM1)) - allcatProgrNeg.Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
-                res.GruppoStatisticoProgressivo.Add(new GruppoStatistico() { CKY_MERC = cat.CKY_MERC, CDS_MERC = cat.CDS_MERC, Valore = value });
+                res.GruppoStatisticoProgressivo.Add(new GruppoStatistico() { CKY_MERC = cat.CKY_MERC, CDS_MERC = cat.CDS_MERC, Valore = valueProgr, ValoreString = valueProgr.ToString("C", CultureInfo.CurrentCulture) });
 
 
             }
@@ -382,8 +419,8 @@ namespace Provvigioni_Agenti.Models
 
         //public IList<ClienteResponse> ClientiResponse => _clientiResponse;  //ele
         //public IList<ClienteResponseDatagrid> ClientiResponseDatagrid => _clientiResponseDatagrid.Where(x => ((x.TotaleVenduto != "0,00 €") || (x.totaleAnnoPrecedente != "0,00 €"))).ToList();  //ele
-       
-             public IList<ClienteResponse> ClientiResponse => _clientiResponse2;  //ele
+
+        public IList<ClienteResponse> ClientiResponse => _clientiResponse2;  //ele
         public IList<ClienteResponseDatagrid> ClientiResponseDatagrid => _clientiResponseDatagrid2;  //ele
 
 

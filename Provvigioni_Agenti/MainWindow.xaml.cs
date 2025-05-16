@@ -41,7 +41,7 @@ namespace Provvigioni_Agenti
         IList<AgenteRiepilogo> AgentiRiepilogo = null;
 
 
-        Style HorizontalCenterStyle = null;
+        Style HorizontalRightStyle = null;
 
         public MainWindow()
         {
@@ -83,9 +83,9 @@ namespace Provvigioni_Agenti
 
             General.directoryTrasferiti(A.Max(t => t.NGB_ANNO_DOC).ToString());
 
-            HorizontalCenterStyle = new Style();
+            HorizontalRightStyle = new Style();
 
-            HorizontalCenterStyle.Setters.Add(new Setter(HorizontalAlignmentProperty, HorizontalAlignment.Right));
+            HorizontalRightStyle.Setters.Add(new Setter(HorizontalAlignmentProperty, HorizontalAlignment.Right));
 
 
 
@@ -185,7 +185,7 @@ namespace Provvigioni_Agenti
 
                 for (int i = 2; i <= 15; i++)
                 {
-                    dataGridVendite.Columns[i].CellStyle = HorizontalCenterStyle;
+                    dataGridVendite.Columns[i].CellStyle = HorizontalRightStyle;
                 }
 
 
@@ -221,7 +221,7 @@ namespace Provvigioni_Agenti
             trs.Trasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = total.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = total });
 
             dataGridTrasferiti.ItemsSource = trs.Trasferiti;
-            dataGridTrasferiti.Columns[1].CellStyle = HorizontalCenterStyle;
+            dataGridTrasferiti.Columns[1].CellStyle = HorizontalRightStyle;
 
             dataGridTrasferiti.Columns[0].Width = 190;
             dataGridTrasferiti.Columns[1].Width = 80;
@@ -252,7 +252,7 @@ namespace Provvigioni_Agenti
 
             for (int i = 2; i <= 7; i++)
             {
-                dataGridVendite.Columns[i].CellStyle = HorizontalCenterStyle;
+                dataGridVendite.Columns[i].CellStyle = HorizontalRightStyle;
             }
 
             Console.WriteLine(dataGridVendite.Items.Count);
@@ -303,8 +303,6 @@ namespace Provvigioni_Agenti
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
             try
             {
                 ElaboraAgente();
@@ -409,7 +407,8 @@ namespace Provvigioni_Agenti
 
             dataGridVendite.ItemsSource = null;
             dataGridTrasferiti.ItemsSource = null;
-            dataGridCategorieStatCliente.ItemsSource = null;
+            dataGridGruppiStatisticiProgressivoCliente.ItemsSource = null;
+            dataGridGruppiStatisticiTrimestreCliente.ItemsSource= null;
             nomeClienteCategoriaLabel.Text = string.Empty;
             totInfoProgressivoCorrente.Text = string.Empty;
             totInfoProgressivoRiferimento.Text = string.Empty;
@@ -523,7 +522,7 @@ namespace Provvigioni_Agenti
 
                         dataGridTrasferiti.ItemsSource = trs.Trasferiti;
 
-                        dataGridTrasferiti.Columns[1].CellStyle = HorizontalCenterStyle;
+                        dataGridTrasferiti.Columns[1].CellStyle = HorizontalRightStyle;
 
                         dataGridTrasferiti.Columns[0].Width = 190;
 
@@ -554,24 +553,85 @@ namespace Provvigioni_Agenti
 
                     var clickCliente = clienteResponse.Where(x => x.IdCliente == idCliente).ToArray()[0];
                     //List<CategoriaStatisticaDettaglio> cstdL = new List<CategoriaStatisticaDettaglio>();
-                    List<GruppoStatistico> cstdL = new List<GruppoStatistico>();
+                    //List<GruppoStatistico> cstdL = new List<GruppoStatistico>();
+                    List<GruppoStatisticoDataGrid> grpStatProgr = new List<GruppoStatisticoDataGrid>();
 
                     //foreach (var item in clickCliente.CategoriaStatistica)
-                    foreach (var item in clickCliente.GruppoStatisticoCorrente)
+                    foreach (var item in clickCliente.GruppoStatisticoDataGridProgressivo)
                     {
-                        //cstdL.Add(new CategoriaStatisticaDettaglio() { Categoria = item.Categoria, ValoreCorrente = General.valuta(item.ValoreCorrente) });
-                        cstdL.Add(new GruppoStatistico() { CKY_MERC = item.CKY_MERC.Trim(' '), CDS_MERC = item.CDS_MERC.Trim(' '), ValoreString = item.Valore.ToString("C", CultureInfo.CurrentCulture) });
+                      
+                        if((double)item.ValoreRiferimento == 0 && (double)item.ValoreCorrente == 0)
+                        {
+                            continue;
+                        }
+
+                        grpStatProgr.Add(new GruppoStatisticoDataGrid() { 
+                            CKY_MERC = item.CKY_MERC.Trim(' '), 
+                            CDS_MERC = item.CDS_MERC.Trim(' '), 
+                            ValoreRiferimentoString = item.ValoreRiferimento.ToString("C",CultureInfo.CurrentCulture), 
+                            ValoreCorrenteString = item.ValoreCorrente.ToString("C", CultureInfo.CurrentCulture)
+                        });
                     }
 
-                    dataGridCategorieStatCliente.ItemsSource = cstdL;
+                    dataGridGruppiStatisticiProgressivoCliente.ItemsSource = grpStatProgr;
 
-                    dataGridCategorieStatCliente.Columns[0].Width = 70;
-                    dataGridCategorieStatCliente.Columns[1].Width = 190;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[0].Width = 70;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[1].Width = 190;
 
-                    dataGridCategorieStatCliente.Columns[2].Visibility = Visibility.Collapsed;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[2].Visibility = Visibility.Collapsed;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[3].Visibility = Visibility.Collapsed;
 
-                    dataGridCategorieStatCliente.Columns[0].CellStyle = HorizontalCenterStyle;
-                    dataGridCategorieStatCliente.Columns[3].CellStyle = HorizontalCenterStyle;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[0].CellStyle = HorizontalRightStyle;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[4].CellStyle = HorizontalRightStyle;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[5].CellStyle = HorizontalRightStyle;
+
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[4].Header = annoRiferimentoTxt;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[5].Header = annoCorrenteTxt;
+
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[4].Width = 90;
+                    dataGridGruppiStatisticiProgressivoCliente.Columns[5].Width = 90;
+
+
+
+                    List<GruppoStatisticoDataGrid> grpStatTrim = new List<GruppoStatisticoDataGrid>();
+
+                    //foreach (var item in clickCliente.CategoriaStatistica)
+                    foreach (var item in clickCliente.GruppoStatisticoDataGridTrimestre)
+                    {
+
+                        if ((double)item.ValoreRiferimento == 0 && (double)item.ValoreCorrente == 0)
+                        {
+                            continue;
+                        }
+
+                        grpStatTrim.Add(new GruppoStatisticoDataGrid()
+                        {
+                            CKY_MERC = item.CKY_MERC.Trim(' '),
+                            CDS_MERC = item.CDS_MERC.Trim(' '),
+                            ValoreRiferimentoString = item.ValoreRiferimento.ToString("C", CultureInfo.CurrentCulture),
+                            ValoreCorrenteString = item.ValoreCorrente.ToString("C", CultureInfo.CurrentCulture)
+                        });
+                    }
+
+                    dataGridGruppiStatisticiTrimestreCliente.ItemsSource = grpStatTrim;
+
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[0].Width = 70;
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[1].Width = 190;
+
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[2].Visibility = Visibility.Collapsed;
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[3].Visibility = Visibility.Collapsed;
+
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[0].CellStyle = HorizontalRightStyle;
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[4].CellStyle = HorizontalRightStyle;
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[5].CellStyle = HorizontalRightStyle;
+
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[4].Header = annoRiferimentoTxt;
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[5].Header = annoCorrenteTxt;
+
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[4].Width = 90;
+                    dataGridGruppiStatisticiTrimestreCliente.Columns[5].Width = 90;
+
+
                 }
                 else
                 {
