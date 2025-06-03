@@ -77,7 +77,7 @@ namespace Provvigioni_Agenti.Controllers
                 foreach (var prop in type.GetProperties())
                 {
                     var protoType = prop.PropertyType;
-                    prop.SetValue(obj, Convert.ChangeType(reader[prop.Name].ToString(), protoType));
+                    prop.SetValue(obj, Convert.ChangeType(reader[prop.Name].ToString().Trim(), protoType));
                 }
                 list.Add(obj);
             }

@@ -18,10 +18,10 @@ namespace Provvigioni_Agenti.Models
         public List<CategoriaStatistica> CategoriaStatisticaProgressiva { get; set; } = new List<CategoriaStatistica>();
         public List<CategoriaStatistica> CategoriaStatistica { get; set; } = new List<CategoriaStatistica>();
 
-        public List<GruppoStatistico> GruppoStatisticoCorrente { get; set; } = new List<GruppoStatistico>();
-        public List<GruppoStatistico> GruppoStatisticoRiferimento { get; set; } = new List<GruppoStatistico>();
-        public List<GruppoStatistico> GruppoStatisticoCorrenteProgressivo { get; set; } = new List<GruppoStatistico>();
-        public List<GruppoStatistico> GruppoStatisticoRiferimentoProgressivo { get; set; } = new List<GruppoStatistico>();
+        public List<GruppoStatisticoVendita> GruppoStatisticoCorrente { get; set; } = new List<GruppoStatisticoVendita>();
+        public List<GruppoStatisticoVendita> GruppoStatisticoRiferimento { get; set; } = new List<GruppoStatisticoVendita>();
+        public List<GruppoStatisticoVendita> GruppoStatisticoCorrenteProgressivo { get; set; } = new List<GruppoStatisticoVendita>();
+        public List<GruppoStatisticoVendita> GruppoStatisticoRiferimentoProgressivo { get; set; } = new List<GruppoStatisticoVendita>();
 
         public List<GruppoStatisticoDataGrid> GruppoStatisticoDataGridProgressivo { get; set; } = new List<GruppoStatisticoDataGrid>();
         public List<GruppoStatisticoDataGrid> GruppoStatisticoDataGridTrimestre { get; set; } = new List<GruppoStatisticoDataGrid>();
@@ -86,11 +86,18 @@ namespace Provvigioni_Agenti.Models
         public double totaleVendutoProgressivo { get; set; } = 0;
         public double provvigione { get; set; } = 0;
 
-        public List<GruppoStatistico> GruppoStatisticoTrimestre { get; set; } = new List<GruppoStatistico>();
-        public List<GruppoStatistico> GruppoStatisticoProgressivo { get; set; } = new List<GruppoStatistico>();
+        public List<GruppoStatisticoVendita> GruppoStatisticoTrimestre { get; set; } = new List<GruppoStatisticoVendita>();
+        public List<GruppoStatisticoVendita> GruppoStatisticoProgressivo { get; set; } = new List<GruppoStatisticoVendita>();
     }
 
+
     public class GruppoStatistico
+    {
+        public string CKY_MERC { get; set; } = string.Empty;
+        public string CDS_MERC { get; set; } = string.Empty;
+    }
+
+    public class GruppoStatisticoVendita 
     {
         public string CKY_MERC { get; set; } = string.Empty;
         public string CDS_MERC { get; set; } = string.Empty;
@@ -99,7 +106,7 @@ namespace Provvigioni_Agenti.Models
         public string ValoreString { get; set; } = string.Empty;
     }
 
-    public class GruppoStatisticoDataGrid
+    public class GruppoStatisticoDataGrid  
     {
         public string CKY_MERC { get; set; } = string.Empty;
         public string CDS_MERC { get; set; } = string.Empty;
@@ -111,4 +118,15 @@ namespace Provvigioni_Agenti.Models
         public string ValoreCorrenteString { get; set; } = string.Empty;
 
     }
+
+    public class GruppoStatisticoRiepilogo
+    {
+        public string CKY_MERC { get; set; } = string.Empty;
+        public string CDS_MERC { get; set; } = string.Empty;
+
+        public double ValoreRiferimento { get; set; } = 0;
+        public double ValoreCorrente { get; set; } = 0;
+
+    }
+
 }

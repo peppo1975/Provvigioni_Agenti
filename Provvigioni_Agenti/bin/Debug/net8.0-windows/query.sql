@@ -57,6 +57,5 @@ FROM     MMA_M
 WHERE    (MMA_M.ANNO = '{annoCorrente}'
           OR MMA_M.ANNO = '{annoRiferimento}')
          AND MMA_M.CKY_CNT_AGENTE IN ({agente})
-         AND (MMA_D.CSG_DOC = 'NC'
-              OR MMA_D.CSG_DOC = 'FT')
+         AND (MMA_D.CSG_DOC = 'NC' OR MMA_D.CSG_DOC = 'FT')
 ORDER BY Clienti.CDS_CNT_RAGSOC ASC, MMA_M.DTT_DOC ASC;

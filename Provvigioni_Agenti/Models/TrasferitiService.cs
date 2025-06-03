@@ -81,9 +81,11 @@ namespace Provvigioni_Agenti.Models
             foreach (string trasferito in elencoTrasferiti)
             {
                 string pathTrasferito = $"{path}/{trasferito}";
-                List<string> elencoFiles = General.elencoFile(pathTrasferito);
+                List<string> el = General.elencoFile(pathTrasferito);
 
-                elencoFiles.Remove(elencoFiles.Find(x => x.Contains(".xml")));
+                var elencoFiles = el.FindAll(el => el.Contains(".xlsx"));
+
+                //elencoFiles.Remove(elencoFiles.Find(x => x.Contains(".xml")));
 
                 //acmei ha solo un file
                 switch (trasferito)

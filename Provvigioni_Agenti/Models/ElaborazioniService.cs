@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Xml.Serialization;
 using DocumentFormat.OpenXml.Bibliography;
+using Provvigioni_Agenti.Controllers;
 
 namespace Provvigioni_Agenti.Models
 {
@@ -104,7 +105,9 @@ namespace Provvigioni_Agenti.Models
 
                 string t = trimestreSelezionato[0];
 
-                switch (t)
+                var p = General.leggiPeriodoHome();
+
+                switch (p.Trimestre)
                 {
                     case "t_1":
                         t_1.IsChecked = true;
@@ -120,7 +123,11 @@ namespace Provvigioni_Agenti.Models
                         break;
                 }
 
-                return;
+                if (p.Trimestre != string.Empty)
+                {
+                    return;
+                }
+
 
 
             }
@@ -151,10 +158,6 @@ namespace Provvigioni_Agenti.Models
             {
                 t_4.IsChecked = true;
             }
-
-
-
-
 
 
         }

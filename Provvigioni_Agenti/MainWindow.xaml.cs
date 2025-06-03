@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -10,6 +11,8 @@ using System.Xml.Serialization;
 using DocumentFormat.OpenXml.Drawing;
 using Provvigioni_Agenti.Controllers;
 using Provvigioni_Agenti.Models;
+using System.Threading.Tasks;
+using System.Printing.IndexedProperties;
 
 namespace Provvigioni_Agenti
 {
@@ -40,6 +43,10 @@ namespace Provvigioni_Agenti
         IList<CategoriaStatistica> categorieStatisticheTotaleProgressivo = null;
         IList<AgenteRiepilogo> AgentiRiepilogo = null;
 
+        List<GruppoStatistico> GruppoStatistico = null;
+        List<GruppoStatisticoRiepilogo> GruppoStatisticoProgessivo = null;
+        List<GruppoStatisticoRiepilogo> GruppoStatisticoTrimestre = null;
+
 
         Style HorizontalRightStyle = null;
 
@@ -63,11 +70,14 @@ namespace Provvigioni_Agenti
                 annoRiferimento.Items.Add(anno.NGB_ANNO_DOC);
             }
 
+
             annoCorrente.SelectedItem = A.Max(t => t.NGB_ANNO_DOC);
 
+     
             annoRiferimento.SelectedItem = A.Max(t => t.NGB_ANNO_DOC) - 1;
 
-            annoCorrenteTxt = annoCorrente.SelectedItem.ToString();
+            annoCorrenteTxt = A.Max(t => t.NGB_ANNO_DOC).ToString(); //annoCorrente.SelectedItem.ToString();
+            annoRiferimentoTxt = (A.Max(t => t.NGB_ANNO_DOC) - 1).ToString(); //annoCorrente.SelectedItem.ToString();
 
             agentiService = new Models.AgentiService();
 
@@ -77,8 +87,6 @@ namespace Provvigioni_Agenti
 
             controlDate = true;
 
-            checkService = new Models.CheckService(t_1, t_2, t_3, t_4);
-
             buttonElabora.IsEnabled = false;
 
             General.directoryTrasferiti(A.Max(t => t.NGB_ANNO_DOC).ToString());
@@ -86,6 +94,31 @@ namespace Provvigioni_Agenti
             HorizontalRightStyle = new Style();
 
             HorizontalRightStyle.Setters.Add(new Setter(HorizontalAlignmentProperty, HorizontalAlignment.Right));
+
+            // vedo se sono salvate delle date -----------------------------------
+
+            checkService = new Models.CheckService(t_1, t_2, t_3, t_4);
+
+            var p = General.leggiPeriodoHome();
+
+            if (p.AnnoCorrente != string.Empty)
+            {
+                annoCorrente.SelectedItem = Int32.Parse(p.AnnoCorrente) ;
+            }
+
+            if (p.AnnoRiferimento != string.Empty)
+            {
+                annoRiferimento.SelectedItem = Int32.Parse(p.AnnoRiferimento);
+            }
+            // -------------------------------------------------------------------
+
+            //var t = Task.Run(async delegate
+            //{
+            //    await Task.Delay(10000);
+            //    //MessageBox.Show("fengul");
+            //    return 42;
+            //});
+            //t.Wait();
 
 
 
@@ -108,8 +141,6 @@ namespace Provvigioni_Agenti
                 }
 
             }
-
-
 
             corr.Text = "";
             totInfo.Text = "";
@@ -135,15 +166,14 @@ namespace Provvigioni_Agenti
 
             refreshInfo();
 
-
-
             annoCorrenteTxt = annoCorrente.SelectedItem.ToString();
+
             annoRiferimentoTxt = annoRiferimento.SelectedItem.ToString();
 
             // TRASFERITI --------------------------------------------
             elencoTrasferiti = General.directoryTrasferiti(annoCorrenteTxt);
             trs = new TrasferitiService(agente.Regione, annoCorrenteTxt, trimestre, elencoTrasferiti);
-            // ------------------------------------------------------
+            // -------------------------------------------------------
 
 
             string query = Controllers.Query.clientiAgente(agente.ID, annoCorrenteTxt, annoRiferimentoTxt);
@@ -212,15 +242,27 @@ namespace Provvigioni_Agenti
 
             var elenco = new Models.ClientiService(st, periodoService.Periodo[0]);
 
+            GruppoStatistico = (List<GruppoStatistico>)elenco.GruppoStatistico;
+            GruppoStatisticoProgessivo = (List<GruppoStatisticoRiepilogo>)elenco.GruppoStatisticoProgressivo;
+            GruppoStatisticoTrimestre = (List<GruppoStatisticoRiepilogo>)elenco.GruppoStatisticoTrimestre;
+
             ClientiRiepilogoVendite = elenco.ClientiRiepilogoVendite[0];
             categorieStatisticheTotaleProgressivo = elenco.CategorieStatitischeTotaleProgressivo;
 
 
-            double total = trs.Trasferiti.Sum(x => x.ValoreEuro);
+            double totalTrasferiti = trs.Trasferiti.Sum(x => x.ValoreEuro);
 
-            trs.Trasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = total.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = total });
+            //trs.Trasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = total.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = total });
 
-            dataGridTrasferiti.ItemsSource = trs.Trasferiti;
+
+            var trsTrasferiti = trs.Trasferiti;
+
+            trsTrasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = totalTrasferiti.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = totalTrasferiti });
+
+            totSellout.Text = totalTrasferiti.ToString("C", CultureInfo.CurrentCulture);
+
+            dataGridTrasferiti.ItemsSource = trsTrasferiti;
+
             dataGridTrasferiti.Columns[1].CellStyle = HorizontalRightStyle;
 
             dataGridTrasferiti.Columns[0].Width = 190;
@@ -270,8 +312,11 @@ namespace Provvigioni_Agenti
             totProvvigioneCorrente.Text = General.valuta(provvigioneCorrente);
 
 
-            double provvigioneTrasferiti = (double)trs.Trasferiti.Sum(x => x.ValoreEuro) * 0.02;
+            //double provvigioneTrasferiti = (double)trs.Trasferiti.Sum(x => x.ValoreEuro) * 0.02;
+            double provvigioneTrasferiti = totalTrasferiti * 0.02;
             totProvvigioneSellout.Text = General.valuta(provvigioneTrasferiti);
+
+
 
             totProvvigioneTrimestre.Text = General.valuta(provvigioneCorrente + provvigioneTrasferiti);
 
@@ -307,6 +352,8 @@ namespace Provvigioni_Agenti
             {
                 ElaboraAgente();
 
+                creaExcelButton.IsEnabled = true;
+
             }
             catch (Exception exeption)
             {
@@ -339,6 +386,8 @@ namespace Provvigioni_Agenti
 
             List<string> trimestreSelezionato = new List<string>();
 
+
+
             trimestre = name;
 
 
@@ -350,8 +399,6 @@ namespace Provvigioni_Agenti
             {
                 xmls.Serialize(writer, trimestreSelezionato);
             }
-
-
 
             switch (name)
             {
@@ -393,6 +440,8 @@ namespace Provvigioni_Agenti
             titoloTrimestre.Text = titoloTimestreText;
             trimestre = name;
 
+            General.salvaPeriodoHome(trimestre);
+
             refreshInfo();
         }
 
@@ -408,7 +457,7 @@ namespace Provvigioni_Agenti
             dataGridVendite.ItemsSource = null;
             dataGridTrasferiti.ItemsSource = null;
             dataGridGruppiStatisticiProgressivoCliente.ItemsSource = null;
-            dataGridGruppiStatisticiTrimestreCliente.ItemsSource= null;
+            dataGridGruppiStatisticiTrimestreCliente.ItemsSource = null;
             nomeClienteCategoriaLabel.Text = string.Empty;
             totInfoProgressivoCorrente.Text = string.Empty;
             totInfoProgressivoRiferimento.Text = string.Empty;
@@ -417,14 +466,12 @@ namespace Provvigioni_Agenti
             totProvvigioneCorrente.Text = string.Empty;
             totProvvigioneTrimestre.Text = string.Empty;
             totProvvigioneSellout.Text = string.Empty;
-
             deltaProgressivo.Text = string.Empty;
             deltaProgressivoPercent.Text = string.Empty;
-
             totInfo.Background = null;
             totInfoProgressivoCorrente.Background = null;
-
-
+            creaExcelButton.IsEnabled = false;
+            totSellout.Text = string.Empty;
         }
 
         void deselezionaTrimestre()
@@ -446,6 +493,12 @@ namespace Provvigioni_Agenti
             string ricercaDa = string.Empty;
             string ricercaFinoA = string.Empty;
             bool checkedTrimestre = false;
+
+            if (annoCorrenteTxt != string.Empty)
+            {
+                General.salvaPeriodoHome(annoCorrente: anno);
+            }
+
 
             General.directoryTrasferiti(anno);
 
@@ -532,16 +585,6 @@ namespace Provvigioni_Agenti
 
                         int nRows = dataGridTrasferiti.Items.Count;
 
-                        // dataGridTrasferiti.SelectedIndex = nRows - 2;
-
-                        //  dataGridTrasferiti.CurrentCell = new DataGridCellInfo(dataGridTrasferiti.Items[nRows - 2], dataGridTrasferiti.Columns[1]);
-
-                        // dataGridTrasferiti.SelectedCells.Add(dataGridTrasferiti.CurrentCell);
-
-
-
-                        //       dataGridTrasferiti.SelectedCells.FontWeight = FontWeights.Bold;
-
                         return;
                     }
 
@@ -559,16 +602,17 @@ namespace Provvigioni_Agenti
                     //foreach (var item in clickCliente.CategoriaStatistica)
                     foreach (var item in clickCliente.GruppoStatisticoDataGridProgressivo)
                     {
-                      
-                        if((double)item.ValoreRiferimento == 0 && (double)item.ValoreCorrente == 0)
+
+                        if ((double)item.ValoreRiferimento == 0 && (double)item.ValoreCorrente == 0)
                         {
                             continue;
                         }
 
-                        grpStatProgr.Add(new GruppoStatisticoDataGrid() { 
-                            CKY_MERC = item.CKY_MERC.Trim(' '), 
-                            CDS_MERC = item.CDS_MERC.Trim(' '), 
-                            ValoreRiferimentoString = item.ValoreRiferimento.ToString("C",CultureInfo.CurrentCulture), 
+                        grpStatProgr.Add(new GruppoStatisticoDataGrid()
+                        {
+                            CKY_MERC = item.CKY_MERC.Trim(' '),
+                            CDS_MERC = item.CDS_MERC.Trim(' '),
+                            ValoreRiferimentoString = item.ValoreRiferimento.ToString("C", CultureInfo.CurrentCulture),
                             ValoreCorrenteString = item.ValoreCorrente.ToString("C", CultureInfo.CurrentCulture)
                         });
                     }
@@ -676,18 +720,25 @@ namespace Provvigioni_Agenti
         private void annoRiferimento_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             dataGridVendite.ItemsSource = null;
+
+            if (annoRiferimentoTxt != string.Empty)
+            {
+                annoRiferimentoTxt = annoRiferimento.SelectedItem.ToString();
+                General.salvaPeriodoHome(annoRiferimento: annoRiferimentoTxt);
+            }
+
         }
 
         private void creaExcelButton_Click(object sender, RoutedEventArgs e)
         {
             agente = (Models.Agente)elencoAgenti.SelectedItem;
             if (agente.ID.Contains('#'))
-            {
-                General.generaExcelTotale(annoCorrenteTxt, annoRiferimentoTxt, trimestre, AgentiRiepilogo);
+            {   // tutti gli agenti
+                General.generaExcelTotale(annoCorrenteTxt, annoRiferimentoTxt, trimestre, AgentiRiepilogo, GruppoStatistico);
             }
             else
-            {
-                General.generaExcelTrasferiti(agente.NikName, agente.Nome, annoCorrenteTxt, annoRiferimentoTxt, trimestre, clienteResponse, trs.Trasferiti, categorieStatistiche, categorieStatisticheTotaleProgressivo);
+            {   // singolo agente
+                General.generaExcelTrasferiti(agente.NikName, agente.Nome, annoCorrenteTxt, annoRiferimentoTxt, trimestre, clienteResponse, trs.Trasferiti, categorieStatistiche, categorieStatisticheTotaleProgressivo, GruppoStatistico, GruppoStatisticoProgessivo, GruppoStatisticoTrimestre);
             }
 
         }

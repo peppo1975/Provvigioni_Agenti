@@ -11,6 +11,8 @@ using DocumentFormat.OpenXml.Bibliography;
 using System.Runtime.CompilerServices;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Spreadsheet;
+using System.Collections.Generic;
+using DocumentFormat.OpenXml.Office2019.Drawing.Animation;
 
 namespace Provvigioni_Agenti.Controllers
 {
@@ -105,8 +107,6 @@ namespace Provvigioni_Agenti.Controllers
             try
             {
                 var fullPath = System.IO.Path.GetFullPath(path);
-
-                //string[] fileEntries = {"ciao"};
 
                 DirectoryInfo di = new DirectoryInfo(fullPath);
                 Console.WriteLine("No search pattern returns:");
@@ -383,9 +383,10 @@ namespace Provvigioni_Agenti.Controllers
 
 
 
-        public static void generaExcelTrasferiti(string agente, string agenteFullName, string annoCorrente, string annoRiferimento, string trimestre, IList<ClienteResponse> clienteResponse, IList<Final> Trasferiti, IList<CategoriaStatistica> categorieStatistiche, IList<CategoriaStatistica> categorieStatisticheTotaleProgressivo)
+        public static void generaExcelTrasferiti(string agente, string agenteFullName, string annoCorrente, string annoRiferimento, string trimestre, IList<ClienteResponse> clienteResponse, IList<Final> Trasferiti, IList<CategoriaStatistica> categorieStatistiche, IList<CategoriaStatistica> categorieStatisticheTotaleProgressivo, List<GruppoStatistico> GruppoStatistico, List<GruppoStatisticoRiepilogo> GruppoStatisticoProgressivo, List<GruppoStatisticoRiepilogo> GruppoStatisticoTrimestre)
         {
             Dictionary<string, string> trimestri = new Dictionary<string, string>() { { "t_1", "TRIM-1" }, { "t_2", "TRIM-2" }, { "t_3", "TRIM-3" }, { "t_4", "TRIM-4" } };
+
             Dictionary<string, string> trimestriSuExcel = new Dictionary<string, string>() { { "t_1", "1° TRIM" }, { "t_2", "2° TRIM" }, { "t_3", "3° TRIM" }, { "t_4", "4° TRIM" } };
 
             IList<ClienteResponse> clienteResponseFiltered = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList();
@@ -396,6 +397,7 @@ namespace Provvigioni_Agenti.Controllers
             int index = 9;
 
             int indexRowProvvigioneAgente = 0;
+
             int indexRowProvvigioneAgenteSellout = 0;
 
             if (!File.Exists(path))
@@ -407,12 +409,56 @@ namespace Provvigioni_Agenti.Controllers
             using var workbook = new XLWorkbook();
             var worksheet = workbook.AddWorksheet("Provvigioni");
 
+            int rowTotDb = provvigioniPassPartout(workbook, index, agente, agenteFullName, annoCorrente, annoRiferimento, trimestre, clienteResponse);
+
+            int rowTotSellOut = provvigioniSellout(workbook, rowTotDb, Trasferiti);
+
+            int rowProgressivo = gruppiStatistici(workbook, rowTotSellOut, annoCorrente, annoRiferimento, clienteResponse, GruppoStatistico, GruppoStatisticoProgressivo, "PROGRESSIVO");
+
+            int rowTrimestre = gruppiStatistici(workbook, rowProgressivo, annoCorrente, annoRiferimento, clienteResponse, GruppoStatistico, GruppoStatisticoTrimestre, "TRIMESTRE");
+
+            int rowGrStClienteProgr = gruppiStatisticiClienti(workbook, rowTrimestre, GruppoStatistico, GruppoStatisticoProgressivo, clienteResponse, "PROGRESSIVO");
+
+            int rowGrStClienteTrim = gruppiStatisticiClienti(workbook, rowGrStClienteProgr, GruppoStatistico, GruppoStatisticoTrimestre, clienteResponse, "TRIMESTRE");
+
+
+            worksheet.Cell("G4").FormulaA1 = $"G{rowTotDb}+G{rowTotSellOut}";
+            worksheet.Cell("G4").Style.NumberFormat.Format = "#,##0.00 €";
+            worksheet.Cell("G4").Style.Font.Bold = true;
+            worksheet.Cell("G4").Style.Font.FontSize = 15;
+
+
+            workbook.SaveAs(pathFile);
+
+            //Process.Start("explorer.exe", System.IO.Path.GetFullPath($"{path}"));
+
+            Process.Start("explorer.exe", fullPath);
+
+            return;
+
+
+        }
+
+
+        private static int provvigioniPassPartout(XLWorkbook workbook, int indexInit, string agente, string agenteFullName, string annoCorrente, string annoRiferimento, string trimestre, IList<ClienteResponse> clienteResponse)
+        {
+            Dictionary<string, string> trimestri = new Dictionary<string, string>() { { "t_1", "TRIM-1" }, { "t_2", "TRIM-2" }, { "t_3", "TRIM-3" }, { "t_4", "TRIM-4" } };
+            Dictionary<string, string> trimestriSuExcel = new Dictionary<string, string>() { { "t_1", "1° TRIM" }, { "t_2", "2° TRIM" }, { "t_3", "3° TRIM" }, { "t_4", "4° TRIM" } };
+
+            IList<ClienteResponse> clienteResponseFiltered = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList();
+
+            int index = indexInit;
+
+
+            var worksheet = workbook.Worksheet("Provvigioni");
+
             var imagePath = @"../logo.jpg";
 
             var image = worksheet.AddPicture(imagePath)
                 .MoveTo(worksheet.Cell("A2"))
                 .Scale(0.3); // optional: resize picture
 
+            int indexRowProvvigioneAgente = 0;
 
 
             worksheet.Column("A").Width = 10;
@@ -430,9 +476,9 @@ namespace Provvigioni_Agenti.Controllers
             worksheet.Range("C2:G2").Merge();
 
 
-            worksheet.Cell("D3").Value = $"{trimestriSuExcel[trimestre]} {annoCorrente} - PROVVIGIONE TOTALE: ";
-            worksheet.Cell("D3").Style.Font.FontSize = 15;
-            worksheet.Range("D3:G3").Merge();
+            worksheet.Cell("C4").Value = $"{trimestriSuExcel[trimestre]} {annoCorrente} - PROVVIGIONE TOTALE: ";
+            worksheet.Cell("C4").Style.Font.FontSize = 15;
+            worksheet.Range("C4:F4").Merge();
             //worksheet.Cell("H3").Value
 
             worksheet.Cell("A8").Value = $"Codice";
@@ -441,7 +487,7 @@ namespace Provvigioni_Agenti.Controllers
             worksheet.Cell("D8").Value = $"Imp. periodo " + annoCorrente;
             worksheet.Cell("E8").Value = $"Delta imp.";
             worksheet.Cell("F8").Value = $"Delta imp. %";
-            worksheet.Cell("H8").Value = $"Provvigione";
+            worksheet.Cell("G8").Value = $"Provvigione";
 
 
 
@@ -459,7 +505,7 @@ namespace Provvigioni_Agenti.Controllers
                 worksheet.Cell(index, 4).Value = cliente.TotaleVendutoCorrente;
                 worksheet.Cell(index, 5).Value = result[0];
                 worksheet.Cell(index, 6).Value = result[1]; // percentule
-                worksheet.Cell(index, 8).Value = cliente.ProvvigioneCorrente;
+                worksheet.Cell(index, 7).Value = cliente.ProvvigioneCorrente;
 
 
 
@@ -468,15 +514,18 @@ namespace Provvigioni_Agenti.Controllers
                 worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
                 worksheet.Cell(index, 5).Style.NumberFormat.Format = "#,##0.00 €";
                 worksheet.Cell(index, 6).Style.NumberFormat.Format = "0.00%";
-                worksheet.Cell(index, 8).Style.NumberFormat.Format = "#,##0.00 €";
+                worksheet.Cell(index, 7).Style.NumberFormat.Format = "#,##0.00 €";
 
 
 
                 if (result[0] < 0)
                 {
-                    worksheet.Cell(index, 2).Style.Fill.BackgroundColor = XLColor.Red;
-                    worksheet.Cell(index, 5).Style.Fill.BackgroundColor = XLColor.Red;
-                    worksheet.Cell(index, 6).Style.Fill.BackgroundColor = XLColor.Red;
+                    //worksheet.Cell(index, 2).Style.Fill.BackgroundColor = XLColor.Red;
+                    //worksheet.Cell(index, 5).Style.Fill.BackgroundColor = XLColor.Red;
+                    //worksheet.Cell(index, 6).Style.Fill.BackgroundColor = XLColor.Red;
+                    worksheet.Cell(index, 2).Style.Fill.BackgroundColor = XLColor.RedRyb;
+                    worksheet.Cell(index, 5).Style.Fill.BackgroundColor = XLColor.RedRyb;
+                    worksheet.Cell(index, 6).Style.Fill.BackgroundColor = XLColor.RedRyb;
 
                     worksheet.Cell(index, 2).Style.Font.Bold = true;
                     worksheet.Cell(index, 5).Style.Font.Bold = true;
@@ -487,10 +536,10 @@ namespace Provvigioni_Agenti.Controllers
             }
 
 
-            worksheet.Range($"A9:H{index - 1}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"A9:H{index - 1}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"A9:H{index - 1}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"A9:H{index - 1}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"A9:G{index - 1}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"A9:G{index - 1}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"A9:G{index - 1}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"A9:G{index - 1}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
 
 
             //index += 1;
@@ -505,7 +554,6 @@ namespace Provvigioni_Agenti.Controllers
             worksheet.Cell(index, 3).FormulaA1 = $"SUM(C9:C{index - 1})";
             worksheet.Cell(index, 4).FormulaA1 = $"SUM(D9:D{index - 1})";
             worksheet.Cell(index, 5).FormulaA1 = $"SUM(E9:E{index - 1})";
-            //worksheet.Cell(index, 6).FormulaA1 = $"(SUM(D9:D{index - 1})-SUM(C9:C{index - 1}))/SUM(C9:C{index - 1})";
             worksheet.Cell(index, 6).FormulaA1 = $"(D{index}-C{index})/C{index}";
 
             if ((double)worksheet.Cell(index, 5).Value < 0)
@@ -514,217 +562,376 @@ namespace Provvigioni_Agenti.Controllers
                 worksheet.Cell(index, 6).Style.Fill.BackgroundColor = XLColor.Red;
             }
 
+            worksheet.Cell(index, 7).FormulaA1 = $"SUM(G9:G{index - 1})";
+
+            return index;
+
+        }
 
 
-            worksheet.Cell(index, 8).FormulaA1 = $"SUM(H9:H{index - 1})";
-            indexRowProvvigioneAgente = index; // prooviogne db
+        private static int provvigioniSellout(XLWorkbook workbook, int indexInit, IList<Final> Trasferiti)
+        {
+
+            var worksheet = workbook.Worksheet("Provvigioni");
+
+            int indexSellout = 0;
+
+            int index = indexInit;
 
             index += 2;
 
-            worksheet.Range($"A{index}:H{index}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;  // bordo
+            //worksheet.Range($"A{index}:G{index}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;  // bordo
+
+            index += 3;
+
+
+            worksheet.Cell($"C{index}").Value = "SELLOUT";
+            worksheet.Cell($"C{index}").Style.Font.FontSize = 20;
+            worksheet.Range($"C{index}:G{index}").Merge();
 
             index += 2;
 
+            indexSellout = index;
             worksheet.Cell(index, 2).Value = "SELLOUT";
-            worksheet.Cell(index, 8).Value = $"Provvigione";
-            worksheet.Range($"A{index}:H{index}").Style.Font.Bold = true;
-            //worksheet.Range($"A{index}:H{index}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;  // bordo
+            worksheet.Cell(index, 4).Value = "VENDUTO";
+            worksheet.Cell(index, 7).Value = "PROVVIGIONE";
+            worksheet.Range($"A{index}:G{index}").Style.Font.Bold = true;
             index++;
-
-            int indexSellout = index;
-
             foreach (Final f in Trasferiti)
             {
+                if (f.Fornitore == " - - - TOTALE: ")
+                {
+                    continue;
+                }
+
                 worksheet.Cell(index, 2).Value = f.Fornitore;
                 worksheet.Cell(index, 4).Value = f.ValoreEuro;
                 worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
 
-                worksheet.Cell(index, 8).Value = f.ValoreEuro * 0.02;
-                worksheet.Cell(index, 8).Style.NumberFormat.Format = "#,##0.00 €";
+                worksheet.Cell(index, 7).Value = f.ValoreEuro * 0.02;
+                worksheet.Cell(index, 7).Style.NumberFormat.Format = "#,##0.00 €";
 
                 index++;
             }
 
 
-            worksheet.Range($"B{indexSellout}:H{index - 1}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexSellout}:H{index - 1}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexSellout}:H{index - 1}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexSellout}:H{index - 1}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
+
+            worksheet.Range($"B{indexSellout}:G{index - 1}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"B{indexSellout}:G{index - 1}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"B{indexSellout}:G{index - 1}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"B{indexSellout}:G{index - 1}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
 
 
-            worksheet.Cell(index, 3).Value = "TOTALE"; // sellout
-            worksheet.Cell(index, 3).Style.Font.Bold = true;
+            worksheet.Cell(index, 2).Value = "TOTALE"; // sellout
+            worksheet.Cell(index, 2).Style.Font.Bold = true;
 
             worksheet.Cell(index, 4).FormulaA1 = $"SUM(D{indexSellout}:D{index - 1})";
             worksheet.Cell(index, 4).Style.Font.Bold = true;
             worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
 
-            worksheet.Cell(index, 7).Value = "TOTALE"; // sellout provvigione
+            //worksheet.Cell(index, 6).Value = "TOTALE"; // sellout provvigione
+            worksheet.Cell(index, 6).Style.Font.Bold = true;
+
+            worksheet.Cell(index, 7).FormulaA1 = $"SUM(G{indexSellout}:G{index - 1})";
             worksheet.Cell(index, 7).Style.Font.Bold = true;
+            worksheet.Cell(index, 7).Style.NumberFormat.Format = "#,##0.00 €";
+            //indexRowProvvigioneAgenteSellout = index;
 
-            worksheet.Cell(index, 8).FormulaA1 = $"SUM(H{indexSellout}:H{index - 1})";
-            worksheet.Cell(index, 8).Style.Font.Bold = true;
-            worksheet.Cell(index, 8).Style.NumberFormat.Format = "#,##0.00 €";
-            indexRowProvvigioneAgenteSellout = index;
-
-
-            worksheet.Cell("H3").FormulaA1 = $"SUM(H{indexRowProvvigioneAgente}+H{indexRowProvvigioneAgenteSellout})";
-            worksheet.Cell("H3").Style.NumberFormat.Format = "#,##0.00 €";
-            worksheet.Cell("H3").Style.Font.Bold = true;
-            worksheet.Cell("H3").Style.Font.FontSize = 15;
-
-            index += 2;
-            worksheet.Range($"A{index}:H{index}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-
-            index += 2;
-
-            worksheet.Cell(index, 2).Value = "CATEGORIE STATISTICHE";
-            worksheet.Cell(index, 2).Style.Font.Bold = true;
-
-            index++;
-            int indexCatStat = index;
-            foreach (CategoriaStatistica catStatTitle in categorieStatistiche)
-            {
-                worksheet.Cell(index, 2).Value = catStatTitle.Categoria.Trim(' ');
-                worksheet.Cell(index, 4).Value = catStatTitle.ValoreCorrente;
-                worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
-                index++;
-            }
-
-
-            worksheet.Cell(index, 3).Value = "TOTALE"; // categorie statistiche
-            worksheet.Cell(index, 3).Style.Font.Bold = true;
-
-            worksheet.Cell(index, 4).FormulaA1 = $"SUM(D{indexCatStat}:D{index - 1})";
-            worksheet.Cell(index, 4).Style.Font.Bold = true;
-            worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
-
-
-            worksheet.Range($"B{indexCatStat}:D{index - 1}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexCatStat}:D{index - 1}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexCatStat}:D{index - 1}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexCatStat}:D{index - 1}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
-
-
-
-            index += 2;
-            worksheet.Range($"A{index}:H{index}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-            index += 2;
-
-            worksheet.Cell(index, 2).Value = "CATEGORIE STATISTICHE PROGRESSIVO";
-            worksheet.Cell(index, 2).Style.Font.Bold = true;
-            index++;
-            int indexCatStatProgr = index;
-            foreach (CategoriaStatistica catStatTitle in categorieStatisticheTotaleProgressivo)
-            {
-                worksheet.Cell(index, 2).Value = catStatTitle.Categoria.Trim(' ');
-                worksheet.Cell(index, 4).Value = catStatTitle.ValoreCorrente;
-                worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
-                index++;
-            }
-            worksheet.Cell(index, 3).Value = "TOTALE"; // categorie statistiche progressivo
-            worksheet.Cell(index, 3).Style.Font.Bold = true;
-
-            worksheet.Cell(index, 4).FormulaA1 = $"SUM(D{indexCatStatProgr}:D{index - 1})";
-            worksheet.Cell(index, 4).Style.Font.Bold = true;
-            worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
-
-
-
-            worksheet.Range($"B{indexCatStatProgr}:D{index - 1}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexCatStatProgr}:D{index - 1}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexCatStatProgr}:D{index - 1}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"B{indexCatStatProgr}:D{index - 1}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
-
-            index += 2;
-            worksheet.Range($"A{index}:H{index}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-            index += 2;
-
-            int indexCol = 3;
-            foreach (CategoriaStatistica catStatTitle in categorieStatistiche)
-            {
-                worksheet.Cell(index, indexCol).Value = catStatTitle.Categoria;
-                worksheet.Cell(index, indexCol).Style.Font.Bold = true;
-
-                indexCol++;
-            }
-
-            index++;
-            int indexCatStatExpl = index;
-            foreach (ClienteResponse cliente in clienteResponse)
-            {
-
-
-                worksheet.Cell(index, 1).Value = cliente.IdCliente;
-                worksheet.Cell(index, 2).Value = cliente.NomeCliente;
-
-                // ciclare \\
-                int titleCatStat = 3;
-                foreach (CategoriaStatistica catStatTitle in categorieStatistiche)
-                {
-                    var res = cliente.CategoriaStatistica.Find(x => x.Categoria == catStatTitle.Categoria);
-                    if (res != null)
-                    {
-                        worksheet.Cell(index, titleCatStat).Value = res.ValoreCorrente;
-                        worksheet.Cell(index, titleCatStat).Style.NumberFormat.Format = "#,##0.00 €";
-                    }
-                    titleCatStat++;
-
-                }
-                string colinit = worksheet.Cell(index, 3).WorksheetColumn().ColumnLetter();
-                string colEnd = worksheet.Cell(index, titleCatStat - 1).WorksheetColumn().ColumnLetter();
-
-                worksheet.Cell(index, titleCatStat).FormulaA1 = $"SUM({colinit}{index}:{colEnd}{index})";
-                worksheet.Cell(index, titleCatStat).Style.NumberFormat.Format = "#,##0.00 €";
-                worksheet.Cell(index, titleCatStat).Style.Font.Bold = true;
-
-                worksheet.Cell(index, indexCol).Style.Fill.BackgroundColor = XLColor.Yellow;
-
-
-                index++;
-            }
-            worksheet.Cell(index, 2).Value = "TOTALE"; // categorie statistiche expl
-            worksheet.Cell(index, 2).Style.Font.Bold = true;
-
-
-
-
-            indexCol = 3;
-            foreach (CategoriaStatistica catStatTitle in categorieStatistiche)
-            {
-
-                string col = worksheet.Cell(index, indexCol).WorksheetColumn().ColumnLetter();
-
-                worksheet.Cell(index, indexCol).FormulaA1 = $"SUM({col}{indexCatStatExpl}:{col}{index - 1})";
-                worksheet.Cell(index, indexCol).Style.Font.Bold = true;
-                worksheet.Cell(index, indexCol).Style.NumberFormat.Format = "#,##0.00 €";
-                worksheet.Cell(index, indexCol).Style.Fill.BackgroundColor = XLColor.Yellow;
-                indexCol++;
-            }
-
-            string colTot = worksheet.Cell(index, indexCol).WorksheetColumn().ColumnLetter();
-
-            worksheet.Cell(index, indexCol).FormulaA1 = $"SUM({colTot}{indexCatStatExpl}:{colTot}{index - 1})";
-            worksheet.Cell(index, indexCol).Style.Font.Bold = true;
-            worksheet.Cell(index, indexCol).Style.NumberFormat.Format = "#,##0.00 €";
-            worksheet.Cell(index, indexCol).Style.Fill.BackgroundColor = XLColor.GreenYellow;
-
-
-            worksheet.Range($"A{indexCatStatExpl}:{colTot}{index - 1}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"A{indexCatStatExpl}:{colTot}{index - 1}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"A{indexCatStatExpl}:{colTot}{index - 1}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
-            worksheet.Range($"A{indexCatStatExpl}:{colTot}{index - 1}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
-
-
-            workbook.SaveAs(pathFile);
-
-
-            Process.Start("explorer.exe", System.IO.Path.GetFullPath($"{path}"));
-
-            Process.Start("explorer.exe", fullPath);
+            return index;
         }
 
-        public static void generaExcelTotale(string annoCorrente, string annoRiferimento, string trimestre, IList<AgenteRiepilogo> AgentiRiepilogo)
+        private static int gruppiStatistici(XLWorkbook workbook, int indexInit, string annoCorrente, string annoRiferimento, IList<ClienteResponse> clienteResponse, List<GruppoStatistico> GruppoStatistico, List<GruppoStatisticoRiepilogo> GruppoStatisticoPeriodo, string tipo)
+        {
+            List<ClienteResponse> cliente = (List<ClienteResponse>)clienteResponse;
+
+            int index = indexInit;
+            var worksheet = workbook.Worksheet("Provvigioni");
+            int initTabella = 0;
+            int endTabella = 0;
+            index += 3;
+
+            index += 2;
+            worksheet.Cell($"C{index}").Value = $"GRUPPI STATISTICI - {tipo}";
+            worksheet.Cell($"C{index}").Style.Font.FontSize = 20;
+            worksheet.Range($"C{index}:G{index}").Merge();
+            index += 2;
+            initTabella = index;
+            worksheet.Cell($"A{index}").Value = "Codice";
+            worksheet.Cell($"B{index}").Value = "Descrizione";
+            worksheet.Cell($"C{index}").Value = $"{annoRiferimento}";
+            worksheet.Cell($"D{index}").Value = $"{annoCorrente}";
+            worksheet.Cell($"E{index}").Value = "Delta imp.";
+
+            worksheet.Range($"A{index}:F{index}").Style.Font.Bold = true;
+
+            index++;
+            GruppoStatistico.ForEach((x) =>
+            {
+                Console.WriteLine(x);
+
+
+                var rif = GruppoStatisticoPeriodo.Where(y => y.CKY_MERC == x.CKY_MERC).ToList();
+
+                if (rif[0].ValoreRiferimento == 0 && rif[0].ValoreCorrente == 0)
+                {
+                    return;
+                }
+
+                worksheet.Cell(index, 1).Value = x.CKY_MERC;
+                worksheet.Cell(index, 2).Value = x.CDS_MERC;
+                worksheet.Cell(index, 3).Value = rif[0].ValoreRiferimento;
+                worksheet.Cell(index, 4).Value = rif[0].ValoreCorrente;
+                worksheet.Cell(index, 5).FormulaA1 = $"D{index}-C{index}";
+
+                worksheet.Cell(index, 3).Style.NumberFormat.Format = "#,##0.00 €";
+                worksheet.Cell(index, 4).Style.NumberFormat.Format = "#,##0.00 €";
+                worksheet.Cell(index, 5).Style.NumberFormat.Format = "#,##0.00 €";
+
+                if (rif[0].ValoreRiferimento > rif[0].ValoreCorrente)
+                {
+                    worksheet.Cell(index, 5).Style.Font.FontColor = XLColor.RedRyb;
+                }
+
+
+                index++;
+            });
+            endTabella = index - 1;
+
+            worksheet.Range($"A{initTabella}:E{endTabella}").Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"A{initTabella}:E{endTabella}").Style.Border.TopBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"A{initTabella}:E{endTabella}").Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+            worksheet.Range($"A{initTabella}:E{endTabella}").Style.Border.RightBorder = XLBorderStyleValues.Thin;
+
+
+
+            worksheet.Cell(index, 3).FormulaA1 = $"SUM(C{initTabella + 1}:C{endTabella})";
+            worksheet.Cell(index, 4).FormulaA1 = $"SUM(D{initTabella + 1}:D{endTabella})";
+            worksheet.Cell(index, 5).FormulaA1 = $"SUM(E{initTabella + 1}:E{endTabella})";
+            worksheet.Range($"A{index}:F{index}").Style.Font.Bold = true;
+            worksheet.Range($"A{index}:F{index}").Style.NumberFormat.Format = "#,##0.00 €";
+
+            if (Double.Parse(worksheet.Cell(index, 5).Value.ToString()) < 0)
+            {
+                worksheet.Cell(index, 5).Style.Font.FontColor = XLColor.RedRyb;
+            }
+
+
+            index++;
+
+            return index;
+        }
+
+        private static int gruppiStatisticiClienti(XLWorkbook workbook, int indexInit, List<GruppoStatistico> GruppoStatistico, List<GruppoStatisticoRiepilogo> GruppoStatisticoPeriodo, IList<ClienteResponse> clienteResponse, string tipo)
+        {
+            List<ClienteResponse> cliente = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList(); ;
+
+            int index = indexInit + 5;
+
+
+            var worksheet = workbook.Worksheet("Provvigioni");
+            int initTabella = 0;
+            int endTabella = 0;
+            int col = 3;
+
+            worksheet.Cell($"C{index}").Value = $"GRUPPI STATISTICI - CLIENTI - {tipo}";
+            worksheet.Cell($"C{index}").Style.Font.FontSize = 20;
+            worksheet.Range($"C{index}:G{index}").Merge();
+            index += 2;
+            initTabella = index;
+
+            worksheet.Row(index).Style.Font.Bold = true;
+            worksheet.Row(index).Style.Alignment.WrapText = true;
+            worksheet.Cell(index, 1).Value = "Codice";
+            worksheet.Cell(index, 2).Value = "Descrizione";
+
+            GruppoStatistico.ForEach((i) =>
+            {
+
+                worksheet.Cell(index, col).Value = i.CDS_MERC.Trim();
+                worksheet.Column(col).Width = 17;
+                col++;
+            });
+            worksheet.Column(col).Width = 17;
+
+            worksheet.Row(index).Height = 30;
+
+            index++;
+
+
+
+            cliente.ForEach((x) =>
+            {
+
+                worksheet.Cell(index, 1).Value = x.IdCliente.Trim();
+                worksheet.Cell(index, 2).Value = x.NomeCliente.Trim();
+
+                int colTemp = 3;
+
+                GruppoStatistico.ForEach((i) =>
+                {
+
+                    var res = x.GruppoStatisticoCorrente.Find(x => x.CKY_MERC == i.CKY_MERC);
+
+                    switch (tipo)
+                    {
+                        case "TRIMESTRE":
+                            res = x.GruppoStatisticoCorrente.Find(x => x.CKY_MERC == i.CKY_MERC);
+                            break;
+
+                        case "PROGRESSIVO":
+                            res = x.GruppoStatisticoCorrenteProgressivo.Find(x => x.CKY_MERC == i.CKY_MERC);
+                            break;
+                    }
+
+                    if (res != null)
+                    {
+                        worksheet.Cell(index, colTemp).Value = res.Valore;
+                    }
+                    else
+                    {
+                        worksheet.Cell(index, colTemp).Value = "";
+                    }
+
+                    colTemp++;
+                });
+
+                index++;
+
+            });
+
+            endTabella = index - 1;
+
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.TopBorder = XLBorderStyleValues.Thin;
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.RightBorder = XLBorderStyleValues.Thin;
+
+            worksheet.Range(worksheet.Cell(initTabella + 1, 3).Address, worksheet.Cell(endTabella + 1, col).Address).Style.NumberFormat.Format = "#,##0.00 €";
+            worksheet.Row(index).Style.Font.Bold = true;
+
+            for (int c = 3; c < col; c++)
+            {
+                var indInit = worksheet.Cell(initTabella + 1, c).Address.ToString();
+                var indEnd = worksheet.Cell(endTabella, c).Address.ToString();
+                worksheet.Cell(endTabella + 1, c).FormulaA1 = $"SUM({indInit}:{indEnd})";
+            }
+
+
+            for (int r = initTabella + 1; r <= endTabella; r++)
+            {
+                var indInit = worksheet.Cell(r, 3).Address.ToString();
+                var indEnd = worksheet.Cell(r, col - 1).Address.ToString();
+                worksheet.Cell(r, col).FormulaA1 = $"SUM({indInit}:{indEnd})";
+                worksheet.Cell(r, col).Style.Font.Bold = true;
+            }
+
+            return index;
+        }
+
+
+
+
+        private static int _gruppiStatisticiClienti(XLWorkbook workbook, int indexInit, List<GruppoStatistico> GruppoStatistico, List<GruppoStatisticoRiepilogo> GruppoStatisticoPeriodo, IList<ClienteResponse> clienteResponse, string tipo)
+        {
+            List<ClienteResponse> cliente = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList(); ;
+
+            int index = indexInit + 5;
+
+
+            var worksheet = workbook.Worksheet("Provvigioni");
+            int initTabella = 0;
+            int endTabella = 0;
+            int col = 3;
+
+            worksheet.Cell($"C{index}").Value = $"GRUPPI STATISTICI - CLIENTI - {tipo}";
+            worksheet.Cell($"C{index}").Style.Font.FontSize = 20;
+            worksheet.Range($"C{index}:G{index}").Merge();
+            index += 2;
+            initTabella = index;
+
+            worksheet.Row(index).Style.Font.Bold = true;
+            worksheet.Row(index).Style.Alignment.WrapText = true;
+            worksheet.Cell(index, 1).Value = "Codice";
+            worksheet.Cell(index, 2).Value = "Descrizione";
+
+            GruppoStatisticoPeriodo.ForEach((i) =>
+            {
+                if (i.ValoreCorrente == 0)
+                {
+                    return;
+                }
+                worksheet.Cell(index, col).Value = i.CDS_MERC.Trim();
+                worksheet.Column(col).Width = 17;
+                col++;
+            });
+
+            worksheet.Row(index).Height = 30;
+
+            index++;
+
+
+
+            cliente.ForEach((x) =>
+            {
+
+                worksheet.Cell(index, 1).Value = x.IdCliente.Trim();
+                worksheet.Cell(index, 2).Value = x.NomeCliente.Trim();
+
+                int colTemp = 3;
+                GruppoStatisticoPeriodo.ForEach((i) =>
+                {
+                    if (i.ValoreCorrente == 0)
+                    {
+                        return;
+                    }
+
+                    var res = x.GruppoStatisticoCorrente.Find(x => x.CKY_MERC == i.CKY_MERC);
+                    if (res != null)
+                    {
+                        worksheet.Cell(index, colTemp).Value = res.Valore;
+                    }
+                    else
+                    {
+                        worksheet.Cell(index, colTemp).Value = "";
+                    }
+
+                    colTemp++;
+                });
+
+                index++;
+
+            });
+
+            endTabella = index - 1;
+
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.TopBorder = XLBorderStyleValues.Thin;
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+            worksheet.Range(worksheet.Cell(initTabella, 1).Address, worksheet.Cell(endTabella, col - 1).Address).Style.Border.RightBorder = XLBorderStyleValues.Thin;
+
+            worksheet.Range(worksheet.Cell(initTabella + 1, 3).Address, worksheet.Cell(endTabella + 1, col).Address).Style.NumberFormat.Format = "#,##0.00 €";
+            worksheet.Row(index).Style.Font.Bold = true;
+
+            for (int c = 3; c < col; c++)
+            {
+                var indInit = worksheet.Cell(initTabella + 1, c).Address.ToString();
+                var indEnd = worksheet.Cell(endTabella, c).Address.ToString();
+                worksheet.Cell(endTabella + 1, c).FormulaA1 = $"SUM({indInit}:{indEnd})";
+            }
+
+
+            for (int r = initTabella + 1; r <= endTabella; r++)
+            {
+                var indInit = worksheet.Cell(r, 3).Address.ToString();
+                var indEnd = worksheet.Cell(r, col - 1).Address.ToString();
+                worksheet.Cell(r, col).FormulaA1 = $"SUM({indInit}:{indEnd})";
+                worksheet.Cell(r, col).Style.Font.Bold = true;
+            }
+
+            return index;
+        }
+
+        public static void generaExcelTotale(string annoCorrente, string annoRiferimento, string trimestre, IList<AgenteRiepilogo> AgentiRiepilogo, List<GruppoStatistico> GruppoStatistico)
         {
 
             Dictionary<string, string> trimestri = new Dictionary<string, string>() { { "t_1", "TRIM-1" }, { "t_2", "TRIM-2" }, { "t_3", "TRIM-3" }, { "t_4", "TRIM-4" } };
@@ -927,12 +1134,12 @@ namespace Provvigioni_Agenti.Controllers
                 int indexInit = index;
                 foreach (Final final in (List<Final>)trs.Trasferiti)
                 {
-                    worksheet.Cell(index,2).Value = final.Fornitore;
-                    worksheet.Cell(index,3).Value = final.ValoreEuro;
+                    worksheet.Cell(index, 2).Value = final.Fornitore;
+                    worksheet.Cell(index, 3).Value = final.ValoreEuro;
                     worksheet.Cell(index, 3).Style.NumberFormat.Format = "#,##0.00 €";
                     index++;
                 }
-                worksheet.Cell(index, 3).FormulaA1 = $"SUM(C{indexInit}:C{index-1})";
+                worksheet.Cell(index, 3).FormulaA1 = $"SUM(C{indexInit}:C{index - 1})";
                 worksheet.Cell(index, 3).Style.NumberFormat.Format = "#,##0.00 €";
                 worksheet.Cell(index, 3).Style.Font.Bold = true;
 
@@ -946,7 +1153,6 @@ namespace Provvigioni_Agenti.Controllers
             //   
             workbook.SaveAs(pathFile);
 
-            Process.Start("explorer.exe", System.IO.Path.GetFullPath($"{path}"));
             Process.Start("explorer.exe", fullPath);
         }
 
@@ -1047,6 +1253,57 @@ namespace Provvigioni_Agenti.Controllers
             }
 
             return a;
+        }
+
+
+        private static string xmlPeriodoHome = "trimestreSelezionatoHome.xml";
+        public static void salvaPeriodoHome(string trimestre = null, string annoCorrente = null, string annoRiferimento = null)
+        {
+            PeriodoStart p = leggiPeriodoHome();
+
+            if (trimestre != null)
+            {
+                p.Trimestre = trimestre;
+            }
+
+            if (annoCorrente != null)
+            {
+                p.AnnoCorrente = annoCorrente;
+            }
+
+            if (annoRiferimento != null)
+            {
+                p.AnnoRiferimento = annoRiferimento;
+            }
+
+            XmlSerializer x = new XmlSerializer(p.GetType());
+            using (TextWriter writer = new StreamWriter(xmlPeriodoHome))
+            {
+                x.Serialize(writer, p);
+            }
+        }
+
+        public static PeriodoStart leggiPeriodoHome()
+        {
+            PeriodoStart p = new PeriodoStart();
+
+            if (!File.Exists(xmlPeriodoHome))
+            {
+                XmlSerializer x = new XmlSerializer(p.GetType());
+                using (TextWriter writer = new StreamWriter(xmlPeriodoHome))
+                {
+                    x.Serialize(writer, p);
+                }
+            }
+
+            // legge xml
+            XmlSerializer xmlsd = new XmlSerializer(p.GetType());
+            using (TextReader tr = new StreamReader(xmlPeriodoHome))
+            {
+                p = (PeriodoStart)xmlsd.Deserialize(tr);
+            }
+
+            return p;
         }
 
     }

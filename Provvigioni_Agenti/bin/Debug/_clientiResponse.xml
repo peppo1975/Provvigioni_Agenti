@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfClienteResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ClienteResponse>
-    <IdCliente>201.18109</IdCliente>
-    <NomeCliente>AGENERGY S.R.L.S.                                           </NomeCliente>
+    <IdCliente>201.20014</IdCliente>
+    <NomeCliente>11TH DIMENSION SRL</NomeCliente>
     <CategoriaStatisticaProgressiva />
     <CategoriaStatistica />
     <GruppoStatisticoCorrente />
@@ -14,25 +14,167 @@
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>50.63000000000001</ProvvigioneRiferimento>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>1265.85</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
     <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
   </ClienteResponse>
   <ClienteResponse>
-    <IdCliente>201.17748</IdCliente>
-    <NomeCliente>BE ESCO SPA                                                 </NomeCliente>
-    <CategoriaStatisticaProgressiva />
-    <CategoriaStatistica />
+    <IdCliente>201.19122</IdCliente>
+    <NomeCliente>BARCELLA ELETTROFORNITURE SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>19301.499999999993</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>26830.660000000003</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>38523.33</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE DI CALCOLO</Categoria>
+        <ValoreCorrente>800</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>4952.96</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>13458.650000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>16439.340000000004</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>1722.89</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV GB</Categoria>
+        <ValoreCorrente>1561.28</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>195.14</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>997.52</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE GB</Categoria>
+        <ValoreCorrente>2827.57</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>1374.16</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE ZAVORRE</Categoria>
+        <ValoreCorrente>400</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>19301.499999999993</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>26830.660000000003</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>38523.33</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE DI CALCOLO</Categoria>
+        <ValoreCorrente>800</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>4952.96</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>13458.650000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>16439.340000000004</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>1722.89</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV GB</Categoria>
+        <ValoreCorrente>1561.28</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>195.14</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>997.52</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE GB</Categoria>
+        <ValoreCorrente>2827.57</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>1374.16</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE ZAVORRE</Categoria>
+        <ValoreCorrente>400</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
     <GruppoStatisticoCorrente />
     <GruppoStatisticoRiferimento />
     <GruppoStatisticoCorrenteProgressivo />
     <GruppoStatisticoRiferimentoProgressivo />
     <GruppoStatisticoDataGridProgressivo />
     <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrente>129384.99999999988</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneCorrente>2563.67</ProvvigioneCorrente>
     <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
     <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
@@ -40,18 +182,18 @@
   </ClienteResponse>
   <ClienteResponse>
     <IdCliente>201.21229</IdCliente>
-    <NomeCliente>CAMBIELLI S.P.A.                                            </NomeCliente>
+    <NomeCliente>CAMBIELLI S.P.A.</NomeCliente>
     <CategoriaStatisticaProgressiva>
       <CategoriaStatistica>
         <Categoria>QUADRI UNICOBOX</Categoria>
-        <ValoreCorrente>808.1999999999999</ValoreCorrente>
+        <ValoreCorrente>2875.92</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatisticaProgressiva>
     <CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>QUADRI UNICOBOX</Categoria>
-        <ValoreCorrente>808.1999999999999</ValoreCorrente>
+        <ValoreCorrente>2875.92</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatistica>
@@ -61,9 +203,170 @@
     <GruppoStatisticoRiferimentoProgressivo />
     <GruppoStatisticoDataGridProgressivo />
     <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>808.1999999999999</TotaleVendutoCorrente>
+    <TotaleVendutoCorrente>2875.92</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>32.339999999999996</ProvvigioneCorrente>
+    <ProvvigioneCorrente>115.03</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.17306</IdCliente>
+    <NomeCliente>CARBOFF ITALIA S.R.L.</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>12546.47</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI ELETTRICI</Categoria>
+        <ValoreCorrente>3273.68</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>405</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>12546.47</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI ELETTRICI</Categoria>
+        <ValoreCorrente>3273.68</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>405</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>16225.15</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>649.01</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19715</IdCliente>
+    <NomeCliente>CIEB ELETTROFORNITURE SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>1456.63</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>908.01</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>1070.32</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>379.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>2236.61</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>2779.2599999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>210.53</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>1456.63</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>908.01</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>1070.32</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>379.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>2236.61</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>2779.2599999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>210.53</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>9041.300000000001</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>187.49999999999983</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>1524.8299999999997</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>60110.97999999998</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.21782</IdCliente>
+    <NomeCliente>COMET SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
     <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
     <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
@@ -71,486 +374,78 @@
   </ClienteResponse>
   <ClienteResponse>
     <IdCliente>201.17864</IdCliente>
-    <NomeCliente>COMOLI FERRARI &amp; C. SPA                                     </NomeCliente>
-    <CategoriaStatisticaProgressiva />
-    <CategoriaStatistica />
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.20441</IdCliente>
-    <NomeCliente>CONVOI MULTIUTILITY ITALIA SRL                              </NomeCliente>
-    <CategoriaStatisticaProgressiva />
-    <CategoriaStatistica />
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.19387</IdCliente>
-    <NomeCliente>ENERGY DUXON SRL                                            </NomeCliente>
-    <CategoriaStatisticaProgressiva />
-    <CategoriaStatistica />
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.18937</IdCliente>
-    <NomeCliente>ENITALIA GROUP S.R.L.                                       </NomeCliente>
-    <CategoriaStatisticaProgressiva />
-    <CategoriaStatistica />
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>33.2</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>830.1700000000001</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.19938</IdCliente>
-    <NomeCliente>GEGROUP SRL                                                 </NomeCliente>
-    <CategoriaStatisticaProgressiva />
-    <CategoriaStatistica />
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.18076</IdCliente>
-    <NomeCliente>GESCO S.P.A. UNIPERSONALE                                   </NomeCliente>
+    <NomeCliente>COMOLI FERRARI &amp; C. SPA</NomeCliente>
     <CategoriaStatisticaProgressiva>
       <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>20342.42</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
         <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>4390.84</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>2136.55</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>27262.72</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatisticaProgressiva>
-    <CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>20342.42</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>4390.84</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>2136.55</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>27262.72</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatistica>
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>54132.52999999999</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>2165.31</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>10.8</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>270.11</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.20500</IdCliente>
-    <NomeCliente>I.F.EL. SRL                                                 </NomeCliente>
-    <CategoriaStatisticaProgressiva>
-      <CategoriaStatistica>
-        <Categoria>STAFFE</Categoria>
-        <ValoreCorrente>371.37</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatisticaProgressiva>
-    <CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>STAFFE</Categoria>
-        <ValoreCorrente>371.37</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatistica>
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>371.37</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>11.14</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.21341</IdCliente>
-    <NomeCliente>IES ENGINEERING SRL                                         </NomeCliente>
-    <CategoriaStatisticaProgressiva />
-    <CategoriaStatistica />
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>15.610000000000003</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>390.18</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.20588</IdCliente>
-    <NomeCliente>IES SOLARE SRL                                              </NomeCliente>
-    <CategoriaStatisticaProgressiva>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>897.7299999999998</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>1152.6399999999999</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>186</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatisticaProgressiva>
-    <CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>897.7299999999998</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>1152.6399999999999</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>186</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatistica>
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>2236.37</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>89.47</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>59.93999999999998</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>1498.15</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.18976</IdCliente>
-    <NomeCliente>L'ELETTRICA S.P.A.                                          </NomeCliente>
-    <CategoriaStatisticaProgressiva>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>456.84000000000003</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>516.42</ValoreCorrente>
+        <ValoreCorrente>81.86</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>STAFFE</Categoria>
-        <ValoreCorrente>659.68</ValoreCorrente>
+        <ValoreCorrente>59.67</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>1380.9299999999998</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>1268.42</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>3257.14</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatisticaProgressiva>
-    <CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>456.84000000000003</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>516.42</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>STAFFE</Categoria>
-        <ValoreCorrente>659.68</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>1380.9299999999998</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>1268.42</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>3257.14</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatistica>
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>7539.430000000001</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>125.20000000000002</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>142.84000000000003</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>3571.129999999999</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.18714</IdCliente>
-    <NomeCliente>MARINI-PANDOLFI S.P.A.                                      </NomeCliente>
-    <CategoriaStatisticaProgressiva>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>10036.74</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>6263.640000000003</ValoreCorrente>
+        <ValoreCorrente>323.93000000000006</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>7000.550000000001</ValoreCorrente>
+        <ValoreCorrente>132.26</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>SUPPORTI</Categoria>
-        <ValoreCorrente>2096.1400000000003</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>3551.21</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV GB</Categoria>
-        <ValoreCorrente>121.68</ValoreCorrente>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>273.58000000000004</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ZAVORRE GB</Categoria>
-        <ValoreCorrente>287.64</ValoreCorrente>
+        <ValoreCorrente>338.4</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>10464.04</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI CAMPO</Categoria>
-        <ValoreCorrente>3832.83</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI ELETTRICI</Categoria>
-        <ValoreCorrente>893.6500000000001</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>RELAZIONE DI CALCOLO</Categoria>
-        <ValoreCorrente>500</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROVE SU QUADRI</Categoria>
-        <ValoreCorrente>436.32</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>RELAZIONE PENSILINA</Categoria>
-        <ValoreCorrente>900</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>CARPORT DESIGN</Categoria>
-        <ValoreCorrente>4775</ValoreCorrente>
+        <Categoria>ACCESSORI FTV GB</Categoria>
+        <ValoreCorrente>162</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatisticaProgressiva>
     <CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>10036.74</ValoreCorrente>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>81.86</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>59.67</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>6263.640000000003</ValoreCorrente>
+        <ValoreCorrente>323.93000000000006</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>7000.550000000001</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>SUPPORTI</Categoria>
-        <ValoreCorrente>2096.1400000000003</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>3551.21</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV GB</Categoria>
-        <ValoreCorrente>121.68</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ZAVORRE GB</Categoria>
-        <ValoreCorrente>287.64</ValoreCorrente>
+        <ValoreCorrente>132.26</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>10464.04</ValoreCorrente>
+        <ValoreCorrente>273.58000000000004</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>QUADRI DI CAMPO</Categoria>
-        <ValoreCorrente>3832.83</ValoreCorrente>
+        <Categoria>ZAVORRE GB</Categoria>
+        <ValoreCorrente>338.4</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>QUADRI ELETTRICI</Categoria>
-        <ValoreCorrente>893.6500000000001</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>RELAZIONE DI CALCOLO</Categoria>
-        <ValoreCorrente>500</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROVE SU QUADRI</Categoria>
-        <ValoreCorrente>436.32</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>RELAZIONE PENSILINA</Categoria>
-        <ValoreCorrente>900</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>CARPORT DESIGN</Categoria>
-        <ValoreCorrente>4775</ValoreCorrente>
+        <Categoria>ACCESSORI FTV GB</Categoria>
+        <ValoreCorrente>162</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatistica>
@@ -560,17 +455,991 @@
     <GruppoStatisticoRiferimentoProgressivo />
     <GruppoStatisticoDataGridProgressivo />
     <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>51159.43999999999</TotaleVendutoCorrente>
+    <TotaleVendutoCorrente>1371.7</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>1990.33</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>4089.679999999999</ProvvigioneRiferimento>
+    <ProvvigioneCorrente>59.88</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>103460.24000000003</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
     <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
   </ClienteResponse>
   <ClienteResponse>
-    <IdCliente>201.18766</IdCliente>
-    <NomeCliente>MASTER ELECTRIC SRL                                         </NomeCliente>
+    <IdCliente>201.21868</IdCliente>
+    <NomeCliente>CONSULENZE B2B E B2C SRL SEMPLIFICATA</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>7498.3</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>7498.3</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>7498.3</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>299.93</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18018</IdCliente>
+    <NomeCliente>CORNA S.R.L.</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>10214.88</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>1856.08</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>932.7199999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>6591.76</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>10214.88</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>1856.08</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>932.7199999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>6591.76</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>19595.439999999995</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>783.83</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>437.09999999999997</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>10927.800000000001</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.21267</IdCliente>
+    <NomeCliente>ELFI S.P.A.</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>411.84000000000003</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1489.85</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>219.51999999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>411.84000000000003</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1489.85</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>219.51999999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>2121.2100000000005</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>84.86999999999999</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18131</IdCliente>
+    <NomeCliente>EMIFER S.R.L.</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>462.86999999999995</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>11571.84</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18192</IdCliente>
+    <NomeCliente>EQUA srl</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18266</IdCliente>
+    <NomeCliente>ESSE SOLAR SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19930</IdCliente>
+    <NomeCliente>FEVAL SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>1243.1399999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1293.41</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>232.71</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>237.12</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>2720.66</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>1424.77</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>242.74</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>1243.1399999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1293.41</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>232.71</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>237.12</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>2720.66</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>1424.77</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>242.74</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>7394.549999999999</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>295.7600000000001</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>149.05999999999997</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>3725.8999999999996</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.17907</IdCliente>
+    <NomeCliente>FIER S.P.A.</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>948.8</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>23720</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.15422</IdCliente>
+    <NomeCliente>FOGLIANI S.P.A.</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1776.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>582.01</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>467.40999999999997</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>151</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1776.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>582.01</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>467.40999999999997</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>151</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>2977.36</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>119.08</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>50.13</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>1253.3799999999999</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18786</IdCliente>
+    <NomeCliente>G.E.N.C.O. SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>678.96</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>4165.92</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>678.96</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>4165.92</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>4844.88</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>193.79999999999998</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>437.4099999999999</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>10935.060000000001</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.17615</IdCliente>
+    <NomeCliente>GBSOLS S.R.L.</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>212.20999999999998</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>5304.8099999999995</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.21410</IdCliente>
+    <NomeCliente>GREEN ENERGY FACTORY TEAM SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>5845.17</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>10517.79</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>1042.59</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>5845.17</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>10517.79</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>1042.59</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>17405.550000000003</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>696.22</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.16657</IdCliente>
+    <NomeCliente>GS ENERGIA SOLARE SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>124.8</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>1879.77</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>137.11</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1622.28</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>175.68</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>124.8</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>1879.77</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>137.11</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>1622.28</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>175.68</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>3939.6400000000003</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>157.58</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>112.3</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>2807.56</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.21312</IdCliente>
+    <NomeCliente>IDROSANITARIA SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19571</IdCliente>
+    <NomeCliente>IL SOLE SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>144.23</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>3605.4100000000003</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19322</IdCliente>
+    <NomeCliente>IMAT FELCO SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>6429.100000000002</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>1067.46</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>9676.75</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>22452.67</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>6365.2</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>6217.99</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>2401.45</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>7328.63</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>842.12</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE ZAVORRE</Categoria>
+        <ValoreCorrente>400</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>379.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI QUADRI</Categoria>
+        <ValoreCorrente>511.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>112.32</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI ELETTRICI</Categoria>
+        <ValoreCorrente>1026.4</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>6429.100000000002</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>1067.46</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>9676.75</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>22452.67</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>6365.2</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>6217.99</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>2401.45</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>7328.63</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>842.12</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE ZAVORRE</Categoria>
+        <ValoreCorrente>400</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>379.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI QUADRI</Categoria>
+        <ValoreCorrente>511.94</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>112.32</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI ELETTRICI</Categoria>
+        <ValoreCorrente>1026.4</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>65211.97</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>2545.1299999999983</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>4049.7799999999993</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>100793.37999999998</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.21172</IdCliente>
+    <NomeCliente>KON.EL.CO. SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>2487.39</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>62184.51999999999</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.01021</IdCliente>
+    <NomeCliente>M.C. ELETTRICI SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>3899.63</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>GIUNTI E RESINE</Categoria>
+        <ValoreCorrente>330.76</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>7374.97</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI CONNESSIONE</Categoria>
+        <ValoreCorrente>147.13000000000002</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>2824.3300000000004</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>FISSAGGI</Categoria>
+        <ValoreCorrente>54</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>7729.130000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI ME</Categoria>
+        <ValoreCorrente>119.19999999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>20951.850000000002</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>4336.1900000000005</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ALTRO</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV GB</Categoria>
+        <ValoreCorrente>35.91</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>UTENSILI</Categoria>
+        <ValoreCorrente>13.62</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>1149.55</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>Q.CAMPO FUORI STANDARD</Categoria>
+        <ValoreCorrente>473.62</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>3899.63</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>GIUNTI E RESINE</Categoria>
+        <ValoreCorrente>330.76</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>7374.97</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI CONNESSIONE</Categoria>
+        <ValoreCorrente>147.13000000000002</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>2824.3300000000004</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>FISSAGGI</Categoria>
+        <ValoreCorrente>54</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>7729.130000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI ME</Categoria>
+        <ValoreCorrente>119.19999999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>20951.850000000002</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>4336.1900000000005</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ALTRO</Categoria>
+        <ValoreCorrente>0</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV GB</Categoria>
+        <ValoreCorrente>35.91</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>UTENSILI</Categoria>
+        <ValoreCorrente>13.62</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>1149.55</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>Q.CAMPO FUORI STANDARD</Categoria>
+        <ValoreCorrente>473.62</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>49439.89</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>1001.99</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.22095</IdCliente>
+    <NomeCliente>MAIULLARI IMPIANTI ELETTRICI SRL</NomeCliente>
     <CategoriaStatisticaProgressiva />
     <CategoriaStatistica />
     <GruppoStatisticoCorrente />
@@ -589,38 +1458,38 @@
   </ClienteResponse>
   <ClienteResponse>
     <IdCliente>201.15483</IdCliente>
-    <NomeCliente>MEF S.R.L.                                                  </NomeCliente>
+    <NomeCliente>MEF S.R.L.</NomeCliente>
     <CategoriaStatisticaProgressiva>
       <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>3255.6499999999996</ValoreCorrente>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>280.21</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>1004.29</ValoreCorrente>
+        <ValoreCorrente>20.75</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>720.78</ValoreCorrente>
+        <ValoreCorrente>36.33</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatisticaProgressiva>
     <CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>3255.6499999999996</ValoreCorrente>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>280.21</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>1004.29</ValoreCorrente>
+        <ValoreCorrente>20.75</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>720.78</ValoreCorrente>
+        <ValoreCorrente>36.33</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatistica>
@@ -630,17 +1499,271 @@
     <GruppoStatisticoRiferimentoProgressivo />
     <GruppoStatisticoDataGridProgressivo />
     <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>4980.72</TotaleVendutoCorrente>
+    <TotaleVendutoCorrente>337.28999999999996</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>199.23</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>105.03999999999999</ProvvigioneRiferimento>
+    <ProvvigioneCorrente>13.49</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>2626.4099999999994</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
     <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
   </ClienteResponse>
   <ClienteResponse>
-    <IdCliente>201.16210</IdCliente>
-    <NomeCliente>NWG S.p.A.                                                  </NomeCliente>
+    <IdCliente>201.00577</IdCliente>
+    <NomeCliente>MORSETTITALIA S.p.A.</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI ME</Categoria>
+        <ValoreCorrente>284</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTIERE</Categoria>
+        <ValoreCorrente>1277.2</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI ME</Categoria>
+        <ValoreCorrente>284</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTIERE</Categoria>
+        <ValoreCorrente>1277.2</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>1561.2</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>93.67</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.16496</IdCliente>
+    <NomeCliente>PETALO S.R.L.</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>77.52000000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>106.4</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>77.52000000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>106.4</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>183.92000000000002</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>7.359999999999999</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>38.010000000000005</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>950.2900000000001</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18273</IdCliente>
+    <NomeCliente>PLURISERVICE IMPIANTI S.R.L.</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>1977.3999999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>5263.55</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>635.29</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>1977.3999999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>5263.55</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>635.29</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>7876.239999999998</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>315.07</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.00519</IdCliente>
+    <NomeCliente>REXEL ITALIA SPA</NomeCliente>
+    <CategoriaStatisticaProgressiva>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>8317.899999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>10278.00999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>1608.29</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>11165.669999999996</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>105.26</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>208.3</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>5383.06</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>4876.950000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>17921.17</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>536.04</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatisticaProgressiva>
+    <CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>8317.899999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>10278.00999999999</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>1608.29</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>11165.669999999996</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>105.26</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>208.3</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>5383.06</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>4876.950000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>17921.17</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>536.04</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+    </CategoriaStatistica>
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>60400.65</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>1208.0900000000001</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.16740</IdCliente>
+    <NomeCliente>REXENERGY S.R.L.</NomeCliente>
     <CategoriaStatisticaProgressiva />
     <CategoriaStatistica />
     <GruppoStatisticoCorrente />
@@ -652,167 +1775,14 @@
     <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
     <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>869.7100000000008</ProvvigioneRiferimento>
+    <ProvvigioneRiferimento>423.94999999999993</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>17215.840000000007</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimento>13792.800000000001</TotaleVendutoRiferimento>
     <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
   </ClienteResponse>
   <ClienteResponse>
-    <IdCliente>201.18785</IdCliente>
-    <NomeCliente>SOLARYS I.S. S.R.L.                                         </NomeCliente>
-    <CategoriaStatisticaProgressiva>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI TRACKER</Categoria>
-        <ValoreCorrente>0</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatisticaProgressiva>
-    <CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI TRACKER</Categoria>
-        <ValoreCorrente>0</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatistica>
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>0</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.17763</IdCliente>
-    <NomeCliente>SOLSOLIS SRLS                                               </NomeCliente>
-    <CategoriaStatisticaProgressiva>
-      <CategoriaStatistica>
-        <Categoria>STAFFE</Categoria>
-        <ValoreCorrente>976.5</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>99.16</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>397.32</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROVE SU QUADRI</Categoria>
-        <ValoreCorrente>280.8</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>12016.009999999998</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatisticaProgressiva>
-    <CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>STAFFE</Categoria>
-        <ValoreCorrente>976.5</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>99.16</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>397.32</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROVE SU QUADRI</Categoria>
-        <ValoreCorrente>280.8</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>12016.009999999998</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatistica>
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>13769.79</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>550.81</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>399.95000000000005</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>9998.14</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.16223</IdCliente>
-    <NomeCliente>SONEPAR ITALIA S.P.A.                                       </NomeCliente>
-    <CategoriaStatisticaProgressiva>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>60575.58</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>58553.700000000004</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>SUPPORTI</Categoria>
-        <ValoreCorrente>93719.14</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatisticaProgressiva>
-    <CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>60575.58</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>58553.700000000004</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>SUPPORTI</Categoria>
-        <ValoreCorrente>93719.14</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-    </CategoriaStatistica>
-    <GruppoStatisticoCorrente />
-    <GruppoStatisticoRiferimento />
-    <GruppoStatisticoCorrenteProgressivo />
-    <GruppoStatisticoRiferimentoProgressivo />
-    <GruppoStatisticoDataGridProgressivo />
-    <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>212848.42</TotaleVendutoCorrente>
-    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>2128.47</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
-    <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
-    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
-  </ClienteResponse>
-  <ClienteResponse>
-    <IdCliente>201.18806</IdCliente>
-    <NomeCliente>SUNPRIME DEVELOPMENT SRL                                    </NomeCliente>
+    <IdCliente>201.22117</IdCliente>
+    <NomeCliente>REXEUROPA SRL</NomeCliente>
     <CategoriaStatisticaProgressiva />
     <CategoriaStatistica />
     <GruppoStatisticoCorrente />
@@ -830,39 +1800,139 @@
     <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
   </ClienteResponse>
   <ClienteResponse>
-    <IdCliente>201.18379</IdCliente>
-    <NomeCliente>Toscana Componenti Energetici S.R.L.                        </NomeCliente>
+    <IdCliente>201.18157</IdCliente>
+    <NomeCliente>SACCHI GIUSEPPE S.P.A.</NomeCliente>
     <CategoriaStatisticaProgressiva>
       <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>537.21</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
         <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>1393.9500000000003</ValoreCorrente>
+        <ValoreCorrente>10323.459999999995</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>3678.9399999999996</ValoreCorrente>
+        <ValoreCorrente>10753.730000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>23910.14</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>9332.999999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>1645.52</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>12202.710000000003</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>195.14</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>309.7</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>112.32</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI COMMUTAZIONE</Categoria>
+        <ValoreCorrente>544.61</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE DI CALCOLO</Categoria>
+        <ValoreCorrente>350</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>405.37</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>355.54</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatisticaProgressiva>
     <CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>537.21</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
         <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>1393.9500000000003</ValoreCorrente>
+        <ValoreCorrente>10323.459999999995</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>3678.9399999999996</ValoreCorrente>
+        <ValoreCorrente>10753.730000000001</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROFILI</Categoria>
+        <ValoreCorrente>23910.14</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>MORSETTI FTV</Categoria>
+        <ValoreCorrente>9332.999999999998</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>STAFFE</Categoria>
+        <ValoreCorrente>1645.52</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI INTERFACCIA</Categoria>
+        <ValoreCorrente>12202.710000000003</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI AC</Categoria>
+        <ValoreCorrente>195.14</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI DI CAMPO</Categoria>
+        <ValoreCorrente>309.7</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>PROVE SU QUADRI</Categoria>
+        <ValoreCorrente>112.32</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI COMMUTAZIONE</Categoria>
+        <ValoreCorrente>544.61</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>RELAZIONE DI CALCOLO</Categoria>
+        <ValoreCorrente>350</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>QUADRI UNICOBOX</Categoria>
+        <ValoreCorrente>405.37</ValoreCorrente>
+        <ValoreRiferimento>0</ValoreRiferimento>
+      </CategoriaStatistica>
+      <CategoriaStatistica>
+        <Categoria>SUPPORTI</Categoria>
+        <ValoreCorrente>355.54</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatistica>
@@ -872,88 +1942,67 @@
     <GruppoStatisticoRiferimentoProgressivo />
     <GruppoStatisticoDataGridProgressivo />
     <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>5610.099999999999</TotaleVendutoCorrente>
+    <TotaleVendutoCorrente>70441.24000000005</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>224.43</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>78.65999999999998</ProvvigioneRiferimento>
+    <ProvvigioneCorrente>1401.8000000000018</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>1965.8000000000002</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
     <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
   </ClienteResponse>
   <ClienteResponse>
-    <IdCliente>201.19474</IdCliente>
-    <NomeCliente>UNOENERGY GREEN SOLUTIONS SPA                               </NomeCliente>
+    <IdCliente>201.16249</IdCliente>
+    <NomeCliente>SKY-NRG SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>217.86</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>5446.400000000001</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19883</IdCliente>
+    <NomeCliente>SOLEVENTO IMPIANTI SRL</NomeCliente>
     <CategoriaStatisticaProgressiva>
       <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>2809.6100000000006</ValoreCorrente>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>7538.06</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>2343.1800000000007</ValoreCorrente>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>32097.940000000002</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>550.72</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>2199.15</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROVE SU QUADRI</Categoria>
-        <ValoreCorrente>249.6</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>602.41</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI CAMPO</Categoria>
-        <ValoreCorrente>3789.16</ValoreCorrente>
+        <ValoreCorrente>3386.88</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatisticaProgressiva>
     <CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>ZAVORRE CONTACT</Categoria>
-        <ValoreCorrente>2809.6100000000006</ValoreCorrente>
+        <Categoria>ACCESSORI FTV CONTACT</Categoria>
+        <ValoreCorrente>7538.06</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
-        <Categoria>ACCESSORI FTV CONTACT</Categoria>
-        <ValoreCorrente>2343.1800000000007</ValoreCorrente>
+        <Categoria>ZAVORRE CONTACT</Categoria>
+        <ValoreCorrente>32097.940000000002</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
       <CategoriaStatistica>
         <Categoria>MORSETTI FTV</Categoria>
-        <ValoreCorrente>550.72</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI INTERFACCIA</Categoria>
-        <ValoreCorrente>2199.15</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROVE SU QUADRI</Categoria>
-        <ValoreCorrente>249.6</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>PROFILI</Categoria>
-        <ValoreCorrente>602.41</ValoreCorrente>
-        <ValoreRiferimento>0</ValoreRiferimento>
-      </CategoriaStatistica>
-      <CategoriaStatistica>
-        <Categoria>QUADRI DI CAMPO</Categoria>
-        <ValoreCorrente>3789.16</ValoreCorrente>
+        <ValoreCorrente>3386.88</ValoreCorrente>
         <ValoreRiferimento>0</ValoreRiferimento>
       </CategoriaStatistica>
     </CategoriaStatistica>
@@ -963,12 +2012,69 @@
     <GruppoStatisticoRiferimentoProgressivo />
     <GruppoStatisticoDataGridProgressivo />
     <GruppoStatisticoDataGridTrimestre />
-    <TotaleVendutoCorrente>12543.829999999996</TotaleVendutoCorrente>
+    <TotaleVendutoCorrente>43022.88000000001</TotaleVendutoCorrente>
     <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
-    <ProvvigioneCorrente>501.78999999999996</ProvvigioneCorrente>
-    <ProvvigioneRiferimento>552.2400000000002</ProvvigioneRiferimento>
+    <ProvvigioneCorrente>1720.93</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>58.54</ProvvigioneRiferimento>
     <Percentuale>0</Percentuale>
-    <TotaleVendutoRiferimento>13805.410000000003</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimento>1463.13</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.19394</IdCliente>
+    <NomeCliente>SOLINK SRL</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>32.56</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>813.6999999999999</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18282</IdCliente>
+    <NomeCliente>SORGENIA GREEN SOLUTIONS S.R.L.</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>348.97</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>8724.520000000004</TotaleVendutoRiferimento>
+    <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
+  </ClienteResponse>
+  <ClienteResponse>
+    <IdCliente>201.18519</IdCliente>
+    <NomeCliente>TECNO-LARIO S.P.A.</NomeCliente>
+    <CategoriaStatisticaProgressiva />
+    <CategoriaStatistica />
+    <GruppoStatisticoCorrente />
+    <GruppoStatisticoRiferimento />
+    <GruppoStatisticoCorrenteProgressivo />
+    <GruppoStatisticoRiferimentoProgressivo />
+    <GruppoStatisticoDataGridProgressivo />
+    <GruppoStatisticoDataGridTrimestre />
+    <TotaleVendutoCorrente>0</TotaleVendutoCorrente>
+    <TotaleVendutoCorrenteProgressivo>0</TotaleVendutoCorrenteProgressivo>
+    <ProvvigioneCorrente>0</ProvvigioneCorrente>
+    <ProvvigioneRiferimento>0</ProvvigioneRiferimento>
+    <Percentuale>0</Percentuale>
+    <TotaleVendutoRiferimento>0</TotaleVendutoRiferimento>
     <TotaleVendutoRiferimentoProgressivo>0</TotaleVendutoRiferimentoProgressivo>
   </ClienteResponse>
 </ArrayOfClienteResponse>
