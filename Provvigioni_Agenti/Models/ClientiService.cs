@@ -99,8 +99,6 @@ namespace Provvigioni_Agenti.Models
                     CDS_MERC = item.CDS_MERC,
                     CKY_MERC = item.CKY_MERC,
                     ValoreCorrente = posTrimCorr - negTrimCorr,
-                    //ValoreCorrente = progressivoListCorrente.Where(x=>x.CKY_MERC == item.CKY_MERC).ToList().Sum(x=> Double.Parse( x.NMP_VALMOV_UM1)),
-                    //ValoreRiferimento = progressivoListRiferimento.Where(x => x.CKY_MERC == item.CKY_MERC).ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1)),
                     ValoreRiferimento = posTrimRif - negTrimRif,
                 });
 
@@ -108,16 +106,14 @@ namespace Provvigioni_Agenti.Models
                 var posProgNeg = trimestreListCorrente.Where(x => x.CKY_MERC == item.CKY_MERC).Where(x => x.CSG_DOC != "FT").ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
 
 
-                var posProgRif = trimestreListCorrente.Where(x => x.CKY_MERC == item.CKY_MERC).Where(x => x.CSG_DOC == "FT").ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
-                var negProgRif = trimestreListCorrente.Where(x => x.CKY_MERC == item.CKY_MERC).Where(x => x.CSG_DOC != "FT").ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
+                var posProgRif = trimestreListRiferimento.Where(x => x.CKY_MERC == item.CKY_MERC).Where(x => x.CSG_DOC == "FT").ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
+                var negProgRif = trimestreListRiferimento.Where(x => x.CKY_MERC == item.CKY_MERC).Where(x => x.CSG_DOC != "FT").ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1));
 
                 _gruppoStatisticoTrimestre.Add(new GruppoStatisticoRiepilogo() // anno riferimento
                 {
                     CDS_MERC = item.CDS_MERC,
                     CKY_MERC = item.CKY_MERC,
                     ValoreCorrente = posProgTrim - posProgNeg,
-                    //ValoreCorrente = trimestreListCorrente.Where(x => x.CKY_MERC == item.CKY_MERC).ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1)),
-                    //ValoreRiferimento = trimestreListRiferimento.Where(x => x.CKY_MERC == item.CKY_MERC).ToList().Sum(x => Double.Parse(x.NMP_VALMOV_UM1)),
                     ValoreRiferimento = posProgRif - negProgRif,
                 });
 
@@ -127,15 +123,16 @@ namespace Provvigioni_Agenti.Models
 
             foreach (var clienteID in clientiID)
             {
-                // ClienteResponse cl = new ClienteResponse() { IdCliente = clienteID.CKY_CNT, NomeCliente = clienteID.CDS_CNT_RAGSOC };
-
                 ClienteResponse cl = estrapola(clienteID.CKY_CNT, p, idGruppiMerceologici);
 
                 cl.IdCliente = clienteID.CKY_CNT;
                 cl.NomeCliente = clienteID.CDS_CNT_RAGSOC;
                 _clientiResponse2.Add(cl);
 
-                if (cl.TotaleVendutoCorrente != 0 || cl.TotaleVendutoRiferimento != 0)
+
+
+                //if (cl.TotaleVendutoCorrente != 0 || cl.TotaleVendutoRiferimento != 0 || cl.TotaleVendutoCorrenteProgressivo != 0)
+                if (true)
                 {
                     clDg = new ClienteResponseDatagrid();
                     clDg.IdCliente = clienteID.CKY_CNT;
@@ -178,7 +175,6 @@ namespace Provvigioni_Agenti.Models
 
             using (TextWriter writer = new StreamWriter(@"../_clientiResponse2.xml"))
             {
-                //xmls.Serialize(writer, _clientiResponse2.Where(x => ((x.TotaleVendutoCorrente != 0) || (x.TotaleVendutoRiferimento != 0))).ToList());
                 xmls.Serialize(writer, _clientiResponse2);
             }
 
@@ -207,10 +203,7 @@ namespace Provvigioni_Agenti.Models
 
                 ClienteResponse resultItem = _clientiResponse.Find(x => x.IdCliente.Trim() == storico.CKY_CNT.ToString().Trim());
 
-                //storico.DTT_DOC
-                //totaleVenduto = Double.Parse(storico.NMP_VALMOV_UM1);
                 totaleVenduto = storico.CSG_DOC == "FT" ? Double.Parse(storico.NMP_VALMOV_UM1) : -Double.Parse(storico.NMP_VALMOV_UM1);
-
 
                 var findCatStat = _categorieStatitischeRichiamate.Contains(storico.CDS_CAT_STAT_ART.Trim(' '));
                 if (findCatStat == false)
@@ -368,10 +361,10 @@ namespace Provvigioni_Agenti.Models
 
 
             //anno corrente
-            IList<Storico> correnteProgressivo = entrate.Where(x => (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineCorrente))).ToList();
+            IList<Storico> correnteProgressivo = entrate.Where(x => x.ANNO == p.annoCorrente).Where(x => (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineCorrente))).ToList();
             IList<Storico> correnteTrimestre = correnteProgressivo.Where(x => (DateTime.Parse(x.DTT_DOC) >= DateTime.Parse(p.dataInizioCorrente))).ToList();
 
-            IList<Storico> correnteProgressivo_not = entrate_not.Where(x => (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineCorrente))).ToList();
+            IList<Storico> correnteProgressivo_not = entrate_not.Where(x => x.ANNO == p.annoCorrente).Where(x => (DateTime.Parse(x.DTT_DOC) <= DateTime.Parse(p.dataFineCorrente))).ToList();
             IList<Storico> correnteTrimestre_not = correnteProgressivo_not.Where(x => (DateTime.Parse(x.DTT_DOC) >= DateTime.Parse(p.dataInizioCorrente))).ToList();
 
 
@@ -481,9 +474,6 @@ namespace Provvigioni_Agenti.Models
             return res;
         }
 
-
-        //public IList<ClienteResponse> ClientiResponse => _clientiResponse;  //ele
-        //public IList<ClienteResponseDatagrid> ClientiResponseDatagrid => _clientiResponseDatagrid.Where(x => ((x.TotaleVenduto != "0,00 €") || (x.totaleAnnoPrecedente != "0,00 €"))).ToList();  //ele
 
         public IList<ClienteResponse> ClientiResponse => _clientiResponse2;  //ele
         public IList<ClienteResponseDatagrid> ClientiResponseDatagrid => _clientiResponseDatagrid2;  //ele

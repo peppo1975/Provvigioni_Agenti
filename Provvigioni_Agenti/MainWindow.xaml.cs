@@ -1,18 +1,19 @@
 ﻿
+using DocumentFormat.OpenXml.Bibliography;
+using DocumentFormat.OpenXml.Drawing;
+using Provvigioni_Agenti.Controllers;
+using Provvigioni_Agenti.Models;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Printing.IndexedProperties;
 using System.Reflection.Metadata;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Xml.Serialization;
-using DocumentFormat.OpenXml.Drawing;
-using Provvigioni_Agenti.Controllers;
-using Provvigioni_Agenti.Models;
-using System.Threading.Tasks;
-using System.Printing.IndexedProperties;
 
 namespace Provvigioni_Agenti
 {
@@ -32,6 +33,7 @@ namespace Provvigioni_Agenti
         string annoRiferimentoTxt = string.Empty;
 
         string trimestre = string.Empty;
+        List<string> mese = null;
         List<string> elencoTrasferiti = new List<string>();
         TrasferitiService trs = null;
         IList<ClienteResponseDatagrid> clienteResponseDatagrids = null;
@@ -47,6 +49,12 @@ namespace Provvigioni_Agenti
         List<GruppoStatisticoRiepilogo> GruppoStatisticoProgessivo = null;
         List<GruppoStatisticoRiepilogo> GruppoStatisticoTrimestre = null;
 
+        List<PeriodoList> trimestreComboBox = new List<PeriodoList>();
+        List<PeriodoList> meseComboBox = null;
+        PeriodoSelezionato periodoSelezionato = null;
+        List<ClientiContactDiretti> clientiContactDiretti = new List<ClientiContactDiretti>();
+
+
 
         Style HorizontalRightStyle = null;
 
@@ -60,9 +68,57 @@ namespace Provvigioni_Agenti
 
             apriImpostazioni.Visibility = Visibility.Hidden;
 
+            // ------------------------------------------------------------------------------
+            periodoSelezionato = new PeriodoSelezionato(); // xml del periodo selezionato
+
+
+            trimestreComboBox = new List<PeriodoList>()
+            {
+                new PeriodoList() { Valore = Trimestri.T1, Testo = "1° TRIM" } ,
+                new PeriodoList() { Valore = Trimestri.T2, Testo = "2° TRIM" } ,
+                new PeriodoList() { Valore = Trimestri.T3, Testo = "3° TRIM" } ,
+                new PeriodoList() { Valore = Trimestri.T4, Testo = "4° TRIM" }
+            };
+
+            trimestreComboBox.ForEach(trimestre =>
+            {
+                trimestreList.Items.Add(trimestre);
+
+            });
+
+            meseComboBox = new List<PeriodoList>()
+            {
+                new PeriodoList() { Valore = Mesi.Gennaio, Testo = "GENNAIO" } ,
+                new PeriodoList() { Valore = Mesi.Febbraio, Testo = "FEBBRAIO" } ,
+                new PeriodoList() { Valore = Mesi.Marzo, Testo = "MARZO" } ,
+                new PeriodoList() { Valore = Mesi.Aprile, Testo = "APRILE" },
+                new PeriodoList() { Valore = Mesi.Maggio, Testo = "MAGGIO" },
+                new PeriodoList() { Valore = Mesi.Giugno, Testo = "GIUGNO" },
+                new PeriodoList() { Valore = Mesi.Luglio, Testo = "LUGLIO" },
+                new PeriodoList() { Valore = Mesi.Agosto, Testo = "AGOSTO" },
+                new PeriodoList() { Valore = Mesi.Settembre, Testo = "SETTEMBRE" },
+                new PeriodoList() { Valore = Mesi.Ottobre, Testo = "OTTOBRE" },
+                new PeriodoList() { Valore = Mesi.Novembre, Testo = "NOVEMBRE" },
+                new PeriodoList() { Valore = Mesi.Dicembre, Testo = "DICEMBRE" },
+            };
+            meseComboBox.ForEach(x =>
+            {
+                meseList.Items.Add(x);
+            });
+
+
+            periodoSelezionato = General.periodoHome();
+
+            // ------------------------------------------------------------------------------
+
+
+
             List<Anno> A = new List<Anno>();
 
             A = Controllers.Database.SELECT_GET_LIST<Anno>("SELECT NGB_ANNO_DOC FROM MMA_M GROUP BY NGB_ANNO_DOC  ORDER BY NGB_ANNO_DOC DESC");
+
+
+
 
             foreach (Anno anno in A)
             {
@@ -70,11 +126,12 @@ namespace Provvigioni_Agenti
                 annoRiferimento.Items.Add(anno.NGB_ANNO_DOC);
             }
 
+            if (periodoSelezionato.AnnoCorrente == string.Empty)
+                annoCorrente.SelectedItem = A.Max(t => t.NGB_ANNO_DOC);
 
-            annoCorrente.SelectedItem = A.Max(t => t.NGB_ANNO_DOC);
 
-     
-            annoRiferimento.SelectedItem = A.Max(t => t.NGB_ANNO_DOC) - 1;
+            if (periodoSelezionato.AnnoRiferimento == string.Empty)
+                annoRiferimento.SelectedItem = A.Max(t => t.NGB_ANNO_DOC) - 1;
 
             annoCorrenteTxt = A.Max(t => t.NGB_ANNO_DOC).ToString(); //annoCorrente.SelectedItem.ToString();
             annoRiferimentoTxt = (A.Max(t => t.NGB_ANNO_DOC) - 1).ToString(); //annoCorrente.SelectedItem.ToString();
@@ -97,28 +154,26 @@ namespace Provvigioni_Agenti
 
             // vedo se sono salvate delle date -----------------------------------
 
-            checkService = new Models.CheckService(t_1, t_2, t_3, t_4);
-
-            var p = General.leggiPeriodoHome();
-
-            if (p.AnnoCorrente != string.Empty)
+            if (periodoSelezionato.AnnoCorrente != string.Empty)
             {
-                annoCorrente.SelectedItem = Int32.Parse(p.AnnoCorrente) ;
+                annoCorrente.SelectedItem = Int32.Parse(periodoSelezionato.AnnoCorrente);
             }
 
-            if (p.AnnoRiferimento != string.Empty)
+            if (periodoSelezionato.AnnoRiferimento != string.Empty)
             {
-                annoRiferimento.SelectedItem = Int32.Parse(p.AnnoRiferimento);
+                annoRiferimento.SelectedItem = Int32.Parse(periodoSelezionato.AnnoRiferimento);
             }
+
+
+            var m = meseComboBox.FindIndex(e => e.Valore == periodoSelezionato.Mese);
+            var t = trimestreComboBox.FindIndex(e => e.Valore == periodoSelezionato.Trimestre);
+
+            trimestreList.SelectedIndex = t;
+            meseList.SelectedIndex = m;
+
             // -------------------------------------------------------------------
 
-            //var t = Task.Run(async delegate
-            //{
-            //    await Task.Delay(10000);
-            //    //MessageBox.Show("fengul");
-            //    return 42;
-            //});
-            //t.Wait();
+
 
 
 
@@ -159,6 +214,10 @@ namespace Provvigioni_Agenti
         {
             bool initCalc = true;
 
+            mese = new List<string>();
+
+            mese = General.cercaMese(meseList, trimestreList);
+
             General.generaXmlCitta();
 
             if (!initCalc)
@@ -172,11 +231,12 @@ namespace Provvigioni_Agenti
 
             // TRASFERITI --------------------------------------------
             elencoTrasferiti = General.directoryTrasferiti(annoCorrenteTxt);
-            trs = new TrasferitiService(agente.Regione, annoCorrenteTxt, trimestre, elencoTrasferiti);
+            trs = new TrasferitiService(agente.Regione, annoCorrenteTxt, trimestre, elencoTrasferiti, mese);
             // -------------------------------------------------------
 
+            clientiContactDiretti = General.ClientiContactDiretti(annoCorrenteTxt, annoRiferimentoTxt);
 
-            string query = Controllers.Query.clientiAgente(agente.ID, annoCorrenteTxt, annoRiferimentoTxt);
+            string query = Controllers.Query.clientiAgente(agente.ID, annoCorrenteTxt, annoRiferimentoTxt, clientiContactDiretti);
             var st = Controllers.Database.SELECT_GET_LIST<Storico>(query);
 
 
@@ -188,10 +248,21 @@ namespace Provvigioni_Agenti
             storicoService = new Models.StoricoService();
             periodoService = new Models.PeriodoService(annoCorrente.SelectedItem.ToString(), annoRiferimento.SelectedItem.ToString(), fromDate, toDate);
 
-            if (agente.ID.Contains('#'))
+            if (agente.ID.Contains('#')) // TUTTI GLI AGENTI -------------------------------------------------------
             {
-                string[] dirs = Directory.GetDirectories(trimestreSelezionato());
-                var elencoRiepilogo = new Models.AgentiRiepilogoService(st, periodoService.Periodo[0], dirs);
+
+                List<string> listDirs = new List<string>();
+
+                foreach (var item in mese)
+                {
+                    string[] dirs2 = Directory.GetDirectories($"../trasferiti/{annoCorrente.SelectedItem.ToString()}/{item}");
+                    listDirs.AddRange(dirs2);
+                }
+
+
+
+                // string[] dirs = Directory.GetDirectories(periodoSelezionatoL()); // intervallo mesi selezionato (non più trimestre)
+                var elencoRiepilogo = new Models.AgentiRiepilogoService(st, periodoService.Periodo[0], listDirs);
                 AgentiRiepilogo = elencoRiepilogo.AgentiRiepilogo;
 
                 dataGridVendite.ItemsSource = elencoRiepilogo.AgentiRiepilogo;
@@ -254,7 +325,6 @@ namespace Provvigioni_Agenti
 
             //trs.Trasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = total.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = total });
 
-
             var trsTrasferiti = trs.Trasferiti;
 
             trsTrasferiti.Add(new Final() { Fornitore = " - - - TOTALE: ", Valore = totalTrasferiti.ToString("C", CultureInfo.CurrentCulture), ValoreEuro = totalTrasferiti });
@@ -312,8 +382,7 @@ namespace Provvigioni_Agenti
             totProvvigioneCorrente.Text = General.valuta(provvigioneCorrente);
 
 
-            //double provvigioneTrasferiti = (double)trs.Trasferiti.Sum(x => x.ValoreEuro) * 0.02;
-            double provvigioneTrasferiti = totalTrasferiti * 0.02;
+            double provvigioneTrasferiti = totalTrasferiti * 0.05;
             totProvvigioneSellout.Text = General.valuta(provvigioneTrasferiti);
 
 
@@ -361,89 +430,9 @@ namespace Provvigioni_Agenti
             }
 
 
-            //      });
-
         }
 
 
-
-
-        void SelezionaTrimestre(object sender, RoutedEventArgs e)
-        {
-            dataGridVendite.ItemsSource = null;
-
-            RadioButton li = (sender as RadioButton);
-
-            string name = li.Name.ToString();
-
-            string anno = annoCorrente.SelectedItem.ToString();
-
-            string ricercaDa = string.Empty;
-
-            string ricercaFinoA = string.Empty;
-
-            string titoloTimestreText = string.Empty;
-
-            List<string> trimestreSelezionato = new List<string>();
-
-
-
-            trimestre = name;
-
-
-            trimestreSelezionato.Add(name);
-
-            XmlSerializer xmls = new XmlSerializer(typeof(List<string>));
-
-            using (TextWriter writer = new StreamWriter($"trimestreSelezionato.xml"))
-            {
-                xmls.Serialize(writer, trimestreSelezionato);
-            }
-
-            switch (name)
-            {
-                case "t_1":
-                    ricercaDa = $"{anno}-01-01";
-                    ricercaFinoA = $"{anno}-03-31";
-                    titoloTimestreText = "1° Trimestre";
-                    // t_1.IsChecked = true;
-
-                    break;
-
-                case "t_2":
-                    ricercaDa = $"{anno}-04-01";
-                    ricercaFinoA = $"{anno}-06-30";
-                    titoloTimestreText = "2° Trimestre";
-                    //t_2.IsChecked = true;
-                    break;
-
-                case "t_3":
-                    ricercaDa = $"{anno}-07-01";
-                    ricercaFinoA = $"{anno}-09-30";
-                    titoloTimestreText = "3° Trimestre";
-                    //t_3.IsChecked = true;
-                    break;
-
-                case "t_4":
-                    ricercaDa = $"{anno}-10-01";
-                    ricercaFinoA = $"{anno}-12-31";
-                    titoloTimestreText = "4° Trimestre";
-                    // t_4.IsChecked = true;
-                    break;
-
-            }
-
-            fromDate.SelectedDate = DateTime.Parse(ricercaDa);
-            toDate.SelectedDate = DateTime.Parse(ricercaFinoA);
-            //dataGridVendite.ItemsSource = null;
-            li.IsChecked = true;
-            titoloTrimestre.Text = titoloTimestreText;
-            trimestre = name;
-
-            General.salvaPeriodoHome(trimestre);
-
-            refreshInfo();
-        }
 
 
 
@@ -476,66 +465,19 @@ namespace Provvigioni_Agenti
 
         void deselezionaTrimestre()
         {
-            t_1.IsChecked = false;
-            t_2.IsChecked = false;
-            t_3.IsChecked = false;
-            t_4.IsChecked = false;
-
-            trimestre = string.Empty;
-
+            trimestreList.Text = "";
+            meseList.Text = "";
+            titoloTrimestre.Text = "";
         }
 
 
         private void annoCorrente_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            dataGridVendite.ItemsSource = null;
             string anno = annoCorrente.SelectedItem.ToString();
-            string ricercaDa = string.Empty;
-            string ricercaFinoA = string.Empty;
-            bool checkedTrimestre = false;
+      
+            periodoSelezionato.AnnoCorrente = anno;
 
-            if (annoCorrenteTxt != string.Empty)
-            {
-                General.salvaPeriodoHome(annoCorrente: anno);
-            }
-
-
-            General.directoryTrasferiti(anno);
-
-            if (t_1.IsChecked == true)
-            {
-                ricercaDa = $"{anno}-01-01";
-                ricercaFinoA = $"{anno}-03-31";
-                checkedTrimestre = true;
-            }
-
-
-            if (t_2.IsChecked == true)
-            {
-                ricercaDa = $"{anno}-04-01";
-                ricercaFinoA = $"{anno}-06-30";
-                checkedTrimestre = true;
-            }
-
-            if (t_3.IsChecked == true)
-            {
-                ricercaDa = $"{anno}-07-01";
-                ricercaFinoA = $"{anno}-09-30";
-                checkedTrimestre = true;
-            }
-
-            if (t_4.IsChecked == true)
-            {
-                ricercaDa = $"{anno}-10-01";
-                ricercaFinoA = $"{anno}-12-31";
-                checkedTrimestre = true;
-            }
-
-            if (checkedTrimestre)
-            {
-                fromDate.SelectedDate = DateTime.Parse(ricercaDa);
-                toDate.SelectedDate = DateTime.Parse(ricercaFinoA);
-            }
+            General.periodoHomeSave(periodoSelezionato);
 
         }
 
@@ -708,8 +650,8 @@ namespace Provvigioni_Agenti
             string da = DateTime.Parse(fromDate.ToString()).ToString("MM-dd");
             string al = DateTime.Parse(toDate.ToString()).ToString("MM-dd");
 
-            bool one = ((da == "01-01") || (da == "04-01") || (da == "07-01") || (da == "10-01"));
-            bool two = ((al == "03-31") || (al == "07-31") || (al == "09-30") || (al == "12-31"));
+            bool one = ((da == "01-01") || (da == "02-01") || (da == "03-01") || (da == "04-01") || (da == "05-01") || (da == "06-01") || (da == "07-01") || (da == "08-01") || (da == "09-01") || (da == "10-01") || (da == "11-01") || (da == "12-01"));
+            bool two = ((al == "01-31") || (al == "02-28") || (al == "02-29") || (al == "03-31") || (al == "04-30") || (al == "05-31") || (al == "06-30") || (al == "07-31") || (al == "08-31") || (al == "09-30") || (al == "10-31") || (al == "11-30") || (al == "12-31"));
 
             if (!(one && two))
             {
@@ -721,24 +663,24 @@ namespace Provvigioni_Agenti
         {
             dataGridVendite.ItemsSource = null;
 
-            if (annoRiferimentoTxt != string.Empty)
-            {
-                annoRiferimentoTxt = annoRiferimento.SelectedItem.ToString();
-                General.salvaPeriodoHome(annoRiferimento: annoRiferimentoTxt);
-            }
+      
+            periodoSelezionato.AnnoRiferimento = annoRiferimentoTxt = annoRiferimento.SelectedItem.ToString();
 
+            General.periodoHomeSave(periodoSelezionato);
         }
 
         private void creaExcelButton_Click(object sender, RoutedEventArgs e)
         {
             agente = (Models.Agente)elencoAgenti.SelectedItem;
+
+            Console.WriteLine(mese);
             if (agente.ID.Contains('#'))
             {   // tutti gli agenti
                 General.generaExcelTotale(annoCorrenteTxt, annoRiferimentoTxt, trimestre, AgentiRiepilogo, GruppoStatistico);
             }
             else
             {   // singolo agente
-                General.generaExcelTrasferiti(agente.NikName, agente.Nome, annoCorrenteTxt, annoRiferimentoTxt, trimestre, clienteResponse, trs.Trasferiti, categorieStatistiche, categorieStatisticheTotaleProgressivo, GruppoStatistico, GruppoStatisticoProgessivo, GruppoStatisticoTrimestre);
+                General.generaExcelTrasferiti(agente, annoCorrenteTxt, annoRiferimentoTxt, mese, clienteResponse, trs.Trasferiti, GruppoStatistico, GruppoStatisticoProgessivo, GruppoStatisticoTrimestre);
             }
 
         }
@@ -754,34 +696,31 @@ namespace Provvigioni_Agenti
         }
 
 
-        private string trimestreSelezionato()
+        private string periodoSelezionatoL()
         {
             RadioButton rb = null;
 
-            if (t_1.IsChecked == true)
-            {
-                rb = t_1;
-            }
-            else if (t_2.IsChecked == true)
-            {
-                rb = t_2;
-            }
-            else if (t_3.IsChecked == true)
-            {
-                rb = t_3;
-            }
-            else if (t_4.IsChecked == true)
-            {
-                rb = t_4;
-            }
+            //if (t_1.IsChecked == true)
+            //{
+            //    rb = t_1;
+            //}
+            //else if (t_2.IsChecked == true)
+            //{
+            //    rb = t_2;
+            //}
+            //else if (t_3.IsChecked == true)
+            //{
+            //    rb = t_3;
+            //}
+            //else if (t_4.IsChecked == true)
+            //{
+            //    rb = t_4;
+            //}
 
-            if (rb == null)
-            {
-                return "";
-            }
-
-
-
+            //if (rb == null)
+            //{
+            //    return "";
+            //}
 
             string path = $"../trasferiti/{annoCorrente.SelectedItem.ToString()}/{rb.Name}";
 
@@ -792,40 +731,77 @@ namespace Provvigioni_Agenti
         {
             RadioButton rb = null;
 
-            if (t_1.IsChecked == true)
+            //if (t_1.IsChecked == true)
+            //{
+            //    rb = t_1;
+            //}
+            //else if (t_2.IsChecked == true)
+            //{
+            //    rb = t_2;
+            //}
+            //else if (t_3.IsChecked == true)
+            //{
+            //    rb = t_3;
+            //}
+            //else if (t_4.IsChecked == true)
+            //{
+            //    rb = t_4;
+            //}
+
+            //if (rb == null)
+            //{
+            //    return;
+            //}
+
+            string path = string.Empty;
+
+            var mese = meseList.SelectedItem;
+            var trimeste = trimestreList.SelectedItem;
+
+            if (mese != null)
             {
-                rb = t_1;
-            }
-            else if (t_2.IsChecked == true)
-            {
-                rb = t_2;
-            }
-            else if (t_3.IsChecked == true)
-            {
-                rb = t_3;
-            }
-            else if (t_4.IsChecked == true)
-            {
-                rb = t_4;
+
+
+                int selectedIndex = meseList.SelectedIndex;
+                PeriodoList selectedValue = (PeriodoList)meseList.SelectedValue;
+
+                path = $"../trasferiti/{annoCorrente.SelectedItem.ToString()}/{selectedValue.Valore.ToString()}";
             }
 
-            if (rb == null)
+            if (trimeste != null)
             {
-                return;
+                path = $"../trasferiti/{annoCorrente.SelectedItem.ToString()}";
             }
 
 
 
 
-            string path = $"../trasferiti/{annoCorrente.SelectedItem.ToString()}/{rb.Name}";
+            //string path = $"../trasferiti/{annoCorrente.SelectedItem.ToString()}/{rb.Name}";
+
 
             string fullPath = System.IO.Path.GetFullPath(path);
 
-            File.Create($"{fullPath}/{annoCorrente.SelectedItem.ToString()}--{rb.Name}").Dispose();
+            if (mese != null)
+            {
+                int selectedIndex = meseList.SelectedIndex;
+                PeriodoList selectedValue = (PeriodoList)meseList.SelectedValue;
+
+                File.Create($"{fullPath}/{annoCorrente.SelectedItem.ToString()}_{selectedValue.Valore.ToString()}").Dispose();
+            }
+            if (trimeste != null)
+            {
+                File.Create($"{fullPath}/{annoCorrente.SelectedItem.ToString()}").Dispose();
+            }
+
 
             Process.Start("explorer.exe", fullPath);
         }
+
+
+
+
         Process p = null;
+
         private void apriImpostazioni_Click(object sender, RoutedEventArgs e)
         {
 
@@ -856,6 +832,140 @@ namespace Provvigioni_Agenti
         {
             //  MessageBox.Show("Process exited");
             // p.Close();
+        }
+
+        private void trimestreList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            ComboBox cmb = (ComboBox)sender;
+            int selectedIndex = cmb.SelectedIndex;
+            PeriodoList selectedValue = (PeriodoList)cmb.SelectedValue;
+
+            if (selectedValue == null)
+            {
+                return;
+            }
+
+            dataGridVendite.ItemsSource = null;
+
+            string name = selectedValue.Valore.ToString();
+
+            string anno = annoCorrente.SelectedItem.ToString();
+
+            string ricercaDa = string.Empty;
+
+            string ricercaFinoA = string.Empty;
+
+            string titoloTimestreText = string.Empty;
+
+            List<string> trimestreSelezionato = new List<string>();
+
+            trimestre = name;
+
+            string numTrimestre = name.Split("_")[1];
+
+            ricercaDa = DateTime.Today.ToString("d");
+            ricercaFinoA = DateTime.Today.ToString("d");
+            titoloTimestreText = DateTime.Today.ToString("d");
+
+            int end = Int32.Parse(numTrimestre) * 3; // mese finale trimestre
+
+            if (end > 0)
+            {
+                int init = end - 2; // mese iniziale trimestre
+                var days = DateTime.DaysInMonth(Int32.Parse(anno), end);
+
+                ricercaDa = $"{anno}-{init}-01";
+                ricercaFinoA = $"{anno}-{end}-{days}";
+                titoloTimestreText = $"{selectedValue.Testo}";
+            }
+
+            XmlSerializer xmls = new XmlSerializer(typeof(List<string>));
+
+            using (TextWriter writer = new StreamWriter($"periodoSelezionato.xml"))
+            {
+                xmls.Serialize(writer, trimestreSelezionato);
+            }
+
+            fromDate.SelectedDate = DateTime.Parse(ricercaDa);
+            toDate.SelectedDate = DateTime.Parse(ricercaFinoA);
+
+            dataGridVendite.ItemsSource = null;
+
+            titoloTrimestre.Text = titoloTimestreText;
+            trimestre = name;
+
+            periodoSelezionato.Trimestre = name;
+            periodoSelezionato.Mese = "";
+
+            General.periodoHomeSave(periodoSelezionato);
+
+            refreshInfo();
+
+            meseList.Text = "";
+
+        }
+
+        private void meseList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cmb = (ComboBox)sender;
+            int selectedIndex = cmb.SelectedIndex;
+            PeriodoList selectedValue = (PeriodoList)cmb.SelectedValue;
+
+            if (selectedValue == null)
+            {
+                return;
+            }
+
+
+            bool inserisciData = true;
+
+            dataGridVendite.ItemsSource = null;
+
+            string name = selectedValue.Valore.ToString();
+
+            string anno = annoCorrente.SelectedItem.ToString();
+
+            string ricercaDa = string.Empty;
+
+            string ricercaFinoA = string.Empty;
+
+            string titoloTimestreText = string.Empty;
+
+            List<string> trimestreSelezionato = new List<string>();
+
+            string mese = name.Split("_")[1];
+
+            var days = DateTime.DaysInMonth(Int32.Parse(anno), Int32.Parse(mese));
+
+            XmlSerializer xmls = new XmlSerializer(typeof(List<string>));
+
+            using (TextWriter writer = new StreamWriter($"meseSelezionato.xml"))
+            {
+                xmls.Serialize(writer, trimestreSelezionato);
+            }
+
+            ricercaDa = $"{anno}-{mese}-01";
+            ricercaFinoA = $"{anno}-{mese}-{days}";
+            titoloTimestreText = $"{selectedValue.Testo}";
+
+
+
+            fromDate.SelectedDate = DateTime.Parse(ricercaDa);
+            toDate.SelectedDate = DateTime.Parse(ricercaFinoA);
+
+
+            dataGridVendite.ItemsSource = null;
+            titoloTrimestre.Text = titoloTimestreText;
+            periodoSelezionato.Mese = name;
+            periodoSelezionato.Trimestre = "";
+
+            General.periodoHomeSave(periodoSelezionato);
+
+            refreshInfo();
+
+            trimestreList.Text = "";
+
         }
     }
 

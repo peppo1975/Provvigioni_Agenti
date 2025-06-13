@@ -1,18 +1,20 @@
-﻿using System.Globalization;
-using System.Windows.Controls;
-using Provvigioni_Agenti.Models;
-using System.Windows.Media;
-using System.IO;
-using ClosedXML.Excel;
-using System.Xml.Serialization;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
+﻿using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Bibliography;
-using System.Runtime.CompilerServices;
 using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Spreadsheet;
-using System.Collections.Generic;
 using DocumentFormat.OpenXml.Office2019.Drawing.Animation;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Provvigioni_Agenti.Models;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Formats.Tar;
+using System.Globalization;
+using System.IO;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Xml.Serialization;
 
 namespace Provvigioni_Agenti.Controllers
 {
@@ -59,8 +61,14 @@ namespace Provvigioni_Agenti.Controllers
             //leggo il file agenti.xml
             AgentiService agentiService = new Models.AgentiService();
 
-            List<string> trasferiti = new List<string>() { "acmei", "barcella", "comoli", "edif", "mc_elettrici", "meb", "rexel", "sacchi", "sonepar" };
-            List<string> trimestri = new List<string>() { "t_1", "t_2", "t_3", "t_4" };
+            List<string> trasferiti = new List<string>();
+
+            trasferiti = Models.TrasferitiAgenzie.ToArray();
+
+            List<string> mesi = new List<string>(); // { "m_01", "m_02", "m_03", "m_04", "m_05", "m_06", "m_07", "m_08", "m_09", "m_10", "m_11", "m_12" };
+
+            mesi = Models.Mesi.toArray();
+
             string path = "../trasferiti";
 
             if (!File.Exists(path))
@@ -77,9 +85,9 @@ namespace Provvigioni_Agenti.Controllers
 
             }
 
-            foreach (string trimestre in trimestri)
+            foreach (string mese in mesi)
             {
-                string subPathTrimestre = $"{pathYear}/{trimestre}";
+                string subPathTrimestre = $"{pathYear}/{mese}";
 
                 if (!File.Exists(subPathTrimestre))
                 {
@@ -301,10 +309,6 @@ namespace Provvigioni_Agenti.Controllers
 
         public static void generaXmlCitta()
         {
-            //generaCittaBarcella();
-            //generaCittaRexel();
-            //generaCittaSacchi();
-
 
             List<string> cittaXml = new List<string>();
 
@@ -322,14 +326,6 @@ namespace Provvigioni_Agenti.Controllers
             {
                 generaCittaXml(x);
             });
-
-            //generaCittaXml("citta_acmei");
-            //generaCittaXml("citta_barcella");
-            //generaCittaXml("citta_rexel");
-            //generaCittaXml("citta_sacchi");
-            //generaCittaXml("citta_barcella");
-            //generaCittaXml("citta_comoli");
-            //generaCittaXml("citta_mc_elettrici");
 
         }
 
@@ -383,16 +379,16 @@ namespace Provvigioni_Agenti.Controllers
 
 
 
-        public static void generaExcelTrasferiti(string agente, string agenteFullName, string annoCorrente, string annoRiferimento, string trimestre, IList<ClienteResponse> clienteResponse, IList<Final> Trasferiti, IList<CategoriaStatistica> categorieStatistiche, IList<CategoriaStatistica> categorieStatisticheTotaleProgressivo, List<GruppoStatistico> GruppoStatistico, List<GruppoStatisticoRiepilogo> GruppoStatisticoProgressivo, List<GruppoStatisticoRiepilogo> GruppoStatisticoTrimestre)
+        public static void generaExcelTrasferiti(Agente agente, string annoCorrente, string annoRiferimento, List<string> mese, IList<ClienteResponse> clienteResponse, IList<Final> Trasferiti, List<GruppoStatistico> GruppoStatistico, List<GruppoStatisticoRiepilogo> GruppoStatisticoProgressivo, List<GruppoStatisticoRiepilogo> GruppoStatisticoTrimestre)
         {
-            Dictionary<string, string> trimestri = new Dictionary<string, string>() { { "t_1", "TRIM-1" }, { "t_2", "TRIM-2" }, { "t_3", "TRIM-3" }, { "t_4", "TRIM-4" } };
 
-            Dictionary<string, string> trimestriSuExcel = new Dictionary<string, string>() { { "t_1", "1° TRIM" }, { "t_2", "2° TRIM" }, { "t_3", "3° TRIM" }, { "t_4", "4° TRIM" } };
+            var esplPer = esplicitaPeriodo(mese);
+
 
             IList<ClienteResponse> clienteResponseFiltered = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList();
 
             string path = "../excelAgenti";
-            string pathFile = $"{path}/{annoCorrente}-{trimestri[trimestre]}--{agente}.xlsx";
+            string pathFile = $"{path}/{annoCorrente}-{esplPer["excelNomeFile"]}--{agente.NikName}.xlsx";
             string fullPath = System.IO.Path.GetFullPath(pathFile);
             int index = 9;
 
@@ -409,17 +405,17 @@ namespace Provvigioni_Agenti.Controllers
             using var workbook = new XLWorkbook();
             var worksheet = workbook.AddWorksheet("Provvigioni");
 
-            int rowTotDb = provvigioniPassPartout(workbook, index, agente, agenteFullName, annoCorrente, annoRiferimento, trimestre, clienteResponse);
+            int rowTotDb = provvigioniPassPartout(workbook, index, agente.NikName, agente.Nome, annoCorrente, annoRiferimento, esplPer["excel"], clienteResponse);
 
             int rowTotSellOut = provvigioniSellout(workbook, rowTotDb, Trasferiti);
 
             int rowProgressivo = gruppiStatistici(workbook, rowTotSellOut, annoCorrente, annoRiferimento, clienteResponse, GruppoStatistico, GruppoStatisticoProgressivo, "PROGRESSIVO");
 
-            int rowTrimestre = gruppiStatistici(workbook, rowProgressivo, annoCorrente, annoRiferimento, clienteResponse, GruppoStatistico, GruppoStatisticoTrimestre, "TRIMESTRE");
+            int rowTrimestre = gruppiStatistici(workbook, rowProgressivo, annoCorrente, annoRiferimento, clienteResponse, GruppoStatistico, GruppoStatisticoTrimestre, esplPer["excel"]);
 
             int rowGrStClienteProgr = gruppiStatisticiClienti(workbook, rowTrimestre, GruppoStatistico, GruppoStatisticoProgressivo, clienteResponse, "PROGRESSIVO");
 
-            int rowGrStClienteTrim = gruppiStatisticiClienti(workbook, rowGrStClienteProgr, GruppoStatistico, GruppoStatisticoTrimestre, clienteResponse, "TRIMESTRE");
+            int rowGrStClienteTrim = gruppiStatisticiClienti(workbook, rowGrStClienteProgr, GruppoStatistico, GruppoStatisticoTrimestre, clienteResponse, esplPer["excel"]);
 
 
             worksheet.Cell("G4").FormulaA1 = $"G{rowTotDb}+G{rowTotSellOut}";
@@ -440,9 +436,61 @@ namespace Provvigioni_Agenti.Controllers
         }
 
 
+
+        private static Dictionary<string, string> esplicitaPeriodo(List<string> mese)
+        {
+            Dictionary<string, string> esplicitaExcel = new Dictionary<string, string>();
+            Dictionary<string, string> esplicitaExcelNomeFile = new Dictionary<string, string>();
+            Dictionary<string, string> result = new Dictionary<string, string>();
+
+
+            string cerca = String.Join("", mese);
+
+            esplicitaExcel.Add(Mesi.Gennaio + Mesi.Febbraio + Mesi.Marzo, "1° TRIMESTRE");
+            esplicitaExcel.Add(Mesi.Aprile + Mesi.Maggio + Mesi.Giugno, "2° TRIMESTRE");
+            esplicitaExcel.Add(Mesi.Luglio + Mesi.Agosto + Mesi.Settembre, "3° TRIMESTRE");
+            esplicitaExcel.Add(Mesi.Ottobre + Mesi.Novembre + Mesi.Dicembre, "4° TRIMESTRE");
+            esplicitaExcel.Add(Mesi.Gennaio, "GENNAIO");
+            esplicitaExcel.Add(Mesi.Febbraio, "FEBBRAIO");
+            esplicitaExcel.Add(Mesi.Marzo, "MARZO");
+            esplicitaExcel.Add(Mesi.Aprile, "APRILE");
+            esplicitaExcel.Add(Mesi.Maggio, "MAGGIO");
+            esplicitaExcel.Add(Mesi.Giugno, "GIUGNO");
+            esplicitaExcel.Add(Mesi.Luglio, "LUGLIO");
+            esplicitaExcel.Add(Mesi.Agosto, "AGOSTO");
+            esplicitaExcel.Add(Mesi.Settembre, "SETTEMBRE");
+            esplicitaExcel.Add(Mesi.Ottobre, "OTTOBRE");
+            esplicitaExcel.Add(Mesi.Novembre, "NOVEMBRE");
+            esplicitaExcel.Add(Mesi.Dicembre, "DICEMBRE");
+
+            esplicitaExcelNomeFile.Add(Mesi.Gennaio + Mesi.Febbraio + Mesi.Marzo, "1-TRIMESTRE");
+            esplicitaExcelNomeFile.Add(Mesi.Aprile + Mesi.Maggio + Mesi.Giugno, "2-TRIMESTRE");
+            esplicitaExcelNomeFile.Add(Mesi.Luglio + Mesi.Agosto + Mesi.Settembre, "3-TRIMESTRE");
+            esplicitaExcelNomeFile.Add(Mesi.Ottobre + Mesi.Novembre + Mesi.Dicembre, "4-TRIMESTRE");
+            esplicitaExcelNomeFile.Add(Mesi.Gennaio, "GENNAIO");
+            esplicitaExcelNomeFile.Add(Mesi.Febbraio, "FEBBRAIO");
+            esplicitaExcelNomeFile.Add(Mesi.Marzo, "MARZO");
+            esplicitaExcelNomeFile.Add(Mesi.Aprile, "APRILE");
+            esplicitaExcelNomeFile.Add(Mesi.Maggio, "MAGGIO");
+            esplicitaExcelNomeFile.Add(Mesi.Giugno, "GIUGNO");
+            esplicitaExcelNomeFile.Add(Mesi.Luglio, "LUGLIO");
+            esplicitaExcelNomeFile.Add(Mesi.Agosto, "AGOSTO");
+            esplicitaExcelNomeFile.Add(Mesi.Settembre, "SETTEMBRE");
+            esplicitaExcelNomeFile.Add(Mesi.Ottobre, "OTTOBRE");
+            esplicitaExcelNomeFile.Add(Mesi.Novembre, "NOVEMBRE");
+            esplicitaExcelNomeFile.Add(Mesi.Dicembre, "DICEMBRE");
+
+            result.Add("excel", esplicitaExcel[cerca]);
+            result.Add("excelNomeFile", esplicitaExcelNomeFile[cerca]);
+
+            return result;
+        }
+
+
         private static int provvigioniPassPartout(XLWorkbook workbook, int indexInit, string agente, string agenteFullName, string annoCorrente, string annoRiferimento, string trimestre, IList<ClienteResponse> clienteResponse)
         {
-            Dictionary<string, string> trimestri = new Dictionary<string, string>() { { "t_1", "TRIM-1" }, { "t_2", "TRIM-2" }, { "t_3", "TRIM-3" }, { "t_4", "TRIM-4" } };
+
+
             Dictionary<string, string> trimestriSuExcel = new Dictionary<string, string>() { { "t_1", "1° TRIM" }, { "t_2", "2° TRIM" }, { "t_3", "3° TRIM" }, { "t_4", "4° TRIM" } };
 
             IList<ClienteResponse> clienteResponseFiltered = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList();
@@ -476,7 +524,7 @@ namespace Provvigioni_Agenti.Controllers
             worksheet.Range("C2:G2").Merge();
 
 
-            worksheet.Cell("C4").Value = $"{trimestriSuExcel[trimestre]} {annoCorrente} - PROVVIGIONE TOTALE: ";
+            worksheet.Cell("C4").Value = $"{trimestre} {annoCorrente} - PROVVIGIONE TOTALE: ";
             worksheet.Cell("C4").Style.Font.FontSize = 15;
             worksheet.Range("C4:F4").Merge();
             //worksheet.Cell("H3").Value
@@ -644,6 +692,7 @@ namespace Provvigioni_Agenti.Controllers
         {
             List<ClienteResponse> cliente = (List<ClienteResponse>)clienteResponse;
 
+
             int index = indexInit;
             var worksheet = workbook.Worksheet("Provvigioni");
             int initTabella = 0;
@@ -672,10 +721,10 @@ namespace Provvigioni_Agenti.Controllers
 
                 var rif = GruppoStatisticoPeriodo.Where(y => y.CKY_MERC == x.CKY_MERC).ToList();
 
-                if (rif[0].ValoreRiferimento == 0 && rif[0].ValoreCorrente == 0)
-                {
-                    return;
-                }
+                //if (rif[0].ValoreRiferimento == 0 && rif[0].ValoreCorrente == 0)
+                //{
+                //    return;
+                //}
 
                 worksheet.Cell(index, 1).Value = x.CKY_MERC;
                 worksheet.Cell(index, 2).Value = x.CDS_MERC;
@@ -723,7 +772,8 @@ namespace Provvigioni_Agenti.Controllers
 
         private static int gruppiStatisticiClienti(XLWorkbook workbook, int indexInit, List<GruppoStatistico> GruppoStatistico, List<GruppoStatisticoRiepilogo> GruppoStatisticoPeriodo, IList<ClienteResponse> clienteResponse, string tipo)
         {
-            List<ClienteResponse> cliente = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList(); ;
+            //List<ClienteResponse> cliente = clienteResponse.Where(x => x.TotaleVendutoCorrente > 0 || x.TotaleVendutoRiferimento > 0).ToList(); ;
+            List<ClienteResponse> cliente = clienteResponse.ToList();
 
             int index = indexInit + 5;
 
@@ -732,6 +782,29 @@ namespace Provvigioni_Agenti.Controllers
             int initTabella = 0;
             int endTabella = 0;
             int col = 3;
+
+
+            List<string> removeGruppoStatistico = new List<string>();
+            GruppoStatistico.ForEach((x) =>
+            {
+                Console.WriteLine(x);
+
+
+                var rif = GruppoStatisticoPeriodo.Where(y => y.CKY_MERC == x.CKY_MERC).ToList();
+
+                //if (rif[0].ValoreRiferimento == 0 && rif[0].ValoreCorrente == 0)
+                //{
+                //    removeGruppoStatistico.Add(x.CKY_MERC);
+                //    //return;
+                //}
+
+            });
+
+            //removeGruppoStatistico.ForEach((x) => {
+            //    GruppoStatistico.RemoveAll(y=>y.CKY_MERC == x);
+            //});
+
+
 
             worksheet.Cell($"C{index}").Value = $"GRUPPI STATISTICI - CLIENTI - {tipo}";
             worksheet.Cell($"C{index}").Style.Font.FontSize = 20;
@@ -1200,7 +1273,7 @@ namespace Provvigioni_Agenti.Controllers
             }
         }
 
-        public static List<Trasferito> estraiXmlSellout(string[] listDir)
+        public static List<Trasferito> estraiXmlSellout(List<string> listDir)
         {
             List<Trasferito> a = new List<Trasferito>();
 
@@ -1216,7 +1289,7 @@ namespace Provvigioni_Agenti.Controllers
 
                 if (nameFile == "mc_elettrici")
                 {
-                    fileXml.Add($"{item}/mc_elettrici_consegna_diretta.xml");
+                    fileXml.Add($"{item}/mc_elettrici_vendita_diretta.xml");
                     fileXml.Add($"{item}/mc_elettrici_magazzino.xml");
                 }
                 else
@@ -1228,6 +1301,10 @@ namespace Provvigioni_Agenti.Controllers
 
             foreach (var item in fileXml)
             {
+
+
+                if (!File.Exists(item))
+                    continue;
 
                 // legge xml
                 XmlSerializer xmlsd = new XmlSerializer(typeof(List<Trasferito>));
@@ -1304,6 +1381,134 @@ namespace Provvigioni_Agenti.Controllers
             }
 
             return p;
+        }
+
+
+        // ----------------------------------------------------------------------------------------------
+
+        private static string xmlPeriodoSelezionatoHome = "periodoSelezionatoHome.xml";
+        public static PeriodoSelezionato periodoHome()
+        {
+            PeriodoSelezionato p = new PeriodoSelezionato();
+
+            if (!File.Exists(xmlPeriodoSelezionatoHome))
+            {
+                XmlSerializer x = new XmlSerializer(p.GetType());
+                using (TextWriter writer = new StreamWriter(xmlPeriodoSelezionatoHome))
+                {
+                    x.Serialize(writer, p);
+                }
+            }
+
+            // legge xml
+            XmlSerializer xmlsd = new XmlSerializer(p.GetType());
+            using (TextReader tr = new StreamReader(xmlPeriodoSelezionatoHome))
+            {
+                p = (PeriodoSelezionato)xmlsd.Deserialize(tr);
+            }
+
+            return p;
+
+        }
+
+        public static void periodoHomeSave(PeriodoSelezionato p)
+        {
+            XmlSerializer x = new XmlSerializer(p.GetType());
+            using (TextWriter writer = new StreamWriter(xmlPeriodoSelezionatoHome))
+            {
+                x.Serialize(writer, p);
+            }
+        }
+
+
+        public static List<string> cercaMese(ComboBox mese, ComboBox trimestre)
+        {
+            List<string> list = new List<string>();
+
+            if (mese.SelectedItem != null)
+            {
+
+                list.Add(((PeriodoList)mese.SelectedItem).Valore);
+            }
+
+            if (trimestre.SelectedItem != null)
+            {
+
+                string trimesteSelezionato = ((PeriodoList)trimestre.SelectedItem).Valore;
+
+                if (trimesteSelezionato == Trimestri.T1)
+                {
+                    list.Add(Mesi.Gennaio);
+                    list.Add(Mesi.Febbraio);
+                    list.Add(Mesi.Marzo);
+                }
+
+                if (trimesteSelezionato == Trimestri.T2)
+                {
+                    list.Add(Mesi.Aprile);
+                    list.Add(Mesi.Maggio);
+                    list.Add(Mesi.Giugno);
+                }
+                if (trimesteSelezionato == Trimestri.T3)
+                {
+                    list.Add(Mesi.Luglio);
+                    list.Add(Mesi.Agosto);
+                    list.Add(Mesi.Settembre);
+                }
+                if (trimesteSelezionato == Trimestri.T4)
+                {
+                    list.Add(Mesi.Luglio);
+                    list.Add(Mesi.Agosto);
+                    list.Add(Mesi.Settembre);
+                }
+
+                //switch (trimesteSelezionato)
+                //{
+
+                //    case "t_1":
+                //        list.Add(Mesi.Gennaio);
+                //        list.Add(Mesi.Febbraio);
+                //        list.Add(Mesi.Marzo);
+                //        break;
+
+                //    case "t_2":
+                //        list.Add(Mesi.Aprile);
+                //        list.Add(Mesi.Maggio);
+                //        list.Add(Mesi.Giugno);
+                //        break;
+
+                //    case "t_3":
+                //        list.Add(Mesi.Lugio);
+                //        list.Add(Mesi.Agosto);
+                //        list.Add(Mesi.Settembre);
+                //        break;
+
+                //    case "t_4":
+                //        list.Add(Mesi.Ottobre);
+                //        list.Add(Mesi.Novembre);
+                //        list.Add(Mesi.Dicembre);
+                //        break;
+
+                //}
+
+
+
+            }
+
+            return list;
+        }
+
+        public static List<ClientiContactDiretti> ClientiContactDiretti(string annoCorrente, string annoRiferimento)
+        {
+            List<ClientiContactDiretti> list = new List<ClientiContactDiretti>();
+
+            string query = $"SELECT CKY_CNT_CLFR FROM MMA_M WHERE CKY_CNT_AGENTE = '415.01009'  and NGB_ANNO_DOC in ('{annoRiferimento}','{annoCorrente}') GROUP BY CKY_CNT_CLFR";
+
+            List<Anno> A = new List<Anno>();
+
+            list = Controllers.Database.SELECT_GET_LIST<ClientiContactDiretti>(query);
+
+            return list;
         }
 
     }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTrasferito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Trasferito>
+    <Regione>LAZIO</Regione>
+    <Venduto>7090.813800000002</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>PIEMONTE</Regione>
+    <Venduto>3029.8095</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>MARCHE</Regione>
+    <Venduto>1152.6768</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>LOMBARDIA</Regione>
+    <Venduto>3826.1691</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>CAMPANIA</Regione>
+    <Venduto>7737.025499999999</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>EMILIA ROMAGNA</Regione>
+    <Venduto>3133.9512</Venduto>
+  </Trasferito>
+</ArrayOfTrasferito>

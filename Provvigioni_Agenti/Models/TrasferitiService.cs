@@ -1,4 +1,11 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Bibliography;
+using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.InkML;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Provvigioni_Agenti.Controllers;
+using Provvigioni_Agenti.Sellout;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -8,12 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Serialization;
-using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.InkML;
-using DocumentFormat.OpenXml.Spreadsheet;
-using Provvigioni_Agenti.Controllers;
+using static System.Net.WebRequestMethods;
 
 namespace Provvigioni_Agenti.Models
 {
@@ -30,7 +32,8 @@ namespace Provvigioni_Agenti.Models
         string annoCorrente = string.Empty;
         string trimestre = string.Empty;
         List<string> elencoTrasferiti = new List<string>();
-        public TrasferitiService(List<Regione> regione, string annoCorrente, string trimestre, List<string> elencoTrasferiti)
+        List<string> mese = null;
+        public TrasferitiService(List<Regione> regione, string annoCorrente, string trimestre, List<string> elencoTrasferiti, List<string> mese = null)
         {
             _trasferiti = new List<Final>();
             this.regione = regione;
@@ -38,8 +41,162 @@ namespace Provvigioni_Agenti.Models
             this.trimestre = trimestre;
             this.elencoTrasferiti = elencoTrasferiti;
 
-            leggiDirectory();
+            if (mese != null)
+            {
+                this.mese = mese;
+            }
+
+            //leggiDirectory();
+            leggiDirectoryClass();
         }
+
+
+        private void leggiDirectoryClass()
+        {
+            Final estratti = null;
+            List<Final> finale = new List<Final>();
+
+            foreach (string trasferito in elencoTrasferiti)
+            {
+                if (trasferito == TrasferitiAgenzie.Acmei)
+                {
+                    Acmei acmei = new Acmei(annoCorrente, mese);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)acmei.Trasferito);
+
+
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "ACMEI";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.Barcella)
+                {
+                    Barcella barcella = new Barcella(annoCorrente, mese);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)barcella.Trasferito);
+
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "BARCELLA";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.Comoli)
+                {
+
+                    Comoli comoli = new Comoli(annoCorrente, mese);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)comoli.Trasferito);
+
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "COMOLI";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.Edif)
+                {
+                    Edif edif = new Edif(annoCorrente, mese);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)edif.Trasferito);
+
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "EDIF";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.McElettrici)
+                {
+                    McElettrici magazzino = new McElettrici(annoCorrente, mese, 1);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)magazzino.Trasferito);
+
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "MC ELETTR. MAG.";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+
+                    McElettrici diretta = new McElettrici(annoCorrente, mese, 2);
+                    result = IntefaceClass.cercaInList(regione, (List<Trasferito>)diretta.Trasferito);
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "MC ELETTR. DIR.";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.Meb)
+                {
+                    Meb meb = new Meb(annoCorrente, mese);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)meb.Trasferito);
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "MEB";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.Rexel)
+                {
+
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.Sacchi)
+                {
+
+                }
+
+
+                if (trasferito == TrasferitiAgenzie.Sonepar)
+                {
+                    Sonepar sonepar = new Sonepar(annoCorrente, mese);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)sonepar.Trasferito);
+                    if (result != null)
+                    {
+                        estratti = new Final();
+                        estratti.Fornitore = "SONEPAR";
+                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        estratti.ValoreEuro = result.Venduto;
+                        finale.Add(estratti);
+                    }
+                }
+            }
+
+            _trasferiti = finale;
+        }
+
 
         private void leggiDirectory()
         {
@@ -188,9 +345,9 @@ namespace Provvigioni_Agenti.Models
         }
 
 
-        private void serializzaXml(string annoCorrente, string trimestre, string trasferito, string trasferitoName, List<Trasferito> sellout)
+        private void serializzaXml(string annoCorrente, string intervallo, string trasferito, string trasferitoName, List<Trasferito> sellout)
         {
-            string path = $"../trasferiti/{annoCorrente}/{trimestre}/{trasferito}/{trasferitoName}.xml";
+            string path = $"../trasferiti/{annoCorrente}/{intervallo}/{trasferito}/{trasferitoName}.xml";
 
             XmlSerializer xmls = new XmlSerializer(typeof(List<Trasferito>));
 
@@ -199,6 +356,7 @@ namespace Provvigioni_Agenti.Models
                 xmls.Serialize(writer, sellout);
             }
         }
+
 
         private Trasferito cercaInList(List<Regione> regioni, List<Trasferito> daExcel)
         {
@@ -221,7 +379,6 @@ namespace Provvigioni_Agenti.Models
                     res.Venduto += result.Venduto;
                 }
             }
-
 
             return res;
         }
@@ -753,8 +910,6 @@ namespace Provvigioni_Agenti.Models
 
         private List<Trasferito> elaboraComoli(string path, List<string> elencoFiles)
         {
-
-
             List<Trasferito> comoli = new List<Trasferito>();
 
             if (elencoFiles.Count == 0)

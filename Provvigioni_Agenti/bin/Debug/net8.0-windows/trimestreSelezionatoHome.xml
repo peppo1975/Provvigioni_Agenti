@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PeriodoStart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Trimestre>t_1</Trimestre>
-  <AnnoCorrente>2025</AnnoCorrente>
-  <AnnoRiferimento>2024</AnnoRiferimento>
+  <Trimestre>t_4</Trimestre>
+  <AnnoCorrente />
+  <AnnoRiferimento />
 </PeriodoStart>

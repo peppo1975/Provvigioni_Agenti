@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Provvigioni_Agenti.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,9 +11,14 @@ namespace Provvigioni_Agenti.Controllers
     internal class Query
     {
 
-        public static string clientiAgente(string agente, string annoCorrente, string annoRiferimento)
+        public static string clientiAgente(string agente, string annoCorrente, string annoRiferimento,List<ClientiContactDiretti> clientiContactDiretti)
         {
             string query = string.Empty;
+
+            List<string> list = new List<string>();
+            list = clientiContactDiretti.Select(x => x.CKY_CNT_CLFR).ToList();
+
+            string direttiContact = String.Join(',',list);
 
             if (agente.Contains('#'))
             {
@@ -34,7 +40,7 @@ namespace Provvigioni_Agenti.Controllers
 
             string readText = File.ReadAllText("query.sql");
 
-            query = readText.Replace("{annoCorrente}", annoCorrente).Replace("{annoRiferimento}", annoRiferimento).Replace("{agente}", agente);
+            query = readText.Replace("{annoCorrente}", annoCorrente).Replace("{annoRiferimento}", annoRiferimento).Replace("{agente}", agente).Replace("{direttiContact}", direttiContact);
 
             return query;
         }

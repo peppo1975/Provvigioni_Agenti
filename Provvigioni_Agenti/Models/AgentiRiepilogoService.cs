@@ -2,6 +2,7 @@
 using Provvigioni_Agenti.Controllers;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -20,12 +21,12 @@ namespace Provvigioni_Agenti.Models
         private List<AgenteRiepilogo> _agentiRiepilogo = null;
         private List<AgenteRiepilogo> _agentiRiepilogo2 = null;
 
-        public AgentiRiepilogoService(IList<Storico> Storico, Periodo p, string[] dirs)
+        public AgentiRiepilogoService(IList<Storico> Storico, Periodo p, List<string> dirs)
         {
             _agentiRiepilogo = new List<AgenteRiepilogo>();
             _agentiRiepilogo2 = new List<AgenteRiepilogo>();
 
-            https://josipmisko.com/posts/c-sharp-unique-list
+        https://josipmisko.com/posts/c-sharp-unique-list
             var agentiId = Storico.DistinctBy(x => x.CKY_CNT_AGENTE).ToList();
 
             foreach (var item in agentiId)
@@ -100,38 +101,45 @@ namespace Provvigioni_Agenti.Models
 
             foreach (var item in agentiId)
             {
-                List<Regione> agenteRegione = ag.Find(r => r.ID == item.CKY_CNT_AGENTE).Regione.ToList();
 
                 double sellout = 0;
 
-                agenteRegione.ForEach((r) =>
+                if (a.Count > 0)
                 {
-                    Trasferito resnum = a.Find(z => z.Regione == r.Nome);
-                    sellout += resnum.Venduto;
-                });
+                    List<Regione> agenteRegione = ag.Find(r => r.ID == item.CKY_CNT_AGENTE).Regione.ToList();
+
+                    agenteRegione.ForEach((r) =>
+                    {
+                        Trasferito resnum = a.Find(z => z.Regione == r.Nome);
+                        if (resnum != null)
+                            sellout += resnum.Venduto;
+                    });
+                }
+
+
 
                 _agentiRiepilogo2.Add(filtra((List<Storico>)Storico, p, item.CKY_CNT_AGENTE, (Storico)item, sellout));
             }
 
-            _agentiRiepilogo.ForEach((x) =>
-        {
-            //x.VendutoRiferimento = 1.3;
-            string id = x.ID;
+            //_agentiRiepilogo.ForEach((x) =>
+            //{
+            //    //x.VendutoRiferimento = 1.3;
+            //    string id = x.ID;
 
-            var res = ag.Find(x => x.ID == id);
+            //    var res = ag.Find(x => x.ID == id);
 
-            res.Regione.ForEach((y) =>
-            {
-                string nome = y.Nome;
-                var resnum = a.Find(z => z.Regione == nome);
+            //    res.Regione.ForEach((y) =>
+            //    {
+            //        string nome = y.Nome;
+            //        var resnum = a.Find(z => z.Regione == nome);
 
-                x.VendutoSellout += resnum.Venduto;
-                x.VendutoSelloutString = x.VendutoSellout.ToString("C", CultureInfo.CurrentCulture);
+            //        x.VendutoSellout += resnum.Venduto;
+            //        x.VendutoSelloutString = x.VendutoSellout.ToString("C", CultureInfo.CurrentCulture);
 
-                x.ProvvigioneSellout = x.VendutoSellout * 0.02;
-                x.ProvvigioneSelloutString = x.ProvvigioneSellout.ToString("C", CultureInfo.CurrentCulture);
-            });
-        });
+            //        x.ProvvigioneSellout = x.VendutoSellout * 0.02;
+            //        x.ProvvigioneSelloutString = x.ProvvigioneSellout.ToString("C", CultureInfo.CurrentCulture);
+            //    });
+            //});
 
         }
 
@@ -162,7 +170,7 @@ namespace Provvigioni_Agenti.Models
             res.Delta = vendutoCorrente - vendutoRiferimento;
             res.DeltaPercent = res.Delta / vendutoRiferimento;
             res.VendutoSellout = sellout;
-            res.ProvvigioneSellout = sellout * 0.02;
+            res.ProvvigioneSellout = sellout * 0.05;
 
 
             res.VendutoCorrenteString = res.VendutoCorrente.ToString("C", CultureInfo.CurrentCulture);

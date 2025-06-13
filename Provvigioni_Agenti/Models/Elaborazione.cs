@@ -26,9 +26,9 @@ namespace Provvigioni_Agenti.Models
         public string CDS_CAT_STAT_ART { get; set; }
         public string CSG_DOC { get; set; }
 
-        public string CKY_MERC {  get; set; }
+        public string CKY_MERC { get; set; }
 
-        public string CDS_MERC { get;set; }
+        public string CDS_MERC { get; set; }
 
     }
     public class StoricoTotal
@@ -65,5 +65,11 @@ namespace Provvigioni_Agenti.Models
 
         public int NGB_ANNO_DOC { get; set; }
 
+    }
+
+
+    public class ClientiContactDiretti
+    {
+        public string CKY_CNT_CLFR { get; set; } = string.Empty;
     }
 }

@@ -33,6 +33,41 @@ namespace Provvigioni_Agenti.Models
         public string Regione { get; set; }
     }
 
+
+    public static class TrasferitiAgenzie
+    {
+        // List<string> trasferiti = new List<string>() { "amei", "barcella", "comoli", "edif", "mc_elettrici", "meb", "rexel", "sacchi", "sonepar" };
+
+        public static string Acmei { get; set; } = "acmei";
+        public static string Barcella { get; set; } = "barcella";
+        public static string Comoli { get; set; } = "comoli";
+        public static string Edif { get; set; } = "edif";
+        public static string McElettrici { get; set; } = "mc_elettrici";
+        public static string Meb { get; set; } = "meb";
+        public static string Rexel { get; set; } = "rexel";
+        public static string Sacchi { get; set; } = "sacchi";
+        public static string Sonepar { get; set; } = "sonepar";
+
+        public static  List<string> ToArray()
+        {
+            List<string> list = new List<string>(); 
+
+            list.Add(Acmei);
+            list.Add(Barcella);
+            list.Add(Comoli);
+            list.Add(Edif);
+            list.Add(McElettrici);
+            list.Add(Meb);
+            list.Add(Rexel);
+            list.Add(Sacchi);
+            list.Add(Sonepar);
+
+            return list;
+        }
+
+    }
+
+
     public enum ComoliStatoLettura : byte
     {
         Init,
