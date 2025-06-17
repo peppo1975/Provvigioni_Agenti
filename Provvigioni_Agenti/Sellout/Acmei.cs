@@ -20,6 +20,7 @@ namespace Provvigioni_Agenti.Sellout
     {
         private List<Trasferito> _trasferito = null;
         private List<Trasferito> _trasferitoMese = null; // 2025-05-05 trasferito mensile
+        private List<string> _nuoveCitta = null;
         public Acmei(string anno, List<string> mesi)
         {
             _trasferito = new List<Trasferito>();
@@ -30,6 +31,7 @@ namespace Provvigioni_Agenti.Sellout
         private void leggiAgenzia(string anno, List<string> mesi)
         {
             // vedo se ci sono files in barcella
+            _nuoveCitta = new List<string>();
 
             foreach (string mese in mesi)
             {
@@ -43,7 +45,7 @@ namespace Provvigioni_Agenti.Sellout
                 }
 
                 List<Citta> citta = null;
-                List<string> nuoveCitta = new List<string>();
+
                 string path = $"../trasferiti/{anno}/{mese}/{TrasferitiAgenzie.Acmei}";
 
                 //apri xml citta
@@ -80,11 +82,16 @@ namespace Provvigioni_Agenti.Sellout
 
                             string cellValue = cell.Value.ToString().Trim(' ');
 
-                            if (cellValue.Contains("Regione Nazione"))
+                            if (cellValue.Contains("Provincia"))
                             {
                                 colonnaRegione = c;
                                 rigaRegione = r + 1;
-                                colonnaVenduto = c + 2;
+                                //colonnaVenduto = c + 2;
+                                statoLettura = AcmeiStatoLettura.LeggiNomeRegione;
+                            }
+                            if (cellValue.Contains("Venduto"))
+                            {
+                                colonnaVenduto = c;
                                 statoLettura = AcmeiStatoLettura.LeggiNomeRegione;
                             }
 
@@ -107,23 +114,70 @@ namespace Provvigioni_Agenti.Sellout
                         case AcmeiStatoLettura.LeggiNomeRegione:
                             regione = ws.Cell(r, colonnaRegione).Value.ToString().Trim(' ');
                             regioneNome = citta.Find(x => x.Comune == regione);
-                            statoLettura = AcmeiStatoLettura.AttendiFine;
 
-                            if (regioneNome == null && regione != string.Empty)
+
+                            //if (regioneNome == null && regione != string.Empty)
+                            if (regioneNome == null)
                             {
-                                nuoveCitta.Add(regione.ToString());
-                                continue;
+                                if (regione == string.Empty)
+                                {
+                                    statoLettura = AcmeiStatoLettura.LeggiNomeRegione;
+                                    continue;
+                                }
+                                else
+                                {
+                                    _nuoveCitta.Add(regione.ToString());
+                                    statoLettura = AcmeiStatoLettura.AttendiFineCittaNonSalvata;
+                                    continue;
+
+                                }
+
+
                             }
+
+
+                            statoLettura = AcmeiStatoLettura.AttendiFine;
 
                             break;
 
+                        case AcmeiStatoLettura.AttendiFineCittaNonSalvata:
+                            if (ws.Cell(r, colonnaRegione).Value.ToString().Trim(' ').Contains("Totale"))
+                            {
+                                statoLettura = AcmeiStatoLettura.LeggiNomeRegione;
+                            }
+                            break;
+
                         case AcmeiStatoLettura.AttendiFine:
-                            if(ws.Cell(r, colonnaRegione).Value.ToString().Trim(' ').Contains("Totale"))
+                            if (ws.Cell(r, colonnaRegione).Value.ToString().Trim(' ').Contains("Totale"))
                             {
                                 var venduto = ws.Cell(r, colonnaVenduto).Value.ToString();
-                                _trasferito.Add(new Trasferito() { Regione = regioneNome.Regione, Venduto = Double.Parse(venduto.ToString()) });
 
-                                _trasferitoMese.Add(new Trasferito() { Regione = regioneNome.Regione, Venduto = Double.Parse(venduto.ToString()) });
+
+                                var result = _trasferito.Find(x => x.Regione == regioneNome.Regione);
+
+                                if (result == null)
+                                {
+                                    _trasferito.Add(new Trasferito() { Regione = regioneNome.Regione });
+                                }
+
+                                var resultMese = _trasferitoMese.Find(x => x.Regione == regioneNome.Regione);
+
+                                if (resultMese == null)
+                                {
+                                    _trasferitoMese.Add(new Trasferito() { Regione = regioneNome.Regione });
+                                }
+
+
+
+                                result = _trasferito.Find(x => x.Regione == regioneNome.Regione);
+                                result.Venduto += Double.Parse(ws.Cell(r, colonnaVenduto).Value.ToString());
+
+                                resultMese = _trasferitoMese.Find(x => x.Regione == regioneNome.Regione);
+                                resultMese.Venduto += Double.Parse(ws.Cell(r, colonnaVenduto).Value.ToString());
+
+
+                                //_trasferito.Add(new Trasferito() { Regione = regioneNome.Regione, Venduto = Double.Parse(venduto.ToString()) });
+                                //_trasferitoMese.Add(new Trasferito() { Regione = regioneNome.Regione, Venduto = Double.Parse(venduto.ToString()) });
 
                                 statoLettura = AcmeiStatoLettura.LeggiNomeRegione;
                             }
@@ -139,5 +193,6 @@ namespace Provvigioni_Agenti.Sellout
         }
 
         public IList<Trasferito> Trasferito => _trasferito;  //elemento pubblico che da modo di visualizzare un elemento privato
+        public IList<String> NuoveCitta => _nuoveCitta;  //elemento pubblico che da modo di visualizzare un elemento privato
     }
 }

@@ -20,4 +20,80 @@
     <Comune>PUGLIA</Comune>
     <Regione>PUGLIA</Regione>
   </Citta>
+  <Citta>
+    <Comune>CHIETI (CH)</Comune>
+    <Regione>ABRUZZO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>L'AQUILA (AQ)</Comune>
+    <Regione>ABRUZZO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>PESCARA (PE)</Comune>
+    <Regione>ABRUZZO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>TERAMO (TE)</Comune>
+    <Regione>ABRUZZO</Regione>
+  </Citta>
+  <Citta>
+    <Comune>MATERA (MT)</Comune>
+    <Regione>BASILICATA - MT</Regione>
+  </Citta>
+  <Citta>
+    <Comune>POTENZA (PZ)</Comune>
+    <Regione>BASILICATA - PZ</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CATANZARO (CZ)</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>COSENZA (CS)</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CROTONE (KR)</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>REGGIO DI CALABRIA (RC)</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>VIBO VALENTIA (VV)</Comune>
+    <Regione>CALABRIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>CAMPOBASSO (CB)</Comune>
+    <Regione>MOLISE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>ISERNIA (IS)</Comune>
+    <Regione>MOLISE</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BARI (BA)</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BARLETTA-ANDRIA-TRANI (BT)</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>BRINDISI (BR)</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>FOGGIA (FG)</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>LECCE (LE)</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
+  <Citta>
+    <Comune>TARANTO (TA)</Comune>
+    <Regione>PUGLIA</Regione>
+  </Citta>
 </ArrayOfCitta>

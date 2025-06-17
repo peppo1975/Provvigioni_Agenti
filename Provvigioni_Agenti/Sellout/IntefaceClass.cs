@@ -13,6 +13,7 @@ namespace Provvigioni_Agenti.Sellout
     public interface ITrasferitiService
     {
         IList<Trasferito> Trasferito { get; }
+        IList<string> NuoveCitta { get; }
     }
     internal class IntefaceClass
     {

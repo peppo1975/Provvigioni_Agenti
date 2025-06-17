@@ -16,6 +16,7 @@ namespace Provvigioni_Agenti.Sellout
     {
         private List<Trasferito> _trasferito = null;
         private List<Trasferito> _trasferitoMese = null; // 2025-05-05 trasferito mensile
+        List<string> _nuoveCitta = null;
         public Meb(string anno, List<string> mesi)
         {
             _trasferito = new List<Trasferito>();
@@ -26,6 +27,7 @@ namespace Provvigioni_Agenti.Sellout
         private void leggiAgenzia(string anno, List<string> mesi)
         {
             // vedo se ci sono files in barcella
+            _nuoveCitta = new List<string>();
 
             foreach (string mese in mesi)
             {
@@ -39,7 +41,7 @@ namespace Provvigioni_Agenti.Sellout
                 }
 
                 List<Citta> citta = null;
-                List<string> nuoveCitta = new List<string>();
+
                 string path = $"../trasferiti/{anno}/{mese}/{TrasferitiAgenzie.Meb}";
 
                 //apri xml citta
@@ -83,12 +85,12 @@ namespace Provvigioni_Agenti.Sellout
 
                                 if (regioneProvincia == null)
                                 {
-                                    nuoveCitta.Add(reg.ToString());
+                                    _nuoveCitta.Add(reg.ToString());
 
                                     continue;
                                 }
 
-                          
+
 
                                 if (mese == Mesi.Gennaio)
                                 {
@@ -173,7 +175,7 @@ namespace Provvigioni_Agenti.Sellout
                                 resultMese = _trasferitoMese.Find(x => x.Regione == regioneProvincia.Regione);
                                 resultAll = _trasferito.Find(x => x.Regione == regioneProvincia.Regione);
 
-                            
+
                                 resultMese.Venduto += Double.Parse(venduto);
                                 resultAll.Venduto += Double.Parse(venduto);
                                 break;
@@ -192,5 +194,6 @@ namespace Provvigioni_Agenti.Sellout
         }
 
         public IList<Trasferito> Trasferito => _trasferito;  //elemento pubblico che da modo di visualizzare un elemento privato
+        public IList<String> NuoveCitta => _nuoveCitta;  //elemento pubblico che da modo di visualizzare un elemento privato
     }
 }

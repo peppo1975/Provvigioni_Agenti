@@ -322,6 +322,9 @@ namespace Provvigioni_Agenti.Controllers
             cittaXml.Add("citta_sacchi");
             cittaXml.Add("citta_sonepar");
 
+            cittaXml.Add("citta_strano");
+            cittaXml.Add("citta_rematarlazzi");
+
             cittaXml.ForEach((x) =>
             {
                 generaCittaXml(x);

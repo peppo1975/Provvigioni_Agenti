@@ -48,6 +48,9 @@ namespace Provvigioni_Agenti.Models
         public static string Sacchi { get; set; } = "sacchi";
         public static string Sonepar { get; set; } = "sonepar";
 
+        public static string Strano { get; set; } = "strano";
+        public static string Rematarlazzi { get; set; } = "rematarlazzi";
+
         public static  List<string> ToArray()
         {
             List<string> list = new List<string>(); 
@@ -61,6 +64,8 @@ namespace Provvigioni_Agenti.Models
             list.Add(Rexel);
             list.Add(Sacchi);
             list.Add(Sonepar);
+            list.Add(Strano);
+            list.Add(Rematarlazzi);
 
             return list;
         }
@@ -82,6 +87,8 @@ namespace Provvigioni_Agenti.Models
         Init,
         LeggiNomeRegione,
         AttendiFine,
+        AttendiFineCittaNonSalvata,
+       
 
     }
 

@@ -2,22 +2,26 @@
 <ArrayOfTrasferito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Trasferito>
     <Regione>ABRUZZO</Regione>
-    <Venduto>37279.61837049999</Venduto>
+    <Venduto>12526.3833888</Venduto>
   </Trasferito>
   <Trasferito>
     <Regione>BASILICATA - MT</Regione>
-    <Venduto>54001.7888769</Venduto>
+    <Venduto>11053.4750632</Venduto>
+  </Trasferito>
+  <Trasferito>
+    <Regione>BASILICATA - PZ</Regione>
+    <Venduto>5945.889381499999</Venduto>
   </Trasferito>
   <Trasferito>
     <Regione>CALABRIA</Regione>
-    <Venduto>25802.86289029999</Venduto>
+    <Venduto>13413.2989891</Venduto>
   </Trasferito>
   <Trasferito>
     <Regione>MOLISE</Regione>
-    <Venduto>12952.142883400003</Venduto>
+    <Venduto>5296.4766633</Venduto>
   </Trasferito>
   <Trasferito>
     <Regione>PUGLIA</Regione>
-    <Venduto>353097.9411416999</Venduto>
+    <Venduto>144376.5652049</Venduto>
   </Trasferito>
 </ArrayOfTrasferito>

@@ -15,6 +15,7 @@ namespace Provvigioni_Agenti.Sellout
     {
         private List<Trasferito> _trasferito = null;
         private List<Trasferito> _trasferitoMese = null; // 2025-05-05 trasferito mensile
+        List<string> _nuoveCitta = null;
         public Comoli(string anno, List<string> mesi)
         {
             _trasferito = new List<Trasferito>();
@@ -25,7 +26,7 @@ namespace Provvigioni_Agenti.Sellout
         private void leggiAgenzia(string anno, List<string> mesi)
         {
             // vedo se ci sono files in barcella
-
+            _nuoveCitta = new List<string>();
             foreach (string mese in mesi)
             {
                 List<string> listFiles = IntefaceClass.elencaFiles(anno, mese, TrasferitiAgenzie.Comoli);
@@ -38,7 +39,7 @@ namespace Provvigioni_Agenti.Sellout
                 }
 
                 List<Citta> citta = null;
-                List<string> nuoveCitta = new List<string>();
+
                 string path = $"../trasferiti/{anno}/{mese}/{TrasferitiAgenzie.Comoli}";
 
                 //apri xml citta
@@ -105,7 +106,7 @@ namespace Provvigioni_Agenti.Sellout
 
                     if (regioneProvincia == null && regione != string.Empty)
                     {
-                        nuoveCitta.Add(regione.ToString());
+                        _nuoveCitta.Add(regione.ToString());
                         continue;
                     }
 
@@ -159,5 +160,6 @@ namespace Provvigioni_Agenti.Sellout
         }
 
         public IList<Trasferito> Trasferito => _trasferito;  //elemento pubblico che da modo di visualizzare un elemento privato
+        public IList<String> NuoveCitta => _nuoveCitta;  //elemento pubblico che da modo di visualizzare un elemento privato
     }
 }

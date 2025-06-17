@@ -40,7 +40,7 @@ namespace Provvigioni_Agenti.Models
 
     public static class Mesi
     {
-        public static string Gennaio { get;  } = "m_01";
+        public static string Gennaio { get; set; } = "m_01";
         public static string Febbraio { get; set; } = "m_02";
         public static string Marzo { get; set; } = "m_03";
         public static string Aprile { get; set; } = "m_04";

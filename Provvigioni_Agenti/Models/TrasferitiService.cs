@@ -51,6 +51,17 @@ namespace Provvigioni_Agenti.Models
         }
 
 
+
+        private Final mettiInCoda(string fornitore, Trasferito result)
+        {
+            Final estratti = new Final();
+            estratti.Fornitore = fornitore;
+            estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+            estratti.ValoreEuro = result.Venduto;
+
+            return estratti;
+        }
+
         private void leggiDirectoryClass()
         {
             Final estratti = null;
@@ -62,31 +73,38 @@ namespace Provvigioni_Agenti.Models
                 {
                     Acmei acmei = new Acmei(annoCorrente, mese);
                     var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)acmei.Trasferito);
-
+                    aggiornaExcelCitta((List<string>)acmei.NuoveCitta, "citta_acmei.xlsx");
 
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "ACMEI";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "ACMEI";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+
+                        finale.Add(mettiInCoda("ACMEI", result));
                     }
                 }
 
 
                 if (trasferito == TrasferitiAgenzie.Barcella)
                 {
+                    continue;
+
                     Barcella barcella = new Barcella(annoCorrente, mese);
                     var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)barcella.Trasferito);
+                    aggiornaExcelCitta((List<string>)barcella.NuoveCitta, "citta_barcella.xlsx");
+
 
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "BARCELLA";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "BARCELLA";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("BARCELLA", result));
                     }
                 }
 
@@ -94,59 +112,75 @@ namespace Provvigioni_Agenti.Models
                 if (trasferito == TrasferitiAgenzie.Comoli)
                 {
 
+                    continue;
+
                     Comoli comoli = new Comoli(annoCorrente, mese);
                     var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)comoli.Trasferito);
+                    aggiornaExcelCitta((List<string>)comoli.NuoveCitta, "citta_comoli.xlsx");
 
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "COMOLI";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "COMOLI";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("COMOLI", result));
                     }
                 }
 
 
                 if (trasferito == TrasferitiAgenzie.Edif)
                 {
+
+                    continue;
+
                     Edif edif = new Edif(annoCorrente, mese);
                     var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)edif.Trasferito);
+                    aggiornaExcelCitta((List<string>)edif.NuoveCitta, "citta_edif.xlsx");
 
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "EDIF";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "EDIF";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("EDIF", result));
                     }
                 }
 
 
                 if (trasferito == TrasferitiAgenzie.McElettrici)
                 {
+
+                    continue;
+
                     McElettrici magazzino = new McElettrici(annoCorrente, mese, 1);
                     var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)magazzino.Trasferito);
+                    aggiornaExcelCitta((List<string>)magazzino.NuoveCitta, "citta_mc_elettrici.xlsx");
 
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "MC ELETTR. MAG.";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "MC ELETTR. MAG.";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("MC ELETTR. MAG.", result));
                     }
 
                     McElettrici diretta = new McElettrici(annoCorrente, mese, 2);
                     result = IntefaceClass.cercaInList(regione, (List<Trasferito>)diretta.Trasferito);
+                    aggiornaExcelCitta((List<string>)diretta.NuoveCitta, "citta_mc_elettrici.xlsx");
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "MC ELETTR. DIR.";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "MC ELETTR. DIR.";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("MC ELETTR. DIR.", result));
                     }
 
                 }
@@ -154,15 +188,20 @@ namespace Provvigioni_Agenti.Models
 
                 if (trasferito == TrasferitiAgenzie.Meb)
                 {
+                    continue;
+
                     Meb meb = new Meb(annoCorrente, mese);
                     var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)meb.Trasferito);
+                    aggiornaExcelCitta((List<string>)meb.NuoveCitta, "citta_meb.xlsx");
+
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "MEB";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "MEB";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("MEB", result));
                     }
                 }
 
@@ -170,26 +209,48 @@ namespace Provvigioni_Agenti.Models
                 if (trasferito == TrasferitiAgenzie.Rexel)
                 {
 
+                    continue;
+
+                    Rexel rexel = new Rexel(annoCorrente, mese);
+                    var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)rexel.Trasferito);
+                    aggiornaExcelCitta((List<string>)rexel.NuoveCitta, "citta_rexel.xlsx");
+
+
+                    if (result != null)
+                    {
+                        //estratti = new Final();
+                        //estratti.Fornitore = "REXEL";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("REXEL", result));
+                    }
                 }
 
 
                 if (trasferito == TrasferitiAgenzie.Sacchi)
                 {
-
+                    continue;
                 }
 
 
                 if (trasferito == TrasferitiAgenzie.Sonepar)
                 {
+
+                    continue;
+
                     Sonepar sonepar = new Sonepar(annoCorrente, mese);
                     var result = IntefaceClass.cercaInList(regione, (List<Trasferito>)sonepar.Trasferito);
+                    aggiornaExcelCitta((List<string>)sonepar.NuoveCitta, "citta_sonepar.xlsx");
+
                     if (result != null)
                     {
-                        estratti = new Final();
-                        estratti.Fornitore = "SONEPAR";
-                        estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
-                        estratti.ValoreEuro = result.Venduto;
-                        finale.Add(estratti);
+                        //estratti = new Final();
+                        //estratti.Fornitore = "SONEPAR";
+                        //estratti.Valore = result.Venduto.ToString("C", CultureInfo.CurrentCulture);
+                        //estratti.ValoreEuro = result.Venduto;
+                        //finale.Add(estratti);
+                        finale.Add(mettiInCoda("SONEPAR", result));
                     }
                 }
             }

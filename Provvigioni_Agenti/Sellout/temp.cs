@@ -15,6 +15,7 @@ namespace Provvigioni_Agenti.Sellout
     {
         private List<Trasferito> _trasferito = null;
         private List<Trasferito> _trasferitoMese = null; // 2025-05-05 trasferito mensile
+        private List<string> _nuoveCitta = null;
         public _temp(string anno, List<string> mesi)
         {
             _trasferito = new List<Trasferito>();
@@ -38,7 +39,7 @@ namespace Provvigioni_Agenti.Sellout
                 }
 
                 List<Citta> citta = null;
-                List<string> nuoveCitta = new List<string>();
+                _nuoveCitta = new List<string>();
                 string path = $"../trasferiti/{anno}/{mese}/{TrasferitiAgenzie.Barcella}";
 
                 //apri xml citta
@@ -53,7 +54,7 @@ namespace Provvigioni_Agenti.Sellout
                 var wb = new XLWorkbook($"{path}/{file}");
                 var ws = wb.Worksheet(1);
 
-            
+
                 IntefaceClass.serializzaXml(anno, mese, TrasferitiAgenzie.Sonepar, $"{TrasferitiAgenzie.Sonepar}", _trasferitoMese);
 
             }
@@ -61,5 +62,6 @@ namespace Provvigioni_Agenti.Sellout
         }
 
         public IList<Trasferito> Trasferito => _trasferito;  //elemento pubblico che da modo di visualizzare un elemento privato
+        public IList<String> NuoveCitta => _nuoveCitta;  //elemento pubblico che da modo di visualizzare un elemento privato
     }
 }

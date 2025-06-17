@@ -3,47 +3,78 @@
   "WorkspaceRootPath": "E:\\User\\source\\repos\\Provvigioni_Agenti\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\meb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\meb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\barcella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\barcella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\acmei.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\acmei.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\sonepar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\sonepar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\mcelettrici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\mcelettrici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\trasferitiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\models\\trasferitiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\generalmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\models\\generalmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\sacchi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\sacchi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\rexel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\rexel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\meb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\meb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\mcelettrici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\mcelettrici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\edif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\edif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\comoli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\comoli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\barcella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\barcella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\intefaceclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\intefaceclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\trasferito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\models\\trasferito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\controllers\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\controllers\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Peppe\\AppData\\Local\\SourceServer\\05f8ff0704ddc42b88bf253fe098f1c5a7b63cb37f0d95e7964bbee631764a73\\Provvigioni_Agenti\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\comoli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\comoli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\sellout\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\sellout\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|e:\\user\\source\\repos\\provvigioni_agenti\\provvigioni_agenti\\models\\generalmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA9AE26-9854-4433-A25C-35DB9F88B1AB}|Provvigioni_Agenti\\Provvigioni_Agenti.csproj|solutionrelative:provvigioni_agenti\\models\\generalmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Peppe\\AppData\\Local\\SourceServer\\05f8ff0704ddc42b88bf253fe098f1c5a7b63cb37f0d95e7964bbee631764a73\\Provvigioni_Agenti\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,7 +84,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 321,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,116 +96,142 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Acmei.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Acmei.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Acmei.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Acmei.cs*",
+              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Acmei.cs*",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAuwLUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:01:02.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "McElettrici.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\McElettrici.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\McElettrici.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\McElettrici.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\McElettrici.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T21:53:19.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GeneralModels.cs",
-              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\GeneralModels.cs",
-              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\GeneralModels.cs",
-              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\GeneralModels.cs",
-              "RelativeToolTip": "Provvigioni_Agenti\\Models\\GeneralModels.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAzwCoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T21:41:26.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Sonepar.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Sonepar.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Sonepar.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Sonepar.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Sonepar.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwHsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T21:33:33.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Meb.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Meb.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Meb.cs",
-              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Meb.cs*",
-              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Meb.cs*",
-              "ViewState": "AgIAAKoAAAAAAAAAAAArwLcAAAAAAAAAAAAAAA==",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Meb.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Meb.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T14:50:09.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Barcella.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Barcella.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Barcella.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Barcella.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Barcella.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T14:41:52.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Peppe\\AppData\\Local\\SourceServer\\05f8ff0704ddc42b88bf253fe098f1c5a7b63cb37f0d95e7964bbee631764a73\\Provvigioni_Agenti\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Peppe\\AppData\\Local\\SourceServer\\05f8ff0704ddc42b88bf253fe098f1c5a7b63cb37f0d95e7964bbee631764a73\\Provvigioni_Agenti\\MainWindow.xaml.cs [Sola lettura]",
-              "ViewState": "AgIAAIwCAAAAAAAAAAArwKICAAAMAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T14:26:05.35Z",
-              "EditorCaption": " [Sola lettura]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Comoli.cs",
-              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Comoli.cs",
-              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Comoli.cs",
-              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Comoli.cs",
-              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Comoli.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAYwHUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T13:55:21.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "General.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\General.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Controllers\\General.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Controllers\\General.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Controllers\\General.cs",
-              "ViewState": "AgIAAJkCAAAAAAAAAAAnwLQCAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAgBAAAAAAAAAAArwCABAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T22:13:26.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\MainWindow.xaml.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAnwBsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAJUBAAAAAAAAAAAnwKoBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T21:25:13.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Comoli.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Comoli.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Comoli.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Comoli.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Comoli.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAewBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T13:55:21.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Trasferito.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\Trasferito.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\Trasferito.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\Trasferito.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Models\\Trasferito.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwFoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:46:04.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAABwTAAAAAAAAAAAmwDQTAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-06-17T10:11:54.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Rexel.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Rexel.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Rexel.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Rexel.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Rexel.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:03:21.794Z",
               "EditorCaption": ""
             },
             {
@@ -185,9 +242,82 @@
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Edif.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Edif.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Edif.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAhwJEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T13:46:10.007Z"
+              "WhenOpened": "2025-06-13T13:46:10.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sacchi.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Sacchi.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\Sacchi.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\Sacchi.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\Sacchi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:19:59.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GeneralModels.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\GeneralModels.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\GeneralModels.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\GeneralModels.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Models\\GeneralModels.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwCoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T21:41:26.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IntefaceClass.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\IntefaceClass.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\IntefaceClass.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\IntefaceClass.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\IntefaceClass.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAArwC0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:01:18.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "temp.cs",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\temp.cs",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\Sellout\\temp.cs",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Sellout\\temp.cs",
+              "RelativeToolTip": "Provvigioni_Agenti\\Sellout\\temp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T22:58:35.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Provvigioni_Agenti\\MainWindow.xaml",
+              "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\MainWindow.xaml",
+              "RelativeToolTip": "Provvigioni_Agenti\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T21:44:12.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Peppe\\AppData\\Local\\SourceServer\\05f8ff0704ddc42b88bf253fe098f1c5a7b63cb37f0d95e7964bbee631764a73\\Provvigioni_Agenti\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Peppe\\AppData\\Local\\SourceServer\\05f8ff0704ddc42b88bf253fe098f1c5a7b63cb37f0d95e7964bbee631764a73\\Provvigioni_Agenti\\MainWindow.xaml.cs [Sola lettura]",
+              "ViewState": "AgIAAIwCAAAAAAAAAAArwKICAAAMAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T14:26:05.35Z",
+              "EditorCaption": " [Sola lettura]"
             }
           ]
         }
@@ -197,13 +327,13 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "0ac4ec1d-d663-4d11-9630-74367b1c2872",
+        "Id": "45340e68-db7a-4792-84ce-0892ed3fd29e",
         "Display": 0,
-        "X": 779,
-        "Y": -39,
+        "X": -90,
+        "Y": 78,
         "Width": 1662,
-        "Height": 882,
-        "WindowState": 0
+        "Height": 802,
+        "WindowState": 2
       },
       "DocumentGroups": [
         {
@@ -212,15 +342,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "TrasferitiService.cs",
               "DocumentMoniker": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\TrasferitiService.cs",
               "RelativeDocumentMoniker": "Provvigioni_Agenti\\Models\\TrasferitiService.cs",
               "ToolTip": "E:\\User\\source\\repos\\Provvigioni_Agenti\\Provvigioni_Agenti\\Models\\TrasferitiService.cs",
               "RelativeToolTip": "Provvigioni_Agenti\\Models\\TrasferitiService.cs",
-              "ViewState": "AgIAAN4CAAAAAAAAAAAgwP8CAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAApwFcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T15:09:46.443Z",
+              "WhenOpened": "2025-06-16T20:04:55.308Z",
               "EditorCaption": ""
             }
           ]
